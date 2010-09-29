@@ -1,0 +1,43 @@
+### If you're creating the lgviolation (Law.Gov Violation) objects
+### manually using "Add Content" in the admin web UI, then you can
+### save some time by copying-and-pasting from here.
+
+Access fees (Law.Gov #1)
+<p>Direct fees for dissemination of primary legal materials should be avoided.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>
+
+Copyright restrictions (Law.Gov #2)
+<p>Limitations on access through terms of use or the assertion of copyright on primary legal materials is contrary to long-standing public policy and core democratic principles and is misleading to citizens.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>
+
+Bulk access (Law.Gov #3)
+<p>Primary legal materials should be made available using bulk access mechanisms so they may be downloaded by anyone.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>
+
+Authenticated integrity (Law.Gov #4)
+<p>The primary legal materials, and the methods used to access them, should be authenticated so people can trust in the integrity of these materials.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>
+
+Static, online archives (Law.Gov #5)
+<p>Historical archives should be made available online and in a static location to the extent possible.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>
+
+Vendor-neutral, media-neutral citation (Law.Gov #6)
+<p>Vendor- and media-neutral citation mechanisms should be employed.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>
+
+Standardized structure, format (Law.Gov #7)
+<p>Technical standards for document structure, identifiers, and metadata should be developed and applied as extensively as possible.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>
+
+Non-proprietary computer processability (Law.Gov #8)
+<p>Data should be distributed in a computer-processable, non-proprietary form in a manner that meets best current practices for the distribution of open government data. That data should represent the definitive documents, not just aggregate, preliminary, or modified forms.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>
+
+Responsible online distribution (Law.Gov #9)
+<p>An active program of research and development should be sponsored by governmental bodies that issue primary legal materials to develop new standards and solutions to challenges presented by the electronic distribution of definitive primary legal materials. Examples include the automated detection and redaction of private personal information in documents.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>
+
+Use best practices (Law.Gov #10)
+<p>An active program of education, training, and documentation should be undertaken to help governmental bodies that issue primary legal materials learn and use best current practices.</p>
+<p><a href="http://public.resource.org/law.gov" >public.resource.org/law.gov</a>

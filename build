@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# This script is unused until we sort out the PeoplePods provisioning.
+exit 0
+
+MEDIABUGS_RO=http
+MEDIABUGS_RW=https
+MEDIABUGS_SVN=mediabugs-open.googlecode.com/svn/trunk/
+
+# Check out the mediabugs-open core code into 'peoplepods', unless
+# already present.  Note we could unconditionally check it out -- if
+# it were already here, it would just get updated.  But that's not a
+# very predictable behavior; better to let updates be manual.
+if [ ! -d peoplepods ]; then
+  if ! svn checkout ${MEDIABUGS_RW}://${MEDIABUGS_SVN} peoplepods; then
+    echo "Doing a read-only checkout of mediabugs-open:"
+    svn checkout ${MEDIABUGS_RO}://${MEDIABUGS_SVN} peoplepods
+  fi
+else
+    echo "'peoplepods' directory already present"
+fi

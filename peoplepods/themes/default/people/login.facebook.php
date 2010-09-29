@@ -1,0 +1,34 @@
+	<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US" type="text/javascript"></script>
+	<script type="text/javascript">FB.init('<?= $user->write('facebook_api'); ?>','/xd_receiver.htm');</script>	
+
+	<div id="connect_form">
+
+			
+			<h1>Connect to Facebook</h1>
+			
+
+			<? if ($user->get('logged_into_facebook')) { ?>
+				<div class="connect_details">
+				
+					<p>
+						<strong>Facebook Name:</strong> <fb:profile-pic uid=loggedinuser facebook-logo=true></fb:profile-pic> <fb:name uid=loggedinuser useyou=false></fb:name>
+						&nbsp;&nbsp;<a href="/logout?nobounce=1" onclick="FB.Connect.logout(function(){window.location='/logout';});return false;" class="littleButton">Logout</a>
+						&nbsp;&nbsp;<a href="/facebook?rfb=1"  onclick="FB.Connect.logout(function(){window.location='/facebook?rfb=1';});return false;" class="littleButton">Remove</a>
+					</p>
+				</div>
+			<? } else { ?>
+			
+				<p>When you connect, you'll be able to login with your Facebook account, and automatically post your activity to your Facebook wall.</p>
+			
+				<p><fb:login-button v="2" size="medium" autologoutlink="true" onlogin="window.location='<? $POD->siteRoot(); ?>/facebook';">Connect with Facebook</fb:login-button></p>
+
+			<? } ?>
+			<? if ($POD->isAuthenticated()) { ?>
+				<p class="right_align"><a href="/editprofile?showEditProfile=connect" class="littleButton">Return to Connect Preferences &#187;</a></p>
+			<? } else { ?>
+				<p><a href="/login" class="littleButton">&larr; Return to Login</a></p>
+			<? } ?>
+				
+
+				
+	</div>
