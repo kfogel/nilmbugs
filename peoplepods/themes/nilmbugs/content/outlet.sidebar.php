@@ -5,7 +5,7 @@
 
 ?>
 <div id="media_outlet_sidebar">
-<h3><a href="/bugs/browse/outlet?q=<?= $doc->id; ?>"><?= $doc->headline; ?></a></h3>
+<h3><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $doc->id; ?>"><?= $doc->headline; ?></a></h3>
 
 <? if ($doc->link) { ?>
 <p><a href="<?= $doc->link; ?>" target="_new">Visit Official Website</a></p>

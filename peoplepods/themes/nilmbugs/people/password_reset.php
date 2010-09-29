@@ -18,7 +18,7 @@
 		<!-- reset password form -->
 		<h1>Reset Password</h1>
 		
-		<form method="post" action="/password_reset" id="password_reset" class="valid">
+		<form method="post" action="<? $POD->siteRoot(); ?>/password_reset" id="password_reset" class="valid">
 			<input type="hidden" name="resetCode" value="<? echo $_GET['resetCode']; ?>" />
 			<p class="input"><label for="password">New Password:</label>
 			<input id="password" name="password" class="text required"></p>

@@ -79,9 +79,9 @@
 			<a name="connect"></a>
 			<legend>Authentication Services</legend>
 
-<!-- 			<p>Twitter: <a href="/twitter"><? if ($user->get('twitter_name')) { ?>Connected<? } else { ?>Connect Now<? } ?></a></p>				 -->
-			<p>Facebook Connect: <a href="/facebook"><? if ($user->get('fbuid')) { ?>Connected<? } else { ?>Connect Now<? } ?></a></p>
-			<p>OpenID: <a href="/openid"><? if ($user->get('openid')) { ?>Connected<? } else { ?>Connect Now<? } ?></a></p>
+<!-- 			<p>Twitter: <a href="<? $POD->siteRoot(); ?>/twitter"><? if ($user->get('twitter_name')) { ?>Connected<? } else { ?>Connect Now<? } ?></a></p>				 -->
+			<p>Facebook Connect: <a href="<? $POD->siteRoot(); ?>/facebook"><? if ($user->get('fbuid')) { ?>Connected<? } else { ?>Connect Now<? } ?></a></p>
+			<p>OpenID: <a href="<? $POD->siteRoot(); ?>/openid"><? if ($user->get('openid')) { ?>Connected<? } else { ?>Connect Now<? } ?></a></p>
 			
 		</fieldset>
 	
@@ -106,10 +106,10 @@
 		<div class="sidebar">
 			
 			<p><a href="<?= $user->permalink; ?>">View Profile</a>	</p>
-			<p><a href="/editprofile#top">Edit Profile</a></p>
-			<p><a href="/editprofile#email">Email Preferences & Subscriptions</a></p>
-			<p><a href="/editprofile#connect">Authentication Services</a></p>
-			<p><a href="/editprofile#password">Change Password</a></p>
+			<p><a href="<? $POD->siteRoot(); ?>/editprofile#top">Edit Profile</a></p>
+			<p><a href="<? $POD->siteRoot(); ?>/editprofile#email">Email Preferences & Subscriptions</a></p>
+			<p><a href="<? $POD->siteRoot(); ?>/editprofile#connect">Authentication Services</a></p>
+			<p><a href="<? $POD->siteRoot(); ?>/editprofile#password">Change Password</a></p>
 		
 		
 		</div>

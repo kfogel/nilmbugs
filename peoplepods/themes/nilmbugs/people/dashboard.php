@@ -44,7 +44,7 @@
 					} else {
 						$header = "Manage My Bugs <a href=\"?mode=activity\" class=\"small\">View Activity</a>";					
 					}
-					$docs->output("dashboard.{$mode}",'header','pager',$header,'This is your personalized MediaBugs dashboard. This page will collect any
+					$docs->output("dashboard.{$mode}",'header','pager',$header,'This is your personalized NILM Bugs dashboard. This page will collect any
 						bugs you submit, along with any interesting bugs you find around the site
 						that you select. Just click "Track" on the bug\'s page.'); 
 			?>

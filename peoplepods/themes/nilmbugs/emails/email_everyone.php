@@ -1,5 +1,5 @@
 <?= $message; ?>
 
 
-Unsubscribe from the MediaBugs newsletter by clicking below:
+Unsubscribe from the NILM Bugs newsletter by clicking below:
 http://mediabugs.org/unsubscribe?email=<?= urlencode($to); ?>

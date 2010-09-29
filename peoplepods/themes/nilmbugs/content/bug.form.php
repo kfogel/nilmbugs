@@ -121,7 +121,7 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 					</p>
 		
 					<div  id="media_outlet_new" style="display:none;">
-						<p class="input"><strong>You are the first person to report a bug about this media outlet.</strong></p>
+						<p class="input"><strong>You are the first person to report a bug about this jurisdiction.</strong></p>
 					</div>
 					
 					<p class="input">
@@ -154,20 +154,13 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 				
 					<p class="input">
 						<label for="body">
-							Explain the error in this story. <span class="required">*</span>
+							Explain the problem.<span class="required">*</span>
 						</label>
 						<textarea name="body" id="bug_body" class="text tinymce required"><? $doc->htmlspecialwrite('body'); ?></textarea>
 					</p>
 	
 					<p class="input">
-						<label for="link">
-							 If the bug is present in an online version of this story, please provide a link to the story.
-						</label>
-						<input type="text" name="link" value="<?= $doc->link; ?>" class="text" />
-					</p>
-	
-					<p class="input">
-						<label for="date">When did this bug appear? <span class="required">*</span></label>
+						<label for="date">When was this bug discovered? <span class="required">*</span></label>
 						<input type="text" name="meta_report_date" id="report_date" class="text required dpDate" value="<? if ($doc->report_date) { echo date('m/d/Y',strtotime($doc->report_date)); } else { echo date("m/d/Y"); }  ?>" />
 						<script type="text/javascript">
 							$('#report_date').datepick({navigationAsDateFormat: true, prevText: '< M', currentText: 'M y', nextText: 'M >',changeMonth: false, changeYear: false,mandatory:true});
@@ -249,7 +242,7 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 										<option value="open:responded to" <? if ($doc->bug_status=='open:responded to') {?>selected<? } ?>>Open: Responded to</option>						
 										<option value="open:under discussion" <? if ($doc->bug_status=='open:under discussion') {?>selected<? } ?>>Open: Under Discussion</option>						
 									<? } ?>
-								</select>&nbsp;&nbsp;<a href="/pages/status-explanation" target="_new">What do these mean?</a>
+								</select>&nbsp;&nbsp;<a href="<? $POD->siteRoot(); ?>/pages/status-explanation" target="_new">What do these mean?</a>
 							<? } ?>				
 					</p>
 					
@@ -260,13 +253,13 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 				<? } ?>
 			
 				<p class="input">
-					<label for="">Have you contacted this media outlet?</label>
+					<label for="">Have you contacted this jurisdiction?</label>
 					<input type="radio" name="meta_media_outlet_contacted" value="yes" id="contacted_yes" onchange="chcontact();" <? if ($doc->media_outlet_contacted=="yes") {?>checked<? } ?>> Yes
 					<input type="radio" name="meta_media_outlet_contacted" value="no" id="contacted_no" onchange="chcontact();"<? if ($doc->media_outlet_contacted=="no" || !$doc->saved()) {?>checked<? } ?>> No
 				</p>
 				
 				<p class="input" id="media_response" <? if (!$doc->saved() || $doc->media_outlet_response=='') { ?>style="display:none;"<? }?>>
-					<label for="">What was the media outlet's response?</label>
+					<label for="">What was the jurisdiction's response?</label>
 					<textarea name="meta_media_outlet_response" class="text tinymce"><? $doc->htmlspecialwrite('media_outlet_response'); ?></textarea>
 				</p>
 			

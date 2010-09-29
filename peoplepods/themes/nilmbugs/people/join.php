@@ -32,7 +32,7 @@
 			<? } ?>
 
 			<? if (!$user->get('openid')  && !$user->get('fbuid')) { ?>
-			<p>Login with <a href="/openid">OpenID</a> or <a href="/facebook">Facebook</a></p>
+			<p>Login with <a href="<? $POD->siteRoot(); ?>/openid">OpenID</a> or <a href="<? $POD->siteRoot(); ?>/facebook">Facebook</a></p>
 			<? } ?>
 
 			<p class="input">

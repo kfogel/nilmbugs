@@ -48,16 +48,16 @@ if ($POD->isAuthenticated()) {
 						<li><?= $POD->toggleBot($POD->currentUser()->isWatched($doc),'togglewatch','Stop tracking','Track','method=toggleWatch&content='.$doc->id,null,null,'Stop tracking this bug on your My Bugs dashboard','Track this bug on your My Bugs dashboard'); ?></li>
 						<li><?= $POD->toggleBot($subscribed,'togglesub','Stop receiving updates','E-mail me updates','method=toggleSub&contentId='.$doc->id); ?></li>
 					<? } else { ?>
-						<li><a id="togglewatch" href="/join?redirect=<?= $doc->permalink; ?>">Track</a></li>
-						<li><a id="togglesub" href="/join?redirect=<?= $doc->permalink; ?>">Email me updates</a></li>
+						<li><a id="togglewatch" href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>">Track</a></li>
+						<li><a id="togglesub" href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>">Email me updates</a></li>
 					<? } ?>
 					<li><a id="rsslink" href="<?= $doc->permalink ?>/feed">RSS</a></li>
 					<li><a id="tweetlink" href="<?= $doc->createTweet(); ?>">Tweet</a></li>
 					<? if ($POD->isAuthenticated()) { ?>
-						<li><a id="sendlink" href="/send?id=<?= $doc->id; ?>">Send</a></li>
+						<li><a id="sendlink" href="<? $POD->siteRoot(); ?>/send?id=<?= $doc->id; ?>">Send</a></li>
 						<li><?= $POD->toggleBot($doc->hasFlag('report',$POD->currentUser()),'toggleflag','Flagged','Flag a problem','method=toggleFlag&flag=report&content='.$doc->id); ?></li>
 					<? } else { ?>
-						<li><a id="toggleflag" href="/join?redirect=<?= $doc->permalink; ?>">Flag a problem</a></li>
+						<li><a id="toggleflag" href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>">Flag a problem</a></li>
 					<? } ?>
 				</ul>
 				<div class="clearer"></div>
@@ -66,7 +66,7 @@ if ($POD->isAuthenticated()) {
 			<div id="media_info">
 				<? $media_outlet->output('outlet.widget'); ?>
 				<div class="media_info_text">
-					This bug appeared in a news report published by <strong><a href="/bugs/browse/outlet?q=<?= $media_outlet->id; ?>"><?= $media_outlet->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
+					This bug appeared in a news report published by <strong><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $media_outlet->id; ?>"><?= $media_outlet->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
 					<? if ($doc->link) { ?><strong><a href="<?= $doc->link; ?>">View the original news report</a></strong>.<? } ?>
 				</div>
 				<div class="clearer"></div>			
@@ -130,7 +130,7 @@ if ($POD->isAuthenticated()) {
 	</div>	
 
 	<div id="comments">
-		<h2>Discussion <? if ($POD->isAuthenticated()) {?><a href="#reply" class="with_right_float littlebutton">Leave a comment</a><? } else { ?><a href="/join?redirect=<?= $doc->permalink; ?>" class="with_right_float littlebutton">Leave a comment</a><? } ?></h2>
+		<h2>Discussion <? if ($POD->isAuthenticated()) {?><a href="#reply" class="with_right_float littlebutton">Leave a comment</a><? } else { ?><a href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>" class="with_right_float littlebutton">Leave a comment</a><? } ?></h2>
 		<!-- COMMENTS -->	
 		<? 
 			$comments->output('comment');
@@ -142,7 +142,7 @@ if ($POD->isAuthenticated()) {
 			<a name="reply"></a>
 				<h3>Leave a comment</h3>
 				<form method="post" id="add_comment" class="valid">
-					<p style="margin:0px;" class="right_align">You are logged in as <? $POD->currentUser()->permalink(); ?>.  <a href="/logout">Logout</a></p>
+					<p style="margin:0px;" class="right_align">You are logged in as <? $POD->currentUser()->permalink(); ?>.  <a href="<? $POD->siteRoot(); ?>/logout">Logout</a></p>
 					<p class="input"><textarea name="comment" class="text required" id="comment"></textarea></p>
 					<div id="comment_extras">
 						<p>Are you a direct participant in this story?</P>
@@ -170,7 +170,7 @@ if ($POD->isAuthenticated()) {
 			<p id="metoo_counter"><?= $POD->pluralize($doc->flagCount('metoo'),'@number person thinks this is a bug','@number people think this is a bug'); ?></p>
 		<? }  else { ?>
 			<p>
-				<a href="/join?redirect=<?= $doc->permalink; ?>" id="metoo">I think this is a bug too!</a>
+				<a href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>" id="metoo">I think this is a bug too!</a>
 			</p>	
 			<p id="metoo_counter"><?= $POD->pluralize($doc->flagCount('metoo'),'@number person thinks this is a bug','@number people think this is a bug'); ?></p>		
 		<? } ?>

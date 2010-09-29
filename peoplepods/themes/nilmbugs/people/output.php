@@ -34,7 +34,7 @@
 			<? } ?>
 
 			<? if ($POD->isAuthenticated() && $POD->currentUser()->id==$user->id) { ?>
-				<p><a href="/editprofile" class="littlebutton">Edit Profile</a></p>
+				<p><a href="<? $POD->siteRoot(); ?>/editprofile" class="littlebutton">Edit Profile</a></p>
 			<? } ?>
 
 

@@ -45,8 +45,8 @@
 			<object width="400" height="225"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=13021709&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=13021709&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="225"></embed></object></div>
 		<? $welcome_message->output('interface_text'); ?>
 		<div id="homepage_submit">
-			<a href="/bugs/edit" class="button with_right_margin">Report a Bug Now</a>
-			<a href="/pages/what-is-a-media-bug" class="button">What is a Media Bug?</a>
+			<a href="<? $POD->siteRoot(); ?>/bugs/edit" class="button with_right_margin">Report a Bug Now</a>
+			<a href="<? $POD->siteRoot(); ?>/pages/what-is-a-media-bug" class="button">What is an NILM Bug?</a>
 			<div class="clearer"></div>
 		</div>
 		<div class="clearer"></div>	

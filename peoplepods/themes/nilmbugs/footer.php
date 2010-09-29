@@ -18,32 +18,32 @@
 		<div class="grid">
 			<ul>
 				<li>
-					<a href="/pages/what-is-a-media-bug">What is a MediaBug?</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/what-is-a-media-bug">What is an NILRM Bug?</a>
 				</li>
 				<li>
-					<a href="http://mediabugs.org/blog">MediaBugs Blog</a>
+					<a href="http://mediabugs.org/blog">NILM Bugs Blog</a>
 				</li>
 				<li>
-					<a href="/pages/who">Who we are</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/who">Who we are</a>
 				</li>
 				<li>
-					<a href="/pages/contact">Contact Us</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/contact">Contact Us</a>
 				</li>
 				<li>
-					<a href="/pages/about">About</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/about">About</a>
 				</li>
 				<li>
-					<a href="/pages/faq">FAQ</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/faq">FAQ</a>
 				</li>
 				<li>
-					<a href="/pages/help">Help</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/help">Help</a>
 				</li>
 				<li>
-					<a href="/pages/tos">Terms of Service</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/tos">Terms of Service</a>
 				</li>
 				<? if ($POD->isAuthenticated() && $POD->currentUser()->adminUser) { ?>
 					<li>
-						<a href="/peoplepods/admin">PeoplePods</a>
+						<a href="<? $POD->siteRoot(); ?>/peoplepods/admin">PeoplePods</a>
 					</li>			
 				<? } ?>
 			</ul>

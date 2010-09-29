@@ -19,5 +19,5 @@
 		<span class="byline">Status: <?= $doc->bug_status; ?> | Submitted: <strong><?= date('M j, Y',strtotime($doc->date)); ?></strong></span>
 		<?= $doc->bugSummary(); ?>
 		<div class="clearer"></div>
-		<a href="<?= $doc->editlink; ?>">Edit</a> | <a href="/moderation?mode=approve&id=<?= $doc->id; ?>">Approve</a> | <a href="/moderation?mode=delete&id=<?= $doc->id; ?>">Delete</a>
+		<a href="<?= $doc->editlink; ?>">Edit</a> | <a href="<? $POD->siteRoot(); ?>/moderation?mode=approve&id=<?= $doc->id; ?>">Approve</a> | <a href="<? $POD->siteRoot(); ?>/moderation?mode=delete&id=<?= $doc->id; ?>">Delete</a>
 	</div>
