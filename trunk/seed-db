@@ -1,0 +1,6 @@
+#!/bin/sh
+
+DATE="`date '+%Y-%m-%d %H:%M:%S'`"
+sed -e "s/XXX_DATE_HERE_XXX/${DATE}/g" < insert-lgvs.sql.tmpl > insert-lgvs.sql
+
+mysql --user=nilmbugsrw --password=changeme nilmbugs < insert-lgvs.sql

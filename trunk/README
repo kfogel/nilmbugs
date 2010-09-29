@@ -1,0 +1,207 @@
+         National Inventory of Legal Materials (NILM) Bug Tracker
+         ========================================================
+
+        **********************************************************
+        ***                                                    ***
+        ***        WARNING: THIS IS PRE-ALPHA SOFTWARE         ***
+        ***                                                    ***
+        ***                      Also:                         ***
+        ***                                                    ***
+        ***  For now, this is based on an older version of     ***
+        ***  PeoplePods, while we work out how to provision    ***
+        ***  recent versions of PeoplePods and MediaBugs into  ***
+        ***  this tree.  Check back soon.  2010-09-29          ***
+        ***                                                    ***
+        **********************************************************
+
+This is the source distribution for the NILM Bug Tracker.  It's based
+on the MediaBugs.org tracker, which in turn uses the PeoplePods.net
+library developed by Ben Brown.  For more information about NILM, see
+http://radar.oreilly.com/2010/09/lawgov-update-1.html.
+
+Installation Instructions:
+
+  1. Make sure these packages are installed.  I've been developing on
+     Debian and Ubuntu systems -- if you're on something different,
+     adjust accordingly (and I assume you have apache2 httpd already):
+
+     # apt-get update
+     # apt-get install php5       /* See troubleshooting note (1) below. */
+     # apt-get install php5-mysql  
+
+  2. Create the database:
+
+     # mysqld &                   /* Start up mysqld only if not running. */
+     # mysql -u root
+     mysql> create database nilmbugs;
+     mysql> grant all on nilmbugs.* to nilmbugsrw@localhost
+            identified by 'changeme';
+     mysql> flush privileges;
+     mysql> quit
+     # 
+
+  3. Put the nilmbugs directory wherever web pages are normally served
+     from: 
+
+     # cp -a nilmbugs-VERSION /var/www/nilmbugs
+
+     (You could put it in "/var/www/whatever"; these instructions
+     assume "nilmbugs".  And you could serve directly out of this
+     working copy, if you're doing development work on nilmbugs.) 
+
+     # chown -R www-data.www-data /var/www/nilmbugs
+
+     (For 'www-data', use whatever user.group your webserver runs as.)
+
+  4. Make sure apache2 is configured to allow .htaccess overrides.
+     Something like this in your httpd.conf or wherever:
+
+     <Directory /var/www/>
+         AllowOverride All
+         Order allow,deny
+         allow from all
+     </Directory>
+
+  5. Fix up some permissions (see also 'fix-perms' script in this dir):
+
+       $ cd /var/www/nilmbugs
+       $ touch .htaccess
+       $ chmod 777 .htaccess
+       $ chmod -R 777 peoplepods/files
+       $ chmod -R 777 peoplepods/lib/etc
+
+     (Occasionally the app has to write to these locations.  Any
+     permissions that allow that are fine; 777 may be overdoing it.)
+
+  6. Browse to http://yourserver/nilmbugs/peoplepods -- you're in!
+     The rest of the setup takes place via the web admin interface.
+
+     You will be prompted for the database info and for a few steps
+     after that.  ("/nilmbugs/peoplepods" is the web admin area;
+     you'll use it a lot).
+
+  7. When you get to the "Plugin Pods" page during the setup, there
+     will be a long list of pods, with checkboxes on the right.  Only
+     a few will be already checked.  Make sure all of the following
+     are turned on (sorry, I don't know a way to avoid this laborious
+     task):
+
+     mediabugs_profiles
+     akismet
+     openid_connect
+     contact_form
+     mediabugs_reports
+     mediabugs_send_this
+     mediabugs_subscriptions
+     mediabugs_authentication_login
+     mediabugs_authentication_creation
+     mediabugs_cron
+     mediabugs_api
+     mediabugs_moderation
+     contenttype_bug_add
+     contenttype_bug_browse
+     contenttype_bug_feeds
+     contenttype_bug_bugfeeds
+     contenttype_bug_view
+     contenttype_bug_list
+     mediabugs_home
+     facebook_connect
+     email_everyone
+     twitter_connect
+     custom_img
+     mediabugs_features
+     mediabugs_lists
+     mime_send
+     core_pages
+     mediabugs_dashboard
+     toggle_bot
+     lgviolation
+
+     NOTE: And make sure 'core_dashboard' is not checked.  It may be
+     turned on by default, or is somehow get turned on after you hit
+     save.  Just uncheck it and re-save.  (Often when things aren't
+     behaving right, it's because the wrong pod accidentally got
+     enabled through mis-click -- Ben Brow clued me in to this.)
+
+     'core_authentication_login' and 'core_api_simple' might also be
+     defaulted to ON -- you can turn them OFF after you've turned
+     'mediabugs_api' and 'mediabugs_authentication' ON.  I'm not sure
+     it's necessary to turn them off, but it doesn't seem to hurt.
+
+  8. Set the theme.  Click "Options" in the left vertical
+     nav, then click "Activate" for the "NILM Bugs Theme".
+
+  9. Set the API key.  Again go to "Options", and the API Key field is
+     on the "Site Options" tab.  Use this key...
+
+     287b8336ef3aa6360dfbe55ee4b1beab
+
+     ...which I obtained from PeoplePods.net.  Ben Brown agrees that
+     it is silly to require an API key, and we're going to get rid of
+     the code that wants it.  But for now, just make sure it's present.
+
+ 10. Now create the 10 objects representing Law.Gov Principles:
+
+     You can do this by running the 'seed-db' script in this directory.
+
+        ==> alternatively ==>
+
+     You could do it by hand, to learn the web-based admin interface
+     for adding content.  Below is how.  (But skip the rest of this
+     step if you just ran 'seed-db' above.)
+
+     Assuming you're still in the "/peoplepods" admin screens:
+
+     In the upper left vertical nav panel, click on "Content",
+     then at the top of the resultant page, click "Add Content".
+
+     It will ask you "What type of content would you like to create?"
+     Click on the "Create" button next to the faded grey letters
+     saying "new content type" (there's no point actually entering the
+     content type here; we'll do it on the next page).
+
+     On the resultant page, in the upper right where it says "new
+     content type Change", click "Change" and enter "lgviolation".
+     This will be the type for all 10 Law.Gov Violation objects.
+
+     (NOTE: You will *not* be manually entering that type name again.
+     Although we're about to enter the first of ten Law.Gov violation
+     objects, the remaining 2-10 will be created by clicking on the
+     now-existent type from the Add Content page.)
+
+     The rest of this needs to be done 10 times.  Let's walk through
+     the first time:
+
+     Enter a headline, like "Access fees (Law.Gov #1)".
+     For the body, I'd say switch to HTML mode and then enter some
+     text like:
+
+       <p>Direct fees for dissemination of primary legal materials
+       should be avoided.</p> 
+       <p><a href="http://public.resource.org/law.gov"
+       >public.resource.org/law.gov</a>
+
+     Hit "Save", then lather, rinse, repeat, starting from "Add Content.
+     BUT, from now on, just click on "Lgviolation" after "Add Content",
+     since we've now created the type and can re-use it for more objects.
+
+     To save time: when entering the headlines and descriptions, you
+     can cut and paste from the 'law-gov.txt' file included here.  The
+     headlines and HTML bodies are all written out there.
+
+ 11. Create a user named "Anonymous" in the obvious way (starting from
+     the "People" link in the left-side vertical nav panel).  This
+     user is necessary for anonymous bug reporting to work properly.
+
+ 12. Now it's finally all set up.  Click "View Site" at the bottom of
+     the left vertical nav panel, and try "Report a bug".
+
+-Karl Fogel    <kfogel {_AT_} red-bean.com>   <kfogel {_AT_} oreilly.com>  
+
+Troubleshooting notes:
+----------------------
+
+1) PHP will need the mbfl library enabled to provide 'mbstring'.  If
+   your packaged PHP doesn't have that by default, then try 'apt-get
+   install php5-mbstring', or else recompile PHP from source with the
+   --enable-mbfl flag, reinstall it, and don't forget to restart apache2.
