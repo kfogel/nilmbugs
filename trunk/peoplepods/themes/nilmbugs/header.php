@@ -20,7 +20,7 @@
 <head>
 	<title><? if ($pagetitle) { echo $pagetitle . " - " . $POD->siteName(false); } else { echo $POD->siteName(false); } ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link REL="SHORTCUT ICON" HREF="/favicon.ico">
+	<link REL="SHORTCUT ICON" HREF="<? $POD->siteRoot(); ?>/favicon.ico">
 	<!--[if IE]>
 		<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/excanvas/excanvas.compiled.js"></script>
 	<![endif]-->
@@ -74,10 +74,10 @@
 	<div id="header">
 		<div class="grid">
 			<div class="column_5">
-				<a href="/" title="MediaBugs Homepage"><img src="<? $POD->templateDir(); ?>/img/mediabugs_logo.png" id="logo" border="0" alt="MediaBugs" width="361" height="100"/></a>	
+				<a href="<? $POD->siteRoot(); ?>/" title="NILM Bugs Homepage"><img src="<? $POD->templateDir(); ?>/img/nilmbugs_logo.png" id="logo" border="0" alt="NILM Bugs" width="361" height="100"/></a>	
 			</div>
 			<div class="column_7 last">
-				<form method="get" action="/bugs/browse/search">
+				<form method="get" action="<? $POD->siteRoot(); ?>/bugs/browse/search">
 					<input name="q" class="repairField" value="Find a specific bug..." onfocus="repairField(this,'Find a specific bug...');" onblur="repairField(this,'Find a specific bug...');" />
 					<input name="search" value="Search" type="submit" class="littlebutton" />
 				</form>
@@ -90,14 +90,14 @@
 	<div id="nav">				
 		<ul>
 			<li id="nav_home"><a href="<? $POD->siteRoot(); ?>">Home</a></li>
-			<li id="nav_report"><a href="<? $POD->siteRoot(); ?>/bugs/edit">Report a bug</a></li>
-			<li id="nav_browse"><a href="<? $POD->siteRoot(); ?>/bugs">Browse bugs</a></li>
+			<li id="nav_report"><a href="<? $POD->siteRoot(); ?>/bugs/edit">Report&nbsp;a&nbsp;bug</a></li>
+			<li id="nav_browse"><a href="<? $POD->siteRoot(); ?>/bugs">Browse&nbsp;bugs</a></li>
 			<? if ($POD->isAuthenticated()) { ?>
-				<li id="nav_my"><a href="<? $POD->siteRoot(); ?>/dashboard">My bugs</a></li>
+				<li id="nav_my"><a href="<? $POD->siteRoot(); ?>/dashboard">My&nbsp;bugs</a></li>
 			<? } ?>
-			<li id="nav_about"><a href="/pages/about">About</a></li>
-			<li id="nav_help"><a href="/pages/help">Help</a></li>
-			<li id="nav_contact"><a href="/pages/contact">Contact</a></li>
+			<li id="nav_about"><a href="<? $POD->siteRoot(); ?>/pages/about">About</a></li>
+			<li id="nav_help"><a href="<? $POD->siteRoot(); ?>/pages/help">Help</a></li>
+			<li id="nav_contact"><a href="<? $POD->siteRoot(); ?>/pages/contact">Contact</a></li>
 		</ul>
 		<div class="clearer"></div>
 	</div>

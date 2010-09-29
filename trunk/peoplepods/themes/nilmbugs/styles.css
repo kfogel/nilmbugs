@@ -155,18 +155,18 @@
 	#bug_actions li { float: left; margin-right: 5px; font-size: 12px; } 
 
 	#bug_actions a {  padding:2px; padding-left: 20px;}
-	a#togglewatch { background: url(img/mediabugs_track_off_icon.png) no-repeat;    }
-	a#togglewatch.active { background: url(img/mediabugs_track_on_icon.png) no-repeat; }
+	a#togglewatch { background: url(img/nilmbugs_track_off_icon.png) no-repeat;    }
+	a#togglewatch.active { background: url(img/nilmbugs_track_on_icon.png) no-repeat; }
 	
-	a#togglesub { padding-left: 20px; background: url(img/mediabugs_email_icon.png) no-repeat;   }
-	a#togglesub.active { background: url(img/mediabugs_email_on_icon.png) no-repeat;  }
+	a#togglesub { padding-left: 20px; background: url(img/nilmbugs_email_icon.png) no-repeat;   }
+	a#togglesub.active { background: url(img/nilmbugs_email_on_icon.png) no-repeat;  }
 	
-	a#rsslink { background: url(img/mediabugs_rss_icon.png) no-repeat;   }
-	a#tweetlink { background: url(img/mediabugs_twitter_icon.png) no-repeat;   }
-	a#sendlink { background: url(img/mediabugs_email_icon.png) no-repeat;     }
+	a#rsslink { background: url(img/nilmbugs_rss_icon.png) no-repeat;   }
+	a#tweetlink { background: url(img/nilmbugs_twitter_icon.png) no-repeat;   }
+	a#sendlink { background: url(img/nilmbugs_email_icon.png) no-repeat;     }
 	
-	a#toggleflag { background: url(img/mediabugs_flag_off_icon.png) no-repeat; padding:2px; padding-left: 20px;   }
-	a#toggleflag.active { background: url(img/mediabugs_flag_on_icon.png) no-repeat;   }
+	a#toggleflag { background: url(img/nilmbugs_flag_off_icon.png) no-repeat; padding:2px; padding-left: 20px;   }
+	a#toggleflag.active { background: url(img/nilmbugs_flag_on_icon.png) no-repeat;   }
 	
 
 

@@ -15,6 +15,6 @@
 /**********************************************/
 ?><? $recent = $POD->recentBugs(5,0); ?>
 <div class="sidebar" id="recent_visitors_sidebar">
-	<h3><a href="/bugs/browse/date">Recent Bugs</a></h3>
+	<h3><a href="<? $POD->siteRoot(); ?>/bugs/browse/date">Recent Bugs</a></h3>
 	<? $recent->output('list_item','ul_header','ul_footer'); ?>
 </div>

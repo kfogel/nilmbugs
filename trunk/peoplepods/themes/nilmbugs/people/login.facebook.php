@@ -12,8 +12,8 @@
 				
 					<p>
 						<strong>Facebook Name:</strong> <fb:profile-pic uid=loggedinuser facebook-logo=true></fb:profile-pic> <fb:name uid=loggedinuser useyou=false></fb:name>
-						&nbsp;&nbsp;<a href="/logout?nobounce=1" onclick="FB.Connect.logout(function(){window.location='/logout';});return false;">Logout</a>
-						&nbsp;&nbsp;<a href="/facebook?rfb=1"  onclick="FB.Connect.logout(function(){window.location='/facebook?rfb=1';});return false;">Remove</a>
+						&nbsp;&nbsp;<a href="<? $POD->siteRoot(); ?>/logout?nobounce=1" onclick="FB.Connect.logout(function(){window.location='/logout';});return false;">Logout</a>
+						&nbsp;&nbsp;<a href="<? $POD->siteRoot(); ?>/facebook?rfb=1"  onclick="FB.Connect.logout(function(){window.location='/facebook?rfb=1';});return false;">Remove</a>
 					</p>
 				</div>
 			<? } else { ?>
@@ -24,9 +24,9 @@
 
 			<? } ?>
 			<? if ($POD->isAuthenticated()) { ?>
-				<p class="right_align"><a href="/editprofile#connect">Return to Connect Preferences &#187;</a></p>
+				<p class="right_align"><a href="<? $POD->siteRoot(); ?>/editprofile#connect">Return to Connect Preferences &#187;</a></p>
 			<? } else { ?>
-				<p><a href="/login">&larr; Return to Login</a></p>
+				<p><a href="<? $POD->siteRoot(); ?>/login">&larr; Return to Login</a></p>
 			<? } ?>
 				
 

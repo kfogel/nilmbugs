@@ -15,4 +15,4 @@ You can help even more by answering three short questions about your experience 
 If you think your bug should be reopened, you can do so at the bottom of that same page.
 
 
--- the MediaBugs team 
+-- the NILM Bugs team 

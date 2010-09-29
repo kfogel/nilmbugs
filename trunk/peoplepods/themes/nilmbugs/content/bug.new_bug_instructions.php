@@ -26,12 +26,12 @@
 	
 		<p>
 			By filing this bug, you've opened up a communication channel with the reporters and media outlets involved.
-		  	We believe it is important that you remain engaged in this discussion.  The best way to do that is to <strong><a href="/join?claim=<?= $doc->id; ?>">create a MediaBugs account</a></strong>
+		  	We believe it is important that you remain engaged in this discussion.  The best way to do that is to <strong><a href="<? $POD->siteRoot(); ?>/join?claim=<?= $doc->id; ?>">create a NILM Bugs account</a></strong>
 		  	so that you can track this bug and make sure it gets closed. 
 		</p>
 	
 		<p>
-			<a href="/join?claim=<?= $doc->id; ?>" class="littlebutton">Claim this bug</a>		
+			<a href="<? $POD->siteRoot(); ?>/join?claim=<?= $doc->id; ?>" class="littlebutton">Claim this bug</a>		
 		</p>
 		<div class="clearer"></div>
 
@@ -46,7 +46,7 @@
 	
 	<p>
 	<a href="<?= $doc->createTweet(); ?>" class="littlebutton with_right_margin">Tweet this Bug</a>
-	<a href="/send?id=<?= $doc->id; ?>" class="littlebutton">Email this Bug</a>
+	<a href="<? $POD->siteRoot(); ?>/send?id=<?= $doc->id; ?>" class="littlebutton">Email this Bug</a>
 	</p>
 	<div class="clearer"></div>
 </div>

@@ -26,7 +26,7 @@ $subject='Welcome to ' . $sender->POD->siteName(false);
 
 Hello <? $sender->write('nick'); ?>,
 
-Thank you for joining MediaBugs!
+Thank you for joining NILM Bugs!
 
 <? if ($sender->get('verificationKey')) { ?>
 

@@ -38,7 +38,7 @@
 	?>
 
 <div class="column_padding" id="recent_blogs_sidebar">
-	<h3 class="big"><a href="http://mediabugs.org/blog">From the MediaBugs Blog</a></h3>
+	<h3 class="big"><a href="http://mediabugs.org/blog">From the NILM Bugs Blog</a></h3>
 
 	<? foreach ($posts as $item) { ?>
 	<div class="blog_post">
