@@ -18,10 +18,10 @@
 		<div class="grid">
 			<ul>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/what-is-a-media-bug">What is an NILRM Bug?</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/what-is-an-nilm-bug">What is an NILM Bug?</a>
 				</li>
 				<li>
-					<a href="http://mediabugs.org/blog">NILM Bugs Blog</a>
+					<a href="http://public.resource.org">Public.Resource.org</a>
 				</li>
 				<li>
 					<a href="<? $POD->siteRoot(); ?>/pages/who">Who we are</a>
@@ -49,6 +49,7 @@
 			</ul>
 		</div>
 	</div>	
+<!-- FIXME: update the Google Analytics, or get rid of them. -->
 	<script type="text/javascript">
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

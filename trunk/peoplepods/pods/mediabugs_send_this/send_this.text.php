@@ -9,6 +9,6 @@ Message from <?= $doc->send_this_sender_name; ?>:
 <?= $doc->bugHeadline(); ?>
 <?= $doc->permalink; ?>
 
-A bug in <?= $media_outlet->headline; ?> reported to MediaBugs.org
+A bug in <?= $media_outlet->headline; ?> reported to the NILM Bug Tracker.
 
 <?= $doc->bugSummary(); ?>

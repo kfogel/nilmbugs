@@ -75,11 +75,25 @@
 			<? } ?>
 
 		<p class="input">
-				<label>&nbsp;</label>
-				<input name="meta_is_journalist" value="1" type="checkbox" /> I am a journalist.  <a href="#" onclick="return false;" class="glossary" title="We consider you a journalist if you are employed by a media outlet to cover news, or if you regularly provide news reports to any community." /><i>What do we mean by "journalist"?</a> And <a href="#" onclick="return false;" class="glossary" title="So we can see how well MediaBugs is serving both journalists and non-journalists." />why are we asking?</i></a>
-			</p>
+				<input name="meta_is_law_librarian" value="1" type="checkbox" /> I am a practicing law librarian.<br/>
+				<input name="meta_is_law_student" value="1" type="checkbox" /> I am a law student.<br/>
+				<input name="meta_is_law_professor" value="1" type="checkbox" /> I am a law professor.<br/>
+				<input name="meta_is_government_employee" value="1" type="checkbox" /> I am a government employee.<br/>
+                </p>
 
-
+                <p class="input">
+                                List all places, if any, where you are a member of the bar:<br/>
+				<input name="meta_bar_memberships" value="" class="text" /><br/>
+                </p>
+                <p class="input">
+                                Institutional affiliations:<br/>
+				<input name="meta_bar_memberships" value="" class="text" /><br/>
+                </p>
+                </p>
+                <p class="input">
+                                Please tell anything else about yourself that you think might be relevant:<br/>
+				<input name="meta_bar_memberships" value="" class="text" /><br/>
+                </p>
 			<p class="input">
 				<input type="submit"  class="button with_right_margin" value="Create my account" name="create" />By clicking "Create" you agree to our <a href="<? $POD->siteRoot(); ?>/pages/tos">Terms of Service</a>
 			</p>

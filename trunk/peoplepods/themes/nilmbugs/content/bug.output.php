@@ -13,6 +13,7 @@
 /**********************************************/
 
 $media_outlet = $POD->getContent(array('id'=>$doc->media_outlet));
+$violations = $POD->getLawGovViolations();
 
 $subscribed = false;
 if ($POD->isAuthenticated()) { 
@@ -66,24 +67,30 @@ if ($POD->isAuthenticated()) {
 			<div id="media_info">
 				<? $media_outlet->output('outlet.widget'); ?>
 				<div class="media_info_text">
-					This bug appeared in a news report published by <strong><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $media_outlet->id; ?>"><?= $media_outlet->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
+					This bug appeared in <strong><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $media_outlet->id; ?>"><?= $media_outlet->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
 					<? if ($doc->link) { ?><strong><a href="<?= $doc->link; ?>">View the original news report</a></strong>.<? } ?>
 				</div>
 				<div class="clearer"></div>			
 			</div>
 
 			<div id="bug_body">
-				<strong style="display:inline">Bug Type:&nbsp;</strong> <?= $doc->bug_type; ?>
+				<h2 style="display:inline">Bug details:&nbsp;</h2>
 				
+                                <ul>
+					<? foreach ($violations as $violation) { ?>
+                                        <? if ($doc->{'bug_lgv_' . $violation->id}) { ?><li><? echo $violation->permalink(); ?></li><? } ?>
+					<? } ?>
+                                </ul>
+
 				<? $doc->write('body'); ?>
 		
-				<? if ($doc->get('supporting_evidence')) {  ?>
-					<h2>Supporting Information:</h2>
-					<? $doc->write('supporting_evidence');
+				<? if ($doc->get('additional_information')) {  ?>
+					<h3>Additional Information:</h3>
+					<? $doc->write('additional_information');
 				} ?>
 					
 				<? if ($doc->files()->count() >0) { ?>
-					<h2>Attached Files:</h2>
+					<h3>Attached Files:</h3>
 					<? foreach ($doc->files() as $file) { ?>
 						<? if ($file->isImage()) { ?>
 							<a href="<?= $file->original_file; ?>"><img src="<?= $file->thumbnail; ?>" border=0></a>				
@@ -93,7 +100,36 @@ if ($POD->isAuthenticated()) {
 					<? } ?>
 				<? } ?>
 				
-				<h2>Response</h2>
+				<? if ($doc->has_official_vendor) { ?>
+					<h3>Official Vendor:</h3>
+                                        <ul>
+                                        <? if ($doc->official_vendor_name) {
+                                          ?><li><?= $doc->official_vendor_name;
+                                          }?></li>
+                                        <? if ($doc->official_vendor_url) {
+                                          ?><li><?= $doc->official_vendor_url;
+                                          }?></li>
+                                        </ul>
+                                        <? if ($doc->official_vendor_addtl_info) {
+                                          ?><?= $doc->official_vendor_addtl_info;
+                                          }?>
+				<? } ?>
+
+				<? if ($doc->has_terms_of_service) { ?>
+					<h3>Terms of Service:</h3>
+                                        <? if ($doc->terms_of_service_url) {
+                                          ?><p><a href="<?= $doc->terms_of_service_url; ?>" ><?= $doc->terms_of_service_url; ?></a></p><? } ?>
+                                        <? if ($doc->terms_of_service_addtl_info) {
+                                          ?><?= $doc->terms_of_service_addtl_info;
+                                          }?>
+				<? } ?>
+
+				<? if ($doc->enabling_legislation_etc_info) { ?>
+					<h3>Enabling legislation or other statutory authority:</h3>
+                                        <p><?= $doc->enabling_legislation_etc_info; ?></p>
+				<? } ?>
+
+				<h3>Response</h3>
 				<? if ($doc->get('media_outlet_contacted')=='yes') { ?>
 					<p><? $doc->author()->permalink(); ?> has contacted <?= $media_outlet->mediaOutletBrowseLink(); ?>
 						<? if ($doc->media_outlet_response) {?> and received the following response.<? } ?>
@@ -110,7 +146,7 @@ if ($POD->isAuthenticated()) {
 			</div>
 
 			
-			<h2>Bug History</h2>			
+			<h2>Bug History</h2>
 
 			<div id="bug_history">
 				<? 
@@ -144,11 +180,6 @@ if ($POD->isAuthenticated()) {
 				<form method="post" id="add_comment" class="valid">
 					<p style="margin:0px;" class="right_align">You are logged in as <? $POD->currentUser()->permalink(); ?>.  <a href="<? $POD->siteRoot(); ?>/logout">Logout</a></p>
 					<p class="input"><textarea name="comment" class="text required" id="comment"></textarea></p>
-					<div id="comment_extras">
-						<p>Are you a direct participant in this story?</P>
-						<p><input type="checkbox" name="journalist" id="journalist"> <label for="journalist">I am the journalist responsible.</label></p>
-						<p><input type="checkbox" name="participant" id="participant"> <label for="participant">I am mentioned in this report or was interviewed for it.</label></p>
-					</div>
 					<p><input type="submit" value="Post Comment" class="button" /></p>
 				</form>
 			<div class="clearer"></div>		

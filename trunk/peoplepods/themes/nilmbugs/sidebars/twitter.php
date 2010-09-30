@@ -16,8 +16,8 @@
 	    },
 	    tweets: {
 	      background: '#ffffff',
-	      color: '#183411',
-	      links: '#418C00'
+	      color: '#111834',
+	      links: '#00418C'
 	    }
 	  },
 	  features: {

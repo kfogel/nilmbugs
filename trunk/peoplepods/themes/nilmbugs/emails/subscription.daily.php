@@ -1,6 +1,6 @@
 <?
 	
-	$subject = "New bugs on MediaBugs.org";
+	$subject = "New bugs in the NILM Bug Tracker";
 
 ?>
 

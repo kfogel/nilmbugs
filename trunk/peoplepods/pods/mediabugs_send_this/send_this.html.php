@@ -8,7 +8,7 @@
 
 <h3><a href="<?= $doc->permalink; ?>" class="bug_title" title="View this bug report"><?= $doc->bugHeadline(); ?></a></h3>
 
-<p>A bug in <strong><?= $media_outlet->headline; ?></strong> reported to MediaBugs.org</p>
+<p>A bug in <strong><?= $media_outlet->headline; ?></strong> reported to the NILM Bug Tracker</p>
 
 <p><?= $doc->bugSummary(); ?></p>
 

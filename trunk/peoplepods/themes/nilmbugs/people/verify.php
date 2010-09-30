@@ -27,9 +27,9 @@
 		<div class="info">
 			<h3>Your account has been verified!</h3>
 			<p>You're now logged in -- here's what you can do:</p>
-			<p><a href="<? $POD->siteRoot(); ?>/bugs/edit">File an error report!</a></p>
+			<p><a href="<? $POD->siteRoot(); ?>/bugs/edit">File a bug!</a></p>
 			<p><a href="<? $POD->siteRoot(); ?>/editprofile">Edit your profile</a>, tell us who you are, add a photo if you like...</p>
-			<p><a href="<? $POD->siteRoot(); ?>/bugs">Browse error reports</a> that other people have filed</p>
+			<p><a href="<? $POD->siteRoot(); ?>/bugs">Browse bugs</a> that other people have filed</p>
 			<p><a href="<? $POD->siteRoot(); ?>/">Or just go to the home page... &#187;</a></p>
 		</div>
 	

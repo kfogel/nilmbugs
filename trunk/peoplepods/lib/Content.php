@@ -378,8 +378,8 @@
 
 			if (!$this->get('stub')) {
 				$stub = $this->get('headline');			
-				$stub = preg_replace("/\s+/","-",$stub);
-				$stub = preg_replace("/[^a-zA-Z0-9\-]/","",$stub);
+				$stub = preg_replace("/\s+/","_",$stub);
+				$stub = preg_replace("/[^a-zA-Z0-9_\-]/","",$stub);
 				$stub = strtolower($stub);
 			} else {
 				$stub = $this->get('stub');
