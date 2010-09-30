@@ -38,7 +38,7 @@
 		$feed = "/bugs/feeds/" .  $mode  ."?q=". urlencode($_GET['q']);
 		$POD->header("Bugs by $mode",$feed);
 	} else {
-		$POD->header('Search MediaBugs');
+		$POD->header('Search the NILM Bug Tracker');
 	}
 	if ($mode == "home") { 
 		
@@ -68,9 +68,16 @@
 			if ($term) { 
 				$outlet = $POD->getContent(array('id'=>$term));
 			}
-			$crumbs[] = "<a href=\"/bugs/browse/outlet\">Media Outlets</a>";
+                        // FIXME: We will probably need to abstract
+			// out the user-visible word used to describe
+			// the "place" concept (e.g., media outlet,
+			// jurisdiction, whatever it is).
+			$crumbs[] = "<a href=\"/bugs/browse/outlet\">Jurisdictions</a>";
 			$key = 'media_outlet';
 		} else if ($mode=="type") { 
+                        // FIXME: Not all trackers have "bug types"
+			// (for example, Law.Gov bugs don't).  Maybe
+			// we can conditionalize or abstract this bit.
 			$crumbs[] = "<a href=\"/bugs/browse/type\">Bug Types</a>";
 			$key = 'bug_type';
 		} else if ($mode=="search") { 

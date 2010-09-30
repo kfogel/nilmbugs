@@ -1,6 +1,6 @@
 <?
 	
-	$subject = "Your bug at MediaBugs.org has been closed.";
+	$subject = "Your bug in the NILM Bug Tracker has been closed.";
 
 ?>
 

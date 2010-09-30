@@ -34,7 +34,7 @@ $media_outlets = $POD->mediaOutlets(9);
 			<div class="clearer"></div>
 		</li>
 		<li>
-			<a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet">Browse by Media Outlet</a>
+			<a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet">Browse by Jurisdiction</a>
 			<ul>
 				<? foreach ($media_outlets as $outlet) { ?>
 					<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $outlet->id; ?>"><?= $outlet->headline; ?></a></li>				

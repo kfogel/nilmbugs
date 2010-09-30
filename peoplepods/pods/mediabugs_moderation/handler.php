@@ -20,8 +20,8 @@
 			<h3><a href="/peoplepods/admin/flags/?flag=report&type=content">Flagged Bugs</a></h3>
 
 
-			<h3><a href="/peoplepods/admin/content/search.php?type=media_outlet">Media Outlets</a></h3>
-			<p>New media outlets will not appear in the browse interface until they are approved.</p>
+			<h3><a href="/peoplepods/admin/content/search.php?type=media_outlet">Jurisdictions</a></h3>
+			<p>New jurisdictions will not appear in the browse interface until they are approved.</p>
 		
 			
 			<h3><a href="/peoplepods/admin/content/search.php?type=bug">All Bugs</a></h3>

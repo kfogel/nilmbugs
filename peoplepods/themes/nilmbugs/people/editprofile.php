@@ -59,13 +59,13 @@
 			<a name="email"></a>
 			<legend>Email Preferences</legend>
 	
-				<p class="input"><label>&nbsp;</label><input type="checkbox" value="1" name="meta_newsletter" <? if ($user->newsletter) {?>checked<? } ?> /> Send me news about MediaBugs.org</p>
+				<p class="input"><label>&nbsp;</label><input type="checkbox" value="1" name="meta_newsletter" <? if ($user->newsletter) {?>checked<? } ?> /> Send me news about the National Inventory of Legal Materials</p>
 				<p class="input"><label>&nbsp;</label><input type="checkbox" value="1" name="meta_updates" <? if ($user->updates) { ?>checked<? } ?> /> Send me a message when someone leaves a comment on a bug I reported</p>				
 				<p class="input"><label>&nbsp;</label><input type="submit" class="littlebutton" value="Update my account" /></p>
 
 				<div class="clearer"></div>
 
-				<p>Receive automatic messages whenever a bug is filed on a specific media outlet or search term. Look for
+				<p>Receive automatic messages whenever a bug is filed on a specific jurisdiction or search term. Look for
 				the "Email me updates" button on media outlet pages and search results.</p>
 
 				<fieldset>

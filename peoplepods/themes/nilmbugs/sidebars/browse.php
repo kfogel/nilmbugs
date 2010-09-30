@@ -8,7 +8,7 @@
 					<a href="<? $POD->siteRoot(); ?>/bugs/browse/type">Browse by Type</a>
 				</li>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet">Browse by Media Outlet</a>
+					<a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet">Browse by Jurisdiction</a>
 				</li>
 				<li>
 					Browse by Status

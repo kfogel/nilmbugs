@@ -14,6 +14,7 @@
 /**********************************************/
 
 $bug_types = $POD->bugTypes();
+$violations = $POD->getLawGovViolations();
 
 if ($doc->saved()) {
 	$media_outlet = $POD->getContent(array('id'=>$doc->media_outlet));
@@ -30,7 +31,7 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 
 	$instructions_report = $POD->getContent(array('stub'=>'instructions-report-bug'));
 	$instructions_what = $POD->getContent(array('stub'=>'instructions-what-bug'));
-	$instructions_why = $POD->getContent(array('stub'=>'instructions-why-bug'));
+	$instructions_addtl_info = $POD->getContent(array('stub'=>'instructions-addtl-info'));
 	$instructions_status = $POD->getContent(array('stub'=>'instructions-status-bug'));
 	$instructions_edit = $POD->getContent(array('stub'=>'instructions-edit-bug'));
 
@@ -49,8 +50,8 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 	<li id="tab_what">
 		<a href="#" onclick="return tabClick('what');">Bug Details</a>
 	</li>
-	<li id="tab_why">
-		<a href="#" onclick="return tabClick('why');">Supporting Info</a>
+	<li id="tab_addtl_info">
+		<a href="#" onclick="return tabClick('addtl_info');">Additional Info</a>
 	</li>
 	<li id="tab_status">
 		<a href="#" onclick="return tabClick('status');">Status</a>
@@ -110,14 +111,14 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 	
 	
 					<p class="input">
-						<label for="headline">Name This Bug <span class="required">*</span></label>
-						<input name="headline" id="headline" value="<? $doc->htmlspecialwrite('headline'); ?>" length="50" class="text required" title="Try to summarize the key problem in 10 words or less"/>					
+						<label for="headline">New Bug<span class="required">*</span></label>
+						<input name="headline" id="headline" value="<? if ($doc->htmlspecialwrite('headline')) { echo $doc->htmlspecialwrite('headline'); } else { echo 'law bug'; } ?>" length="50" class="text required" title='You can leave this as "law bug", or if you wish you can replace it with a brief description of the problem (try for 10 words or fewer).'/>
 					</p>
 					
 					<p class="input" id="media_outlet_search">
-							<label for="media_outlet">Media outlet where this story appeared: <span class="required">*</label>
-							<input name="media_outlet" id="media_outlet_q" class="text required" value="<? if ($media_outlet) { $media_outlet->htmlspecialwrite('headline'); }  if ($doc->suggested_outlet) { $doc->htmlspecialwrite('suggested_outlet'); } ?>" onblur="mo_newcheck();" title="Pick an outlet from the list, or suggest a new outlet by entering its full name." />
-							<input name="meta_media_outlet" type="hidden" 3value="<? $doc->media_outlet; ?>" id="media_outlet_id" />
+							<label for="media_outlet">Jurisdiction: <span class="required">*</label>
+							<input name="media_outlet" id="media_outlet_q" class="text required" value="<? if ($media_outlet) { $media_outlet->htmlspecialwrite('headline'); }  if ($doc->suggested_outlet) { $doc->htmlspecialwrite('suggested_outlet'); } ?>" onblur="mo_newcheck();" title="Pick a jurisdiction from the list, or register a new jurisdiction by entering its full name." />
+							<input name="meta_media_outlet" type="hidden" value="<? $doc->media_outlet; ?>" id="media_outlet_id" />
 					</p>
 		
 					<div  id="media_outlet_new" style="display:none;">
@@ -125,10 +126,17 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 					</div>
 					
 					<p class="input">
-						<label for="reporter">
-							Name(s) of who wrote or created the story, if you know.
+						<label for="jurisdiction_contact">
+							Specific collection or point of contact.
 						</label>
-						<input type="text" name="meta_reporter" value="<? $doc->htmlspecialwrite('reporter'); ?>" class="text" />
+						<input type="text" name="meta_jurisdiction_contact" value="<? $doc->htmlspecialwrite('jurisdiction_contact'); ?>" class="text" title='For example, "Attorney General Opinions", or the name/address of the official point of contact (e.g., chief judge, clerk, solicitor general, secretary of state).'/>
+					</p>
+		
+					<p class="input">
+						<label for="jurisdiction_url">
+							URL of jurisdiction
+						</label>
+						<input type="text" name="meta_jurisdiction_url" value="<? $doc->htmlspecialwrite('jurisdiction_url'); ?>" class="text" title='The main URL (web page) for the jurisdiction, if any.  Leave blank if none or unknown.'/>
 					</p>
 		
 					<p class="input nextbutton"><a href="#who" class="littlebutton" onclick="return nextSection('report','what');">Next</a></p>
@@ -141,20 +149,19 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 					<? $instructions_what->output('interface_text'); ?>
 				
 					<p class="input">
-						<label for="bug_type">
-							What type of bug is this? <span class="required">*</span>
-						</label>
-						<select name="meta_bug_type" id="bug_type" class="text required">
-							<option value="">Please pick a category for your bug</option>
-							<? foreach ($bug_types as $bug_type) { ?>
-								<option value="<?= $bug_type->headline; ?>" <? if ($doc->bug_type==$bug_type->headline) {?>selected<? } ?>><?= $bug_type->headline; ?></option>
-							<? } ?>	
+ 						<label for="violations">
+							Mark any violations of <a href="http://public.resource.org/law.gov/" >Law.Gov</a> Principles:
+ 						</label>
+						<? foreach ($violations as $violation) { ?>
+                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input type="checkbox" name="meta_bug_lgv_<?= $violation->id; ?>" id="bug_lgv_<?= $violation->id; ?>" value="<?= $violation->stub; ?>">&nbsp;<? echo $violation->permalink(); ?></input><br/>
+						<? } ?>
 						</select>
 					</p>
 				
 					<p class="input">
 						<label for="body">
-							Explain the problem.<span class="required">*</span>
+							Please describe the nature of the violation(s).<span class="required">*</span>
 						</label>
 						<textarea name="body" id="bug_body" class="text tinymce required"><? $doc->htmlspecialwrite('body'); ?></textarea>
 					</p>
@@ -167,24 +174,74 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 						</script>
 					</p>
 	
-					<p class="input nextbutton"><a href="#why" class="littlebutton" onclick="return nextSection('what','why');">Next</a></p>
+					<p class="input nextbutton"><a href="#addtl_info" class="littlebutton" onclick="return nextSection('what','addtl_info');">Next</a></p>
 				</fieldset>
 	
-				<a name="why"></a>
-				<fieldset id="why" style="display: none;">
-					<legend>Why?</legend>
-					<? $instructions_why->output('interface_text'); ?>
+				<a name="addtl_info"></a>
+				<fieldset id="addtl_info" style="display: none;">
+					<legend>Additional Info</legend>
+					<? $instructions_addtl_info->output('interface_text'); ?>
 	
-	
+<!-- BEGIN Official Vendor -->
+				<p class="input">
+					<label for="">Is there an official vendor?</label>
+					<input type="radio" name="meta_has_official_vendor" value="yes" id="has_official_vendor_yes" onchange="chofficialvendor();" <? if ($doc->has_official_vendor=="yes") {?>checked<? } ?>> Yes
+					<input type="radio" name="meta_has_official_vendor" value="no" id="has_official_vendor_no" onchange="chofficialvendor();"<? if ($doc->has_official_vendor=="no" || !$doc->saved()) {?>checked<? } ?>> No
+				</p>
+
+				<p class="input" id="official_vendor_name" <? if (!$doc->saved() || $doc->official_vendor_name=='') { ?>style="display:none;"<? }?>>
+					<label for="">Name:</label>
+					<input type="text" name="meta_official_vendor_name" class="text tinymce"><? $doc->htmlspecialwrite('official_vendor_name'); ?></input>
+				</p>
+
+				<p class="input" id="official_vendor_url" <? if (!$doc->saved() || $doc->official_vendor_url=='') { ?>style="display:none;"<? }?>>
+					<label for="">URL:</label>
+					<input type="text" name="meta_official_vendor_url" class="text tinymce"><? $doc->htmlspecialwrite('official_vendor_url'); ?></input>
+				</p>
+
+				<p class="input" id="official_vendor_addtl_info" <? if (!$doc->saved() || $doc->official_vendor_addtl_info=='') { ?>style="display:none;"<? }?>>
+						<label for="">Price or
+						additional information:</label>
+						<textarea name="meta_official_vendor_addtl_info" class="text tinymce"><? $doc->htmlspecialwrite('official_vendor_addtl_info'); ?></textarea>
+				</p>
+                                <br/>
+<!-- END Official Vendor -->
+<!-- BEGIN Terms of Service -->
+				<p class="input">
+					<label for="">Are there terms of service?</label>
+					<input type="radio" name="meta_has_terms_of_service" value="yes" id="has_terms_of_service_yes" onchange="chtos();" <? if ($doc->has_terms_of_service=="yes") {?>checked<? } ?>> Yes
+					<input type="radio" name="meta_has_terms_of_service" value="no" id="has_terms_of_service_no" onchange="chtos();"<? if ($doc->has_terms_of_service=="no" || !$doc->saved()) {?>checked<? } ?>> No
+				</p>
+
+				<p class="input" id="terms_of_service_url" <? if (!$doc->saved() || $doc->terms_of_service_url=='') { ?>style="display:none;"<? }?>>
+					<label for="">URL:</label>
+					<input type="text" name="meta_terms_of_service_url" class="text tinymce"><? $doc->htmlspecialwrite('terms_of_service_url'); ?></input>
+				</p>
+                                <br/>
+<!-- END Terms of Service -->
+<!-- BEGIN Enabling Legislation Etc -->
+				<p class="input">
+					<label for="">Is there enabling legislation for this jurisdiction or other statutory authority?</label>
+					<input type="radio" name="meta_has_enabling_legislation_etc" value="yes" id="has_enabling_legislation_etc_yes" onchange="chenablinglegislation();" <? if ($doc->has_enabling_legislation_etc=="yes") {?>checked<? } ?>> Yes
+					<input type="radio" name="meta_has_enabling_legislation_etc" value="no" id="has_enabling_legislation_etc_no" onchange="chenablinglegislation();"<? if ($doc->has_enabling_legislation_etc=="no" || !$doc->saved()) {?>checked<? } ?>> No
+				</p>
+
+				<p class="input" id="enabling_legislation_etc_info" <? if (!$doc->saved() || $doc->enabling_legislation_etc_info=='') { ?>style="display:none;"<? }?>>
+					<label for="">Please describe, including URLs where possible:</label>
+					<input type="text" name="meta_enabling_legislation_etc_info" class="text tinymce"><? $doc->htmlspecialwrite('enabling_legislation_etc_info'); ?></input>
+				</p>
+                                <br/>
+<!-- END Enabling Legislation Etc -->
+<!-- BEGIN Other Information -->
+                                <p class="input">
+						<label for="">Any other information we should know?</label>
+						<textarea name="meta_additional_information" class="text tinymce"><? $doc->htmlspecialwrite('additional_information'); ?></textarea>
+                                </p>
+                                <br/>
+<!-- END Other Information -->
+<!-- BEGIN Attach File(s) -->
 					<p class="input">
-						<label for="supporting_evidence">
-							Supporting information:
-						</label>
-						<textarea name="meta_supporting_evidence" class="text tinymce"><? $doc->htmlspecialwrite('supporting_evidence'); ?></textarea>
-					</p>
-					
-					<p class="input">
-						<label for="file1">Attach File</label>
+						<label for="file1">Attach file, if any</label>
 					</p>
 					<div id="files">
 						<? if ($doc->saved() && $doc->files()->count() > 0) {
@@ -204,10 +261,9 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 						<label for="file2">&nbsp;</label>
 						<a href="#" onclick="return addFile()";>Add Another File</a>
 					</p>
+<!-- END Attach File(s) -->
 	
-					<p class="input nextbutton"><a href="#status" class="littlebutton" onclick="return nextSection('why','status');">Next</a></p>
-	
-	
+					<p class="input nextbutton"><a href="#status" class="littlebutton" onclick="return nextSection('addtl_info','status');">Next</a></p>
 				</fieldset>
 			<? } ?>
 
@@ -337,6 +393,37 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 
 
 <script>
+
+	function chofficialvendor() { 
+		if ($('#has_official_vendor_yes').attr('checked')) { 
+			$('#official_vendor_name').show();
+			$('#official_vendor_url').show();
+			$('#official_vendor_addtl_info').show();
+		} else {
+			$('#official_vendor_name').hide();
+			$('#official_vendor_url').hide();
+			$('#official_vendor_addtl_info').hide();
+		}
+		return false;
+	}
+
+	function chtos() { 
+		if ($('#has_terms_of_service_yes').attr('checked')) { 
+			$('#terms_of_service_url').show();
+		} else {
+			$('#terms_of_service_url').hide();
+		}
+		return false;
+	}
+
+	function chenablinglegislation() { 
+		if ($('#has_enabling_legislation_etc_yes').attr('checked')) { 
+			$('#enabling_legislation_etc_info').show();
+		} else {
+			$('#enabling_legislation_etc_info').hide();
+		}
+		return false;
+	}
 
 	function chcontact() { 
 		if ($('#contacted_yes').attr('checked')) { 

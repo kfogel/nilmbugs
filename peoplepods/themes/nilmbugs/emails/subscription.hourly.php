@@ -1,10 +1,10 @@
 <?
 	
-	$subject = "New activity on your MediaBugs.org bugs";
+	$subject = "New activity on your NILM bugs";
 
 ?>
 
-There has been fresh activity on bugs you are tracking on MediaBugs.org!
+There has been fresh activity on bugs you are tracking in the NILM Bug Tracker!
 
 <?= $message; ?>
 

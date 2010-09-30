@@ -133,11 +133,11 @@
 		} else {
 			$('#tab_what').addClass('completed');	
 		}
-		if (!validateSection('why')) { 
-			showFileSection('why');
+		if (!validateSection('addtl_info')) { 
+			showFileSection('addtl_info');
 			return false;
 		} else {
-			$('#tab_why').addClass('completed');	
+			$('#tab_addtl_info').addClass('completed');	
 		}
 		if (!validateSection('status')) { 
 			showFileSection('status');
@@ -182,7 +182,7 @@
 			}
 			if (sectionName=='what') { 
 			
-					if ($('#bug').validate().element('#bug_type') && $('#bug').validate().element('#bug_body') && $('#bug').validate().element('#report_date')) {
+					if ($('#bug').validate().element('#bug_body') && $('#bug').validate().element('#report_date')) {
 						return true;
 					} else {
 						return false;
@@ -211,7 +211,7 @@
 		}
 	
 		function showFileSection(sectionName) { 
-			sections = ['report','what','why','status'];
+			sections = ['report','what','addtl_info','status'];
 		
 			passed = false;
 				

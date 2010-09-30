@@ -8,7 +8,7 @@
 		$user = $POD->getPerson(array('email'=>$_GET['email']));
 		if ($user->success()) { 
 			$user->removeMeta('newsletter');
-			$POD->header('Unsubscribed from MediaBugs');
+			$POD->header('Unsubscribed from the NILM Bug Tracker');
 			$user->output('unsubscribed');
 			$POD->footer();
 		} else {
