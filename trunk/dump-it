@@ -7,5 +7,11 @@ echo ""
 echo "You are being prompted ${DB_USER}'s MySQL password below:"
 echo ""
 
+# If there's a 'dumps' directory, use it, but don't create it if not.
+DUMPS_DIR=""
+if [ -d dumps ]; then
+  DUMPS_DIR="dumps/"
+fi
+
 mysqldump -u ${DB_USER} -p --default-character-set=utf8 nilmbugs \
-   > nilmbugs-dump-${DATE_SOLID}.sql
+   > ${DUMPS_DIR}nilmbugs-dump-${DATE_SOLID}.sql
