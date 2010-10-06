@@ -116,7 +116,7 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 					
 					<p class="input" id="media_outlet_search">
 							<label for="media_outlet">Name of Jurisdiction<span class="required">*</label>
-							<input name="media_outlet" id="media_outlet_q" class="text required" value="<? if ($media_outlet) { $media_outlet->htmlspecialwrite('headline'); }  if ($doc->suggested_outlet) { $doc->htmlspecialwrite('suggested_outlet'); } ?>" onblur="mo_newcheck();" title="Pick a jurisdiction from the list, or register a new jurisdiction by entering its full name." />
+							<input name="media_outlet" id="media_outlet_q" class="text required" value="<? if ($media_outlet) { $media_outlet->htmlspecialwrite('headline'); }  if ($doc->suggested_outlet) { $doc->htmlspecialwrite('suggested_outlet'); } ?>" onblur="mo_newcheck();" title="Please enter the jurisdiction's full name.  If there are already bug reports about this jurisdiction, try to write the jurisdiction's name the same way those bugs do." />
 							<input name="meta_media_outlet" type="hidden" value="<? $doc->media_outlet; ?>" id="media_outlet_id" />
 					</p>
 		
