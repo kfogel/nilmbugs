@@ -117,16 +117,18 @@ Installation Instructions:
      toggle_bot
      lgviolation
 
-     NOTE: And make sure 'core_dashboard' is not checked.  It may be
-     turned on by default, or is somehow get turned on after you hit
-     save.  Just uncheck it and re-save.  (Often when things aren't
-     behaving right, it's because the wrong pod accidentally got
-     enabled through mis-click -- Ben Brow clued me in to this.)
+     NOTE:
 
-     'core_authentication_login' and 'core_api_simple' might also be
-     defaulted to ON -- you can turn them OFF after you've turned
-     'mediabugs_api' and 'mediabugs_authentication' ON.  I'm not sure
-     it's necessary to turn them off, but it doesn't seem to hurt.
+     Make sure 'core_dashboard' is not checked after you hit save.
+     Same with 'core_authentication_login' and 'core_api_simple'.
+     These may be turned on by default, or is somehow get turned on
+     after you hit save -- if so, just uncheck them and re-save.  Yes,
+     turning 'core_authentication_login' off is safe after you've
+     turned on 'mediabugs_api' and 'mediabugs_authentication'.
+
+     (Often when things aren't behaving right, it's because the wrong
+     pod accidentally got enabled through mis-click -- Ben Brown clued
+     me in to this.)
 
   8. Set the theme.  Click "Options" in the left vertical
      nav, then click "Activate" for the "NILM Bugs Theme".
