@@ -13,7 +13,6 @@
 * http://peoplepods.net/readme/new-content-type
 /**********************************************/
 
-$bug_types = $POD->bugTypes();
 $violations = $POD->getLawGovViolations();
 
 if ($doc->saved()) {
@@ -45,10 +44,10 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 <ul id="bug_tabs">
 	<? if (!$doc->saved()) { ?>
 	<li id="tab_report" class="active">
-		<a href="#" onclick="return tabClick('report');">Report a Bug</a>
+		<a href="#" onclick="return tabClick('report');">Describe Jurisdiction</a>
 	</li>
 	<li id="tab_what">
-		<a href="#" onclick="return tabClick('what');">Bug Details</a>
+		<a href="#" onclick="return tabClick('what');">Describe Violation</a>
 	</li>
 	<li id="tab_addtl_info">
 		<a href="#" onclick="return tabClick('addtl_info');">Additional Info</a>
@@ -80,7 +79,7 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 				<input type="hidden" name="type" value="bug" />		
 	
 				<fieldset id="report">
-					<legend>Report a Bug</legend>
+					<legend>Describe Jurisdiction</legend>
 					
 					<? $instructions_report->output('interface_text'); ?>
 	
@@ -111,12 +110,12 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 	
 	
 					<p class="input">
-						<label for="headline">New Bug<span class="required">*</span></label>
+						<label for="headline">Name of Bug<span class="required">*</span></label>
 						<input name="headline" id="headline" value="<? if ($doc->htmlspecialwrite('headline')) { echo $doc->htmlspecialwrite('headline'); } else { echo 'law bug'; } ?>" length="50" class="text required" title='You can leave this as "law bug", or if you wish you can replace it with a brief description of the problem (try for 10 words or fewer).'/>
 					</p>
 					
 					<p class="input" id="media_outlet_search">
-							<label for="media_outlet">Jurisdiction: <span class="required">*</label>
+							<label for="media_outlet">Name of Jurisdiction<span class="required">*</label>
 							<input name="media_outlet" id="media_outlet_q" class="text required" value="<? if ($media_outlet) { $media_outlet->htmlspecialwrite('headline'); }  if ($doc->suggested_outlet) { $doc->htmlspecialwrite('suggested_outlet'); } ?>" onblur="mo_newcheck();" title="Pick a jurisdiction from the list, or register a new jurisdiction by entering its full name." />
 							<input name="meta_media_outlet" type="hidden" value="<? $doc->media_outlet; ?>" id="media_outlet_id" />
 					</p>
@@ -127,18 +126,46 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 					
 					<p class="input">
 						<label for="jurisdiction_contact">
-							Specific collection or point of contact.
+							Point of Contact
 						</label>
 						<input type="text" name="meta_jurisdiction_contact" value="<? $doc->htmlspecialwrite('jurisdiction_contact'); ?>" class="text" title='For example, "Attorney General Opinions", or the name/address of the official point of contact (e.g., chief judge, clerk, solicitor general, secretary of state).'/>
+
+						<label for="jurisdiction_contact_mailing_address">
+							Mailing Address
+						</label>
+						<textarea rows="5" cols="40" name="meta_jurisdiction_contact_mailing_address" id="jurisdiction_contact_mailing_address" title="The mailing address for the Point of Contact." ><? $doc->htmlspecialwrite('jurisdiction_contact_mailing_address'); ?></textarea>
 					</p>
 		
 					<p class="input">
 						<label for="jurisdiction_url">
-							URL of jurisdiction
+							Jurisdiction URL
 						</label>
 						<input type="text" name="meta_jurisdiction_url" value="<? $doc->htmlspecialwrite('jurisdiction_url'); ?>" class="text" title='The main URL (web page) for the jurisdiction, if any.  Leave blank if none or unknown.'/>
 					</p>
 		
+					<p class="input">
+						<label for="jurisdiction_level">
+							What level is this jurisdiction? <span class="required">*</span>
+						</label>
+						<select name="meta_jurisdiction_level" id="jurisdiction_level" class="text required">
+							<option value="Federal" >Federal</option>
+							<option value="State" >State</option>
+							<option value="Local" >Local</option>
+							<option value="Other" >Other</option>
+						</select>
+					</p>
+
+					<p class="input">
+						<label for="jurisdiction_branch">
+							What branch is this jurisdiction? <span class="required">*</span>
+						</label>
+						<select name="meta_jurisdiction_branch" id="jurisdiction_branch" class="text required">
+							<option value="Executive" >Executive</option>
+							<option value="Judicial" >Judicial</option>
+							<option value="Legislative" >Legislative</option>
+						</select>
+					</p>
+
 					<p class="input nextbutton"><a href="#who" class="littlebutton" onclick="return nextSection('report','what');">Next</a></p>
 				</fieldset>
 	
@@ -156,7 +183,6 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
                                                 <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
                                                         <input type="checkbox" name="meta_bug_lgv_<?= $violation->id; ?>" id="bug_lgv_<?= $violation->id; ?>" value="<?= $violation->stub; ?>">&nbsp;<? echo $violation->permalink(); ?></input><br/>
 						<? } ?>
-						</select>
 					</p>
 				
 					<p class="input">
