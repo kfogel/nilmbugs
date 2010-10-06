@@ -8,3 +8,6 @@ build:
 
 dist:
 	@./dist.sh
+
+dump:
+	@./dump-it
