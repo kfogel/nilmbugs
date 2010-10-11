@@ -28,9 +28,10 @@ Installation Instructions
   2. Follow the instructions in ./nilmbugs/README, but with these
      differences: 
 
-       a) Serve the live web site from nilmbugs/nilmbugs here.  In
-          other words, you'll probably have to add one extra level of
-          "/nilmbugs" to the path, in the obvious way.
+       a) Serve the live web site from nilmbugs/nilmbugs.  I.e., one
+          level deeper than the generic mediabugs-open instructions
+          say -- you'll be adding one extra level of "/nilmbugs" to
+          the path, in the obvious way.
 
        b) When activating pods, make sure to also turn on the
           'lgviolation' pod.
