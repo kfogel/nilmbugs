@@ -7,7 +7,10 @@ if [ -L nilmbugs/PeoplePods.php -a -L nilmbugs/lib ]; then
   rm -rf nilmbugs
 fi
 
-# Remove the symlink kluge.
+# Remove the symlink kluges.
 if [ -L PeoplePods.php ]; then
-  rm -rf PeoplePods.php
+  rm PeoplePods.php
+fi
+if [ -L lib ]; then
+  rm lib
 fi
