@@ -1,6 +1,0 @@
-#!/bin/sh
-
-touch .htaccess
-chmod 777 .htaccess
-chmod -R 777 peoplepods/files
-chmod -R 777 peoplepods/lib/etc
