@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Give us a fresh start.
+
+# Remove the 'nilmbugs' directory, but first make sure it's the right one:
+if [ -L nilmbugs/PeoplePods.php -a -L nilmbugs/lib ]; then
+  rm -rf nilmbugs
+fi
+
+# Remove the symlink kluge.
+if [ -L PeoplePods.php ]; then
+  rm -rf PeoplePods.php
+fi

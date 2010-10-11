@@ -1,13 +1,13 @@
-# Default rule will probably change to 'build' once the PeoplePods
-# provisioning is sorted out.  For now, the 'build' rule does nothing.
-
 default: dist
 
-build:
-	@./build.sh
+deploy:
+	@./build
 
 dist:
 	@./dist.sh
 
 dump:
 	@./dump-it
+
+clean:
+	@./cleanup

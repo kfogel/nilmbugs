@@ -1,1 +1,0 @@
-<ul class="stack_output <? if ($title) {?>stack_<?  echo $POD->tokenize($title); } ?>">

@@ -1,1 +1,0 @@
-<p class="did_you_mean">Would you rather see bugs reported on <?= $doc->mediaOutletBrowseLink(); ?>?</p>
