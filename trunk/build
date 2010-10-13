@@ -8,7 +8,9 @@ MEDIABUGS_SVN=mediabugs-open.googlecode.com/svn/trunk/
 # already present.  Note we could unconditionally check it out -- if
 # it were already here, it would just get updated.  But that's not a
 # very predictable behavior; better to let updates be manual.
-if [ ! -d nilmbugs ]; then
+if [ -d nilmbugs ]; then
+    echo "'nilmbugs' directory already present"
+else
   if svn checkout ${MEDIABUGS_RW}://${MEDIABUGS_SVN} nilmbugs; then
     echo "Checked out read/write copy of mediabugs-open."
   else
@@ -16,8 +18,6 @@ if [ ! -d nilmbugs ]; then
     svn checkout ${MEDIABUGS_RO}://${MEDIABUGS_SVN} nilmbugs
     echo "Checked out read-only copy of mediabugs-open."
   fi
-else
-    echo "'nilmbugs' directory already present"
 fi
 
 # Run the build recipe for MediaBugs.
