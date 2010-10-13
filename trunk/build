@@ -9,9 +9,12 @@ MEDIABUGS_SVN=mediabugs-open.googlecode.com/svn/trunk/
 # it were already here, it would just get updated.  But that's not a
 # very predictable behavior; better to let updates be manual.
 if [ ! -d nilmbugs ]; then
-  if ! svn checkout ${MEDIABUGS_RW}://${MEDIABUGS_SVN} nilmbugs; then
+  if svn checkout ${MEDIABUGS_RW}://${MEDIABUGS_SVN} nilmbugs; then
+    echo "Checked out read/write copy of mediabugs-open."
+  else
     echo "Doing a read-only checkout of mediabugs-open:"
     svn checkout ${MEDIABUGS_RO}://${MEDIABUGS_SVN} nilmbugs
+    echo "Checked out read-only copy of mediabugs-open."
   fi
 else
     echo "'nilmbugs' directory already present"
