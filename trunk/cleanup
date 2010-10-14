@@ -2,12 +2,18 @@
 
 # Give us a fresh start.
 
-# Remove the 'nilmbugs' directory, but first make sure it's the right one:
-if [ -L nilmbugs/PeoplePods.php -a -L nilmbugs/lib ]; then
-  rm -rf nilmbugs
+# Remove 'mediabugs-open' directory after making sure it's the right one.
+if [ -L mediabugs-open/PeoplePods.php -a -L mediabugs-open/lib ]; then
+  rm -rf mediabugs-open
 fi
 
 # Remove the symlink kluges.
+if [ -L .htaccess ]; then
+  rm .htaccess
+fi
+if [ -L peoplepods ]; then
+  rm peoplepods
+fi
 if [ -L PeoplePods.php ]; then
   rm PeoplePods.php
 fi
