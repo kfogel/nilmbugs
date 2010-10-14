@@ -44,7 +44,6 @@
 		<? $welcome_message->output('interface_text'); ?>
 		<div id="homepage_submit">
 			<a href="<? $POD->siteRoot(); ?>/bugs/edit" class="button with_right_margin">Report a Bug Now</a>
-			<a href="<? $POD->siteRoot(); ?>/pages/what-is-an-nilm-bug" class="button">What is an NILM Bug?</a>
 			<div class="clearer"></div>
 		</div>
 		<div class="clearer"></div>	
@@ -82,8 +81,6 @@
 			
 		<? $POD->output('sidebars/recent_bugs'); ?>
 		
-		<? $POD->output('sidebars/twitter'); ?>
-
 		<? $POD->output('sidebars/browse'); ?>
 	</div>
 
@@ -92,9 +89,6 @@
 	<div id="below_fold">	
 		<div class="column_3">
 			<? $POD->output('sidebars/member_leaderboard'); ?>
-		</div>
-		<div class="column_7 last">
-			<? $POD->output('sidebars/recent_blogs'); ?>
 		</div>
 		<div class="clearer"></div>
 	</div>
