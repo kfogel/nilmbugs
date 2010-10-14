@@ -12,13 +12,12 @@ Installation Overview
 =====================
 
   When you run the installation instructions below, a new directory
-  also named 'nilmbugs' gets created here.  The mediabugs-open tree is
-  checked out into it, and mediabugs-open in turn checks out the
-  PeoplePods library.  The deployment script also does some symlinking
-  to make sure some PHP code can find other PHP code.  When all is
-  said and done, the live web site is run out of the lower 'nilmbugs'
-  subdirectory (so if the current directory is named 'nilmbugs' too,
-  as is likely, then you'll have nilmbugs/nilmbugs/.htaccess, etc.)
+  'mediabugs-open' is created here and the mediabugs-open tree is
+  checked out into it (mediabugs-open in turn fetches the PeoplePods
+  library).  Then some symlinking happens so various PHP code can find
+  other PHP code.  When it's all over, the live web site runs out of
+  this directory, and some stuff under mediabugs-open is reached via
+  symlinks that the deployment script set up.
 
 Installation Instructions
 =========================
@@ -26,17 +25,18 @@ Installation Instructions
   1. Run 'make deploy'.
 
   2. Follow the instructions in ./nilmbugs/README, but with these
-     differences: 
+     (fairly self-explanatory) differences: 
 
-       a) Serve the live web site from nilmbugs/nilmbugs.  I.e., one
-          level deeper than the generic mediabugs-open instructions
-          say -- you'll be adding one extra level of "/nilmbugs" to
-          the path, in the obvious way.
+       a) Use 'nilmbugs' for the database name and user 'nilmbugsrw',
+          instead of 'mediabugs' / 'mediabugsrw'.
 
-       b) When activating pods, make sure to also turn on the
+       b) Serve the live web site from the current directory (i.e.,
+          the directory this README is in).
+
+       c) When activating pods, make sure to also turn on the
           'lgviolation' pod.
 
-       c) Where it says to choose the "MediaBugs" theme, choose
+       d) Where it says to choose the "MediaBugs" theme, choose
           the "NILM Bugs" theme instead. 
 
   3. Run the 'seed-db' script in the current directory to create the

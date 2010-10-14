@@ -4,29 +4,31 @@ MEDIABUGS_RO=http
 MEDIABUGS_RW=https
 MEDIABUGS_SVN=mediabugs-open.googlecode.com/svn/trunk/
 
-# Check out the mediabugs-open core code into 'nilmbugs', unless
-# already present.  Note we could unconditionally check it out -- if
-# it were already here, it would just get updated.  But that's not a
-# very predictable behavior; better to let updates be manual.
-if [ -d nilmbugs ]; then
-    echo "'nilmbugs' directory already present"
+# Check out the mediabugs-open core code, unless it's already present.
+# Note we could unconditionally check it out -- if it were already
+# here, it would just get updated.  But that's not a very predictable
+# behavior; it's better for updates to be manual and intentional.
+if [ -d mediabugs-open ]; then
+    echo "'mediabugs-open' directory already present"
 else
-  if svn checkout ${MEDIABUGS_RW}://${MEDIABUGS_SVN} nilmbugs; then
+  if svn checkout ${MEDIABUGS_RW}://${MEDIABUGS_SVN} mediabugs-open; then
     echo "Checked out read/write copy of mediabugs-open."
   else
     echo "Doing a read-only checkout of mediabugs-open:"
-    svn checkout ${MEDIABUGS_RO}://${MEDIABUGS_SVN} nilmbugs
+    svn checkout ${MEDIABUGS_RO}://${MEDIABUGS_SVN} mediabugs-open
     echo "Checked out read-only copy of mediabugs-open."
   fi
 fi
 
 # Run the build recipe for MediaBugs.
-(cd nilmbugs; make deploy)
+(cd mediabugs-open; make deploy)
 
-# Symlink in the stuff nilmbugs needs that's not already in MediaBugs.
-ln -s "../../../pods/lgviolation" nilmbugs/peoplepods/pods/lgviolation
-ln -s "../../../themes/nilmbugs" nilmbugs/peoplepods/themes/nilmbugs
+# The current directory is the "top" of the install; symlink accordingly.
+ln -s "../../../themes/nilmbugs" mediabugs-open/peoplepods/themes/nilmbugs
+ln -s "../../../pods/lgviolation" mediabugs-open/peoplepods/pods/lgviolation
+ln -s mediabugs-open/peoplepods peoplepods
+ln -s mediabugs-open/.htaccess .htaccess
 
-# Oh yay, another symlink kluge to match the one in MediaBugs.
-ln -s "nilmbugs/peoplepods/PeoplePods.php" PeoplePods.php
-ln -s "nilmbugs/peoplepods/lib" lib
+# Yet another symlink kluge, similar to one in MediaBugs itself.
+ln -s "mediabugs-open/peoplepods/PeoplePods.php" PeoplePods.php
+ln -s "mediabugs-open/peoplepods/lib" lib
