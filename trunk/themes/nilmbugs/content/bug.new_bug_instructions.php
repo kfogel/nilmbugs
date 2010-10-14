@@ -40,13 +40,5 @@
 	
 	<p>You can link to your bug using the full url, below:</p>
 	<p class="input"><input value="<? $doc->write('permalink'); ?>" class="text" /></p>
-	
-	<p>Or use the shortened url:</p>
-	<p class="input"><input value="<?= $doc->shortURL(); ?>" class="text"/></p>
-	
-	<p>
-	<a href="<?= $doc->createTweet(); ?>" class="littlebutton with_right_margin">Tweet this Bug</a>
-	<a href="<? $POD->siteRoot(); ?>/send?id=<?= $doc->id; ?>" class="littlebutton">Email this Bug</a>
-	</p>
 	<div class="clearer"></div>
 </div>
