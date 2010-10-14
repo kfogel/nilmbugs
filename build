@@ -25,11 +25,13 @@ fi
 # deploying mediabugs-open.  So we set that up temporily...
 sed -e 's|/bin/sh|/bin/bash|' < mediabugs-open/build > mediabugs-open/btmp
 mv mediabugs-open/btmp mediabugs-open/build
+chmod a+x mediabugs-open/build
 # ...then run the build recipe for MediaBugs...
 (cd mediabugs-open; make deploy)
 # ...then revert it back to /bin/sh.
 sed -e 's|/bin/bash|/bin/sh|' < mediabugs-open/build > mediabugs-open/btmp
 mv mediabugs-open/btmp mediabugs-open/build
+chmod a+x mediabugs-open/build
 
 # The current directory is the "top" of the install; symlink accordingly.
 if [ -e mediabugs-open/peoplepods/themes/nilmbugs ]; then
