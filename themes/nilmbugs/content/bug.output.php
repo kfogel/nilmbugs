@@ -65,10 +65,8 @@ if ($POD->isAuthenticated()) {
 			</div>
 			<div class="clearer"></div>			
 			<div id="media_info">
-				<? $media_outlet->output('outlet.widget'); ?>
 				<div class="media_info_text">
-					This bug appeared in <strong><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $media_outlet->id; ?>"><?= $media_outlet->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
-					<? if ($doc->link) { ?><strong><a href="<?= $doc->link; ?>">View the original news report</a></strong>.<? } ?>
+					This bug was reported against <strong><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $media_outlet->id; ?>"><?= $media_outlet->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
 				</div>
 				<div class="clearer"></div>			
 			</div>
@@ -131,7 +129,7 @@ if ($POD->isAuthenticated()) {
 
 				<h3>Response</h3>
 				<? if ($doc->get('media_outlet_contacted')=='yes') { ?>
-					<p><? $doc->author()->permalink(); ?> has contacted <?= $media_outlet->mediaOutletBrowseLink(); ?>
+					<p><? $doc->author()->permalink(); ?> has contacted <?= $media_outlet->bugTargetBrowseLink(); ?>
 						<? if ($doc->media_outlet_response) {?> and received the following response.<? } ?>
 					</p>
 					<div id="media_outlet_response">
@@ -141,7 +139,7 @@ if ($POD->isAuthenticated()) {
 					</div>
 	
 				<? } else { ?>
-					<p><? $doc->author()->permalink(); ?> has not contacted <?= $media_outlet->mediaOutletBrowseLink(); ?></p>
+					<p><? $doc->author()->permalink(); ?> has not contacted <?= $media_outlet->bugTargetBrowseLink(); ?></p>
 				<? } ?>
 			</div>
 
