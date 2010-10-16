@@ -165,9 +165,9 @@
 				tinyMCE.triggerSave();
 			}
 			if (sectionName=='report') { 
-				if ($('#bug').validate().element('#headline') && $('#bug').validate().element('#media_outlet_q')) {
-					if ($('#media_outlet_new').css('display')=='block') {
-						if ($('#new_media_outlet_print').attr('checked')||$('#new_media_outlet_tv').attr('checked')||$('#new_media_outlet_radio').attr('checked')||$('#new_media_outlet_online').attr('checked')) {
+				if ($('#bug').validate().element('#headline') && $('#bug').validate().element('#jurisdiction_q')) {
+					if ($('#jurisdiction_new').css('display')=='block') {
+						if ($('#new_jurisdiction_print').attr('checked')||$('#new_jurisdiction_tv').attr('checked')||$('#new_jurisdiction_radio').attr('checked')||$('#new_jurisdiction_online').attr('checked')) {
 							return true;
 						} else {
 							// display custom error

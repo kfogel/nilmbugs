@@ -1,10 +1,10 @@
 <?
 
-	$open_bugs = $POD->getContents(array('type'=>'bug','media_outlet'=>$doc->id,'bug_status:like'=>'open%'));
-	$closed_bugs = $POD->getContents(array('type'=>'bug','media_outlet'=>$doc->id,'bug_status:like'=>'closed%'));
+	$open_bugs = $POD->getContents(array('type'=>'bug','bug_target'=>$doc->id,'bug_status:like'=>'open%'));
+	$closed_bugs = $POD->getContents(array('type'=>'bug','bug_target'=>$doc->id,'bug_status:like'=>'closed%'));
 
 ?>
-<div id="media_outlet_sidebar">
+<div id="jurisdiction_sidebar">
 <h3><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $doc->id; ?>"><?= $doc->headline; ?></a></h3>
 
 <? if ($doc->link) { ?>
