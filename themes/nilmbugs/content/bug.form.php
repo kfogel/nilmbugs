@@ -16,7 +16,7 @@
 $violations = $POD->getLawGovViolations();
 
 if ($doc->saved()) {
-	$media_outlet = $POD->getContent(array('id'=>$doc->media_outlet));
+	$jurisdiction = $POD->getContent(array('id'=>$doc->bug_target));
 }
 
 // after 15 minutes, users can only edit the last little piece.
@@ -114,13 +114,13 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 						<input name="headline" id="headline" value="<? if ($doc->htmlspecialwrite('headline')) { echo $doc->htmlspecialwrite('headline'); } else { echo 'law bug'; } ?>" length="50" class="text required" title='You can leave this as "law bug", or if you wish you can replace it with a brief description of the problem (try for 10 words or fewer).'/>
 					</p>
 					
-					<p class="input" id="media_outlet_search">
-							<label for="media_outlet">Name of Jurisdiction<span class="required">*</label>
-							<input name="media_outlet" id="media_outlet_q" class="text required" value="<? if ($media_outlet) { $media_outlet->htmlspecialwrite('headline'); }  if ($doc->suggested_outlet) { $doc->htmlspecialwrite('suggested_outlet'); } ?>" onblur="mo_newcheck();" title="Please enter the jurisdiction's full name.  If there are already bug reports about this jurisdiction, try to write the jurisdiction's name the same way those bugs do." />
-							<input name="meta_media_outlet" type="hidden" value="<? $doc->media_outlet; ?>" id="media_outlet_id" />
+					<p class="input" id="jurisdiction_search">
+							<label for="bug_target">Name of Jurisdiction<span class="required">*</label>
+							<input name="bug_target" id="jurisdiction_q" class="text required" value="<? if ($jurisdiction) { $jurisdiction->htmlspecialwrite('headline'); }  if ($doc->suggested_outlet) { $doc->htmlspecialwrite('suggested_outlet'); } ?>" onblur="mo_newcheck();" title="Please enter the jurisdiction's full name.  If there are already bug reports about this jurisdiction, try to write the jurisdiction's name the same way those bugs do." />
+							<input name="meta_bug_target" type="hidden" value="<? $doc->bug_target; ?>" id="jurisdiction_id" />
 					</p>
 		
-					<div  id="media_outlet_new" style="display:none;">
+					<div  id="jurisdiction_new" style="display:none;">
 						<p class="input"><strong>You are the first person to report a bug about this jurisdiction.</strong></p>
 					</div>
 					
@@ -340,7 +340,7 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 					<input type="radio" name="meta_media_outlet_contacted" value="no" id="contacted_no" onchange="chcontact();"<? if ($doc->media_outlet_contacted=="no" || !$doc->saved()) {?>checked<? } ?>> No
 				</p>
 				
-				<p class="input" id="media_response" <? if (!$doc->saved() || $doc->media_outlet_response=='') { ?>style="display:none;"<? }?>>
+				<p class="input" id="jurisdiction_response" <? if (!$doc->saved() || $doc->media_outlet_response=='') { ?>style="display:none;"<? }?>>
 					<label for="">What was the jurisdiction's response?</label>
 					<textarea name="meta_media_outlet_response" class="text tinymce"><? $doc->htmlspecialwrite('media_outlet_response'); ?></textarea>
 				</p>
@@ -453,9 +453,9 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 
 	function chcontact() { 
 		if ($('#contacted_yes').attr('checked')) { 
-			$('#media_response').show();
+			$('#jurisdiction_response').show();
 		} else {
-			$('#media_response').hide();	
+			$('#jurisdiction_response').hide();	
 		}
 		return false;
 	}
@@ -463,22 +463,22 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 	function mo_outletupdate(json) {
 	
 		if (json.id) {
-			$('#media_outlet_id').val(json.id);
-		//	$('#media_outlet_new').hide();
+			$('#jurisdiction_id').val(json.id);
+		//	$('#jurisdiction_new').hide();
 		} else {
-			$('#media_outlet_id').val('');
-		//	$('#media_outlet_new').show();		
+			$('#jurisdiction_id').val('');
+		//	$('#jurisdiction_new').show();		
 		}
 	
 	}
 	function mo_newcheck() { 
-		var val = $('#media_outlet_q').val();
+		var val = $('#jurisdiction_q').val();
 		$.getJSON('/api?method=mediaoutletcheck&outlet='+escape(val),mo_outletupdate);
 	}
 
 	$().ready(function() { 
 	
-			$('#media_outlet_q').autocomplete('/api',{
+			$('#jurisdiction_q').autocomplete('/api',{
 					autoFill: false,
 					selectFirst: false,
 					mustMatch: false,

@@ -11,7 +11,7 @@
 * Documentation for this pod can be found here:
 * http://peoplepods.net/readme/themes
 /**********************************************/
-	$media_outlet = $POD->getContent(array('id'=>$doc->media_outlet));
+	$jurisdiction = $POD->getContent(array('id'=>$doc->bug_target));
 
 ?>	<li id="<? $doc->write('id'); ?>" style="margin-bottom:10px;">	
 		<span class="draghandle" style="font-size:40px; margin-right:20px; color: #CCC;">+</span>

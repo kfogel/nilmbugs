@@ -12,7 +12,7 @@
 * http://peoplepods.net/readme/themes
 /**********************************************/
 
-$media_outlet = $POD->getContent(array('id'=>$doc->media_outlet));
+$jurisdiction = $POD->getContent(array('id'=>$doc->bug_target));
 $violations = $POD->getLawGovViolations();
 
 $subscribed = false;
@@ -66,7 +66,7 @@ if ($POD->isAuthenticated()) {
 			<div class="clearer"></div>			
 			<div id="media_info">
 				<div class="media_info_text">
-					This bug was reported against <strong><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $media_outlet->id; ?>"><?= $media_outlet->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
+					This bug was reported against <strong><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $jurisdiction->id; ?>"><?= $jurisdiction->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
 				</div>
 				<div class="clearer"></div>			
 			</div>
@@ -129,7 +129,7 @@ if ($POD->isAuthenticated()) {
 
 				<h3>Response</h3>
 				<? if ($doc->get('media_outlet_contacted')=='yes') { ?>
-					<p><? $doc->author()->permalink(); ?> has contacted <?= $media_outlet->bugTargetBrowseLink(); ?>
+					<p><? $doc->author()->permalink(); ?> has contacted <?= $jurisdiction->bugTargetBrowseLink(); ?>
 						<? if ($doc->media_outlet_response) {?> and received the following response.<? } ?>
 					</p>
 					<div id="media_outlet_response">
@@ -139,7 +139,7 @@ if ($POD->isAuthenticated()) {
 					</div>
 	
 				<? } else { ?>
-					<p><? $doc->author()->permalink(); ?> has not contacted <?= $media_outlet->bugTargetBrowseLink(); ?></p>
+					<p><? $doc->author()->permalink(); ?> has not contacted <?= $jurisdiction->bugTargetBrowseLink(); ?></p>
 				<? } ?>
 			</div>
 
