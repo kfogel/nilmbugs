@@ -110,8 +110,8 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 	
 	
 					<p class="input">
-						<label for="headline">Name of Bug<span class="required">*</span></label>
-						<input name="headline" id="headline" value="<? if ($doc->htmlspecialwrite('headline')) { echo $doc->htmlspecialwrite('headline'); } else { echo 'law bug'; } ?>" length="50" class="text required" title='You can leave this as "law bug", or if you wish you can replace it with a brief description of the problem (try for 10 words or fewer).'/>
+						<label for="headline">Summary of Problem<span class="required">*</span></label>
+						<input name="headline" id="headline" value="<? if ($doc->htmlspecialwrite('headline')) { echo $doc->htmlspecialwrite('headline'); } ?>" length="50" class="text required" title='Give a very brief summary of the problem, trying for 10 words or fewer.  For example (these are made up): "Springfield charges fees" or "4th circuit appeals court requires Flash".'/>
 					</p>
 					
 					<p class="input" id="jurisdiction_search">
