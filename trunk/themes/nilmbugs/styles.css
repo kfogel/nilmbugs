@@ -144,8 +144,6 @@
 	
 	#bug_output  .bug_status { float: left; background: #e7e8e9; text-align: center; height: 80px; width: 80px; -moz-border-radius: 12px; -webkit-border-radius: 12px; margin-right: 20px; font-family: Helvetica, sans serif; font-weight: bold; color: #888; }
 
-	#media_outlet_widget { float: left; width: 80px;  margin-right: 20px; } 
-
 	#bug_info { margin-bottom:10px; } 
 	#bug_info h1 { margin-bottom: 5px; }
 	#bug_info .byline { color: #888; margin-bottom:5px; display:block; }
