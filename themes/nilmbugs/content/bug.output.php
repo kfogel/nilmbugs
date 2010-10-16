@@ -66,7 +66,7 @@ if ($POD->isAuthenticated()) {
 			<div class="clearer"></div>			
 			<div id="media_info">
 				<div class="media_info_text">
-					This bug was reported against <strong><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $jurisdiction->id; ?>"><?= $jurisdiction->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
+					This bug was reported about <strong><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $jurisdiction->id; ?>"><?= $jurisdiction->headline; ?></a></strong> on <strong><?= date('M j, Y',strtotime($doc->report_date)); ?></strong><? if ($doc->reporter) { ?> by <strong><?= $doc->reporter; ?></strong><? } ?>.
 				</div>
 				<div class="clearer"></div>			
 			</div>
@@ -98,7 +98,7 @@ if ($POD->isAuthenticated()) {
 					<? } ?>
 				<? } ?>
 				
-				<? if ($doc->has_official_vendor) { ?>
+				<? if ($doc->has_official_vendor == 'yes') { ?>
 					<h3>Official Vendor:</h3>
                                         <ul>
                                         <? if ($doc->official_vendor_name) {
@@ -113,7 +113,7 @@ if ($POD->isAuthenticated()) {
                                           }?>
 				<? } ?>
 
-				<? if ($doc->has_terms_of_service) { ?>
+				<? if ($doc->has_terms_of_service == 'yes') { ?>
 					<h3>Terms of Service:</h3>
                                         <? if ($doc->terms_of_service_url) {
                                           ?><p><a href="<?= $doc->terms_of_service_url; ?>" ><?= $doc->terms_of_service_url; ?></a></p><? } ?>
@@ -127,22 +127,21 @@ if ($POD->isAuthenticated()) {
                                         <p><?= $doc->enabling_legislation_etc_info; ?></p>
 				<? } ?>
 
-				<h3>Response</h3>
 				<? if ($doc->get('media_outlet_contacted')=='yes') { ?>
-					<p><? $doc->author()->permalink(); ?> has contacted <?= $jurisdiction->bugTargetBrowseLink(); ?>
-						<? if ($doc->media_outlet_response) {?> and received the following response.<? } ?>
-					</p>
+					<? if ($doc->media_outlet_response) {?> 
+		                              <h3>Response:</h3>
+					      <? $doc->author()->permalink(); ?> has contacted <?= $jurisdiction->bugTargetBrowseLink(); ?> and received the following response:
 					<div id="media_outlet_response">
-					<? if ($doc->media_outlet_response) { 
-						$doc->write('media_outlet_response');
-					} ?>
+						<? $doc->write('media_outlet_response'); ?>
+					<? } else { ?>
+	                                     <h3>Contacted:</h3>
+                                             <? $doc->author()->permalink(); ?> has contacted <?= $jurisdiction->bugTargetBrowseLink(); ?>, but reported no response.
+                                        <? } ?>
 					</div>
-	
 				<? } else { ?>
 					<p><? $doc->author()->permalink(); ?> has not contacted <?= $jurisdiction->bugTargetBrowseLink(); ?></p>
 				<? } ?>
 			</div>
-
 			
 			<h2>Bug History</h2>
 
