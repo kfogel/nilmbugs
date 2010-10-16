@@ -57,7 +57,7 @@
 				theme_advanced_toolbar_align : "left",	
 				theme_advanced_buttons1: "bold,italic,separator,bullist,numlist,separator,link,unlink,separator,undo,separator,charmap",
 				theme_advanced_buttons2: "",
-				content_css : podRoot+"/themes/mediabugs/tinymce.css"
+				content_css : podRoot+"/themes/nilmbugs/tinymce.css"
 			});
 		}
 		$('a.glossary').bt( {
