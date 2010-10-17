@@ -13,5 +13,9 @@ if [ -d dumps ]; then
   DUMPS_DIR="dumps/"
 fi
 
-mysqldump -u ${DB_USER} -p --default-character-set=utf8 nilmbugs \
-   > ${DUMPS_DIR}nilmbugs-dump-${DATE_SOLID}.sql
+DEST=${DUMPS_DIR}nilmbugs-dump-${DATE_SOLID}.sql
+
+mysqldump -u ${DB_USER} -p --default-character-set=utf8 nilmbugs > ${DEST}
+
+# Reassure the user that it worked.
+ls -lh ${DEST}
