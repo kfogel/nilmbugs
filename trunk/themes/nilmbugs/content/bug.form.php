@@ -111,7 +111,7 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 	
 					<p class="input">
 						<label for="headline">Summary of Problem<span class="required">*</span></label>
-						<input name="headline" id="headline" value="<? if ($doc->htmlspecialwrite('headline')) { echo $doc->htmlspecialwrite('headline'); } ?>" length="50" class="text required" title='Give a very brief summary of the problem, trying for 10 words or fewer.  For example (these are made up): "Springfield charges fees" or "4th circuit appeals court requires Flash".'/>
+						<input name="headline" id="headline" value="<? if ($doc->htmlspecialwrite('headline')) { echo $doc->htmlspecialwrite('headline'); } ?>" length="50" class="text required" title='A brief summary of the problem -- try for 10 words or fewer.  The summary you give here will be how this bug appears in listings; think of it as a name or a headline for the bug.  Some examples (these are made up): "Springfield charges fees", "4th circuit appeals court requires Flash", or even just "California Public Safety Codes", "PACER", etc.'/>
 					</p>
 					
 					<p class="input" id="jurisdiction_search">
