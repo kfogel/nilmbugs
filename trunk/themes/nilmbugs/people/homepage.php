@@ -59,6 +59,8 @@
 						This lets us make sure that you aren't a spambot.
 						You should already have the verification email in your inbox!
 					</p>
+                                        <p><em>(If you don't see it, try searching in your spam folder.  The email contains the phrase "bugs.resource.org".)</em>
+                                        </p>
 					<p><a href="<? $POD->siteRoot(); ?>/verify">Verify My Account</a></p>
 				
 				</div>		
