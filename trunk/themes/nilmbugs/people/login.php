@@ -15,7 +15,7 @@
 
 		<h1>Sign in to <? $POD->siteName(); ?></h1>
 
-		<p>Login with <a href="<? $POD->siteRoot(); ?>/openid">OpenID</a> or <a href="<? $POD->siteRoot(); ?>/facebook">Facebook</a></p>
+		<p>Log&nbsp;in with <a href="<? $POD->siteRoot(); ?>/openid">OpenID</a> or <a href="<? $POD->siteRoot(); ?>/facebook">Facebook</a></p>
 		
 		<form method="post" id="login" action="<? $POD->siteRoot(); ?>/login" class="valid">
 			<input type="hidden" name="redirect" value="<? echo htmlspecialchars($user->get('redirect')); ?>" />

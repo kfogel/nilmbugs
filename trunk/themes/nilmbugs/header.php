@@ -63,9 +63,9 @@
 		<div class="grid">
 			<? if ($POD->isAuthenticated()) { ?>
 				Welcome, <a href="<? $POD->currentUser()->write('permalink'); ?>" title="View My Profile"><? $POD->currentUser()->write('nick'); ?></a> |
-				<a href="<? $POD->siteRoot(); ?>/logout" title="Logout">Logout</a>
+				<a href="<? $POD->siteRoot(); ?>/logout" title="Logout">Log&nbsp;out</a>
 			<? } else { ?>
-				<a href="<? $POD->siteRoot(); ?>/login">Login</a> or <a href="<? $POD->siteRoot(); ?>/join">Create an account</a>
+				<a href="<? $POD->siteRoot(); ?>/login">Log&nbsp;in</a> or <a href="<? $POD->siteRoot(); ?>/join">Create an account</a>
 			<? } ?>
 		</div>
 	</div>

@@ -11,7 +11,7 @@
 			
 			<p>When you connect, you'll be able to login with your Twitter account, and automatically post your activity to your Twitter stream.</p>
 			
-			<a href="<? $POD->siteRoot(); ?>/twitter/verify" class="littlebutton">Login to Twitter</a>
+			<a href="<? $POD->siteRoot(); ?>/twitter/verify" class="littlebutton">Log&nbsp;in to Twitter</a>
 			
 			<? } ?>
 

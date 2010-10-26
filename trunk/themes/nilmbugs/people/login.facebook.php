@@ -12,7 +12,7 @@
 				
 					<p>
 						<strong>Facebook Name:</strong> <fb:profile-pic uid=loggedinuser facebook-logo=true></fb:profile-pic> <fb:name uid=loggedinuser useyou=false></fb:name>
-						&nbsp;&nbsp;<a href="<? $POD->siteRoot(); ?>/logout?nobounce=1" onclick="FB.Connect.logout(function(){window.location='/logout';});return false;">Logout</a>
+						&nbsp;&nbsp;<a href="<? $POD->siteRoot(); ?>/logout?nobounce=1" onclick="FB.Connect.logout(function(){window.location='/logout';});return false;">Log&nbsp;out</a>
 						&nbsp;&nbsp;<a href="<? $POD->siteRoot(); ?>/facebook?rfb=1"  onclick="FB.Connect.logout(function(){window.location='/facebook?rfb=1';});return false;">Remove</a>
 					</p>
 				</div>
