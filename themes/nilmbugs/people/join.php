@@ -32,7 +32,7 @@
 			<? } ?>
 
 			<? if (!$user->get('openid')  && !$user->get('fbuid')) { ?>
-			<p>Login with <a href="<? $POD->siteRoot(); ?>/openid">OpenID</a> or <a href="<? $POD->siteRoot(); ?>/facebook">Facebook</a></p>
+			<p>Log&nbsp;in with <a href="<? $POD->siteRoot(); ?>/openid">OpenID</a> or <a href="<? $POD->siteRoot(); ?>/facebook">Facebook</a></p>
 			<? } ?>
 
 			<p class="input">
@@ -100,5 +100,5 @@
 		
 			<p class="form_text"></p>
 		</form>
-		<p class="right_align">Already have an account?  <a href="<? $POD->siteRoot(); ?>/login">Login here</a></p>
+		<p class="right_align">Already have an account?  <a href="<? $POD->siteRoot(); ?>/login">Log&nbsp;in here</a></p>
 	</div>

@@ -175,7 +175,7 @@ if ($POD->isAuthenticated()) {
 			<a name="reply"></a>
 				<h3>Leave a comment</h3>
 				<form method="post" id="add_comment" class="valid">
-					<p style="margin:0px;" class="right_align">You are logged in as <? $POD->currentUser()->permalink(); ?>.  <a href="<? $POD->siteRoot(); ?>/logout">Logout</a></p>
+					<p style="margin:0px;" class="right_align">You are logged in as <? $POD->currentUser()->permalink(); ?>.  <a href="<? $POD->siteRoot(); ?>/logout">Log&nbsp;out</a></p>
 					<p class="input"><textarea name="comment" class="text required" id="comment"></textarea></p>
 					<p><input type="submit" value="Post Comment" class="button" /></p>
 				</form>
