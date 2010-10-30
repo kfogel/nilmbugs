@@ -33,10 +33,13 @@ Installation Instructions
        b) Serve the live web site from the current directory (i.e.,
           the directory this README is in).
 
-       c) When activating pods, make sure to also turn on the
+       c) Skip the 'make deploy' step for MediaBugs.
+          (The 'make deploy' you already ran took care of that.)
+
+       d) When activating pods, make sure to also turn on the
           'lgviolation' pod.
 
-       d) Where it says to choose the "MediaBugs" theme, choose
+       e) Where it says to choose the "MediaBugs" theme, choose
           the "NILM Bugs" theme instead. 
 
   3. Run the 'seed-db' script in the current directory to create the
