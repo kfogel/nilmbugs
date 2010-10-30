@@ -24,7 +24,7 @@ Installation Instructions
 
   1. Run 'make deploy'.
 
-  2. Follow the instructions in ./nilmbugs/README, but with these
+  2. Follow the instructions in ./mediabugs-open/README, but with these
      (fairly self-explanatory) differences: 
 
        a) Use 'nilmbugs' for the database name and user 'nilmbugsrw',
