@@ -1,5 +1,5 @@
 <? 
-	$minutes = 15;
+	$minutes = 120;
 	$edit_minutes = intval(((strtotime($doc->date) + ($minutes*60)) - time())/60);
 	$subscribed = false;
 	if ($POD->isAuthenticated()) { 
@@ -18,9 +18,11 @@
 	
 		<p><input type="checkbox" id="subcheck" <? if ($subscribed) { ?>checked<? } ?> onclick="return toggleBot('subcheck','','','method=toggleSub&contentId='+<?= $doc->id; ?>,subCheckboxSuccess);" /> Send me a message when someone leaves a comment on this bug</p>
 	
-		<? if ($edit_minutes > 0) { ?>
+		<? if ($edit_minutes >= 60) { ?>
+			<p>You can <a href="<?= $doc->editlink; ?>">edit this bug</a> for the next <?= $POD->pluralize(intval($edit_minutes / 60),'@number hour','@number hours'); ?> and <?= $POD->pluralize($edit_minutes % 60,'@number minute','@number minutes'); ?>.</p>
+		<? } else { ?>
 			<p>You can <a href="<?= $doc->editlink; ?>">edit this bug</a> for the next <?= $POD->pluralize($edit_minutes,'@number minute','@number minutes'); ?>.</p>
-		<? } ?>
+                <? } ?>
 	
 	<? } else { ?>
 	
