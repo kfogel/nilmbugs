@@ -75,7 +75,7 @@
 	
 		<!-- this is where new posts from friends and groups show up -->
 			<? 
-					$interesting->output('short','header','footer','Bugs to watch','There\'s nothing new yet!'); 
+					$interesting->output('short','header','footer','Bugs to watch','No bugs yet!'); 
 			?>
 				
 	</div>
