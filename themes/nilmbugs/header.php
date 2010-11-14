@@ -57,6 +57,7 @@
 </head>
 
 <body id="body">
+	<div id="lawgov_logo"><a href="/"><img src="img/law.gov.nilm.png" alt="Law.Gov" border="0"></a></div>
 
 	<!-- begin login status -->
 	<div id="login_status">
@@ -72,16 +73,12 @@
 	<!-- end login status -->
 	<!-- begin header -->
 	<div id="header">
-				<a href="<? $POD->siteRoot(); ?>/" title="NILM Bugs Homepage"><img src="img/law.gov.nilm.png" alt="Law.Gov" border="0"></a>	
+				<a href="<? $POD->siteRoot(); ?>/" title="NILM Bugs Homepage"><img src="img/NILM_logo.png" alt="Law.Gov" border="0"></a>	
 		<div class="grid">
-			<div class="column_5">
-			</div>
-			<div class="column_7 last">
 				<form method="get" action="<? $POD->siteRoot(); ?>/bugs/browse/search">
 					<input name="q" class="repairField" value="Find a specific bug..." onfocus="repairField(this,'Find a specific bug...');" onblur="repairField(this,'Find a specific bug...');" />
 					<input name="search" value="Search" type="submit" class="littlebutton" />
 				</form>
-			</div>
 			<div class="clearer"></div>
 		</div>		
 	</div>
@@ -89,7 +86,6 @@
 	<!-- begin main navigation -->		
 	<div id="nav">				
 		<ul>
-			<li id="nav_home"><a href="<? $POD->siteRoot(); ?>">Home</a></li>
 			<li id="nav_report"><a href="<? $POD->siteRoot(); ?>/bugs/edit">Report&nbsp;a&nbsp;bug</a></li>
 			<li id="nav_browse"><a href="<? $POD->siteRoot(); ?>/bugs">Browse&nbsp;bugs</a></li>
 			<? if ($POD->isAuthenticated()) { ?>
