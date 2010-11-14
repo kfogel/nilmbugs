@@ -72,9 +72,9 @@
 	<!-- end login status -->
 	<!-- begin header -->
 	<div id="header">
+				<a href="<? $POD->siteRoot(); ?>/" title="NILM Bugs Homepage"><img src="img/law.gov.nilm.png" alt="Law.Gov" border="0"></a>	
 		<div class="grid">
 			<div class="column_5">
-				<a href="<? $POD->siteRoot(); ?>/" title="NILM Bugs Homepage"><img src="<? $POD->templateDir(); ?>/img/nilmbugs_logo.png" id="logo" border="0" alt="NILM Bugs" width="361" height="100"/></a>	
 			</div>
 			<div class="column_7 last">
 				<form method="get" action="<? $POD->siteRoot(); ?>/bugs/browse/search">
