@@ -75,6 +75,7 @@
 	<div id="header">
 				<a href="<? $POD->siteRoot(); ?>/" title="NILM Bugs Homepage"><img src="<? $POD->templateDir(); ?>/img/NILM_logo.png" alt="Law.Gov" border="0"></a>	
 		<div class="grid">
+			<div id="search_nilm">
 				<form method="get" action="<? $POD->siteRoot(); ?>/bugs/browse/search">
 					<input name="q" class="repairField" value="Find a specific bug..." onfocus="repairField(this,'Find a specific bug...');" onblur="repairField(this,'Find a specific bug...');" />
 					<input name="search" value="Search" type="submit" class="littlebutton" />
@@ -95,7 +96,8 @@
 			<li id="nav_help"><a href="<? $POD->siteRoot(); ?>/pages/help">Help</a></li>
 			<li id="nav_contact"><a href="<? $POD->siteRoot(); ?>/pages/contact">Contact</a></li>
 		</ul>
-		<div class="clearer"></div>
-	</div>
+			</div>
+			<div class="clearer"></div>
+		</div>	
 	<!-- end main navigation -->	
 	<div id="main" class="content grid">
