@@ -15,6 +15,6 @@
 /**********************************************/
 ?><? $recent = $POD->getPeople(array('leaderboard:!='=>'null','leaderboard:!='=>'0'),'u_m_leaderboard.value DESC',5); ?>
 <div class="column_padding" id="recent_visitors_sidebar">
-	<h3 class="big" style="color:#666;line-height:80%;">Active Contributors</h3>
+	<h2>Active Contributors</h3>
 	<? $recent->output('member_leaderboard','ul_header','ul_footer'); ?>
 </div>
