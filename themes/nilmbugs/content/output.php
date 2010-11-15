@@ -113,14 +113,16 @@
 </div>
 
 <div class="column_4 last" id="post_info">
-
+	<div id="member_info">
+	<div class="person_avatar">	<img src="img/NILM.flag.oregon.png"></div>
+	
 	<? $doc->author()->output('member_info'); ?>
 	
-	<div id="post_stream_navigation">
-		<p id="post_date">
+		<div id="post_date">
 			Posted on <? echo date_format(date_create($doc->get('date')),'l, M jS'); ?>
 			(<? $doc->write('timesince'); ?>)
-		</p>	
+		</div>	
+	<div id="post_stream_navigation">
 
 		<?
 			$previous = $POD->getContents(array('userId'=>$doc->author('id'),'id:lt'=>$doc->get('id')),'d.id DESC',1);
