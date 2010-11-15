@@ -71,7 +71,7 @@
 	<!-- end login status -->
 	<!-- begin header -->
 	<div id="header">
-				<a href="<? $POD->siteRoot(); ?>/" title="NILM Bugs Homepage"><img src="<? $POD->templateDir(); ?>/img/NILM_logo.png" alt="Law.Gov" border="0"></a>	
+				<a href="<? $POD->siteRoot(); ?>/" title="NILM Bugs Homepage"><img src="<? $POD->templateDir(); ?>/img/NILM_logo.png" id="logo" alt="Law.Gov" border="0"></a>	
 		<div class="grid">
 			<div id="search_nilm">
 				<form method="get" action="<? $POD->siteRoot(); ?>/bugs/browse/search">
