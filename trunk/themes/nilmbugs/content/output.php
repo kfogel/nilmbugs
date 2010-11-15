@@ -115,7 +115,13 @@
 
 <div class="column_4 last" id="post_info">
 	<div id="member_info">
-	<div class="person_avatar">	<img src="<? $POD->templateDir(); ?>/img/NILM.flag.oregon.png"></div>
+	<div class="person_avatar">	
+	<? if ($img = $user->files()->contains('file_name','img')) { ?>
+		<a href="<? $user->write('permalink'); ?>"><img src="<? $img->write('thumbnail'); ?>" border="0" align="absmiddle" /></a>
+	<? } else { ?>
+		<a href="<? $user->write('permalink'); ?>"><img src="<? $user->POD->templateDir(); ?>/img/lawgov.black.png" border="0" align="absmiddle" /></a>
+	<? } ?>	
+	</div>
 	
 	<? $doc->author()->output('member_info'); ?>
 	
