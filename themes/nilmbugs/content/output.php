@@ -148,7 +148,7 @@
 		}
 
 		?>
-		<div class="column_padding">
+		<div class="column_padding"  id="post_group_navigation">
 			<p>This is part of <? $doc->group()->permalink(); ?>.</p>
 
 			<?
