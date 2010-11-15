@@ -118,7 +118,7 @@
 	
 	<? $doc->author()->output('member_info'); ?>
 	
-		<div id="post_date">
+		<div class="post_date">
 			Posted on <? echo date_format(date_create($doc->get('date')),'l, M jS'); ?>
 			(<? $doc->write('timesince'); ?>)
 		</div>	
@@ -185,6 +185,7 @@
 					$watching->output('short','header','footer',$watching->totalCount() . $POD->pluralize($watching->totalCount(),' Person Tracking',' People Tracking')); 
 				}
 			?>
+	</div>
 	</div>
 
 </div>
