@@ -54,6 +54,7 @@
 						<li class="owner_only_option">Only you can see this.</li>
 					<? } ?>
 				</ul>
+	<div class="clearer"></div>
 			<? } ?>
 			
 			<? if ($doc->get('link')) { ?>
