@@ -93,15 +93,15 @@
 	<? if ($this->POD->isAuthenticated()) { ?>
 		<div id="comment_form">
 			<a name="reply"></a>
-			<div class="column_1">
+			<div class="column_7 last">
 				<div class="column_padding" id="spinner">
 					FEEDBACK
 				</div>
 			</div>
 			<div class="column_6 last">
 				<form method="post" id="add_comment" onsubmit="return addComment(<? $doc->write('id'); ?>,document.getElementById('comment').value);">
-					<textarea name="comment" id="comment"></textarea>	
-					<input type="submit" value="Post" />
+					<textarea name="comment" class="white" id="comment"></textarea>	
+					<input type="submit" class="greenbutton" value="Post" />
 				</form>
 			</div>
 			<div class="clearer"></div>		
