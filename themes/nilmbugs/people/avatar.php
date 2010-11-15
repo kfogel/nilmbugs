@@ -13,7 +13,6 @@
 * http://peoplepods.net/readme/person-object
 /**********************************************/
 ?>
-<!-- 
 <div class="person_avatar">
 	<div class="column_padding" >
 		<? if ($img = $user->files()->contains('file_name','img')) { ?>
@@ -23,4 +22,3 @@
 		<? } ?>	
 	</div>
 </div>
--->

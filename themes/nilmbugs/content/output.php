@@ -181,12 +181,15 @@
 	<div id="watchers">
 	<div class="stack_output stack_1_person_tracking">
 			<div class="tracking_short">
+				<div class="person_short">
+
 			<?  
 				$watching = $POD->getPeopleByWatching($doc); 
 				if ($watching->totalCount() > 0) {
 					$watching->output('short','header','footer',$watching->totalCount() . $POD->pluralize($watching->totalCount(),' Person Tracking',' People Tracking')); 
 				}
 			?>
+	</div>
 	</div>
 	</div>
 </div>
