@@ -14,12 +14,6 @@
 ?>
 <div class="person_short">
 
-	<? if ($img = $user->files()->contains('file_name','img')) { ?>
-		<a href="<? $user->write('permalink'); ?>"><img src="<? $img->write('thumbnail'); ?>" border="0" align="absmiddle" /></a>
-	<? } else { ?>
-		<a href="<? $user->write('permalink'); ?>"><img src="<? $user->POD->templateDir(); ?>/img/noimage.png" border="0" align="absmiddle" /></a>
-	<? } ?>	
-
 	<? $user->permalink(); ?>
 	<? if ($POD->isAuthenticated()) { ?>
 		<a href="#" id="removeFriend_<? $user->write('id'); ?>" <? if ($POD->currentUser()->isFriendsWith($user)) { ?>style="display: block;"<? } else { ?>style="display: none;"<? } ?> onclick="return removeFriend(<? $user->write('id'); ?>);" class="person_short_follow_button person_short_follow_button_stop">Stop Following</a>
