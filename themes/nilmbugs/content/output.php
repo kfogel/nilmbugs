@@ -94,8 +94,8 @@
 		<div id="comment_form">
 			<a name="reply"></a>
 			<div class="column_1">
-				<div class="column_padding" style="font-size: 18px; font-weight: bold; text-align: center;" id="spinner">
-					FEED BACK
+				<div class="column_padding" id="spinner">
+					FEEDBACK
 				</div>
 			</div>
 			<div class="column_6 last">
