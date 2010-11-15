@@ -140,7 +140,6 @@
 		<? }  else { ?>
 			<strong>&#187;&nbsp;Next</strong>&nbsp;&nbsp;&nbsp;This is <? echo $doc->author('nick'); ?>'s most recent post
 		<? } ?>
-	</div>
 
 	<? if ($doc->group()) {
 		if ($POD->isAuthenticated()) {
