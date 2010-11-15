@@ -15,7 +15,6 @@
 		<div class="clearer"></div>
 	</div> <!-- main -->
 	<div id="footer">
-		<div class="grid">
 			<ul>
 				<li>
 					<a href="<? $POD->siteRoot(); ?>/pages/what-is-an-nilm-bug">What is an NILM Bug?</a>
@@ -38,7 +37,6 @@
 					</li>			
 				<? } ?>
 			</ul>
-		</div>
 	</div>	
 <!-- FIXME: update the Google Analytics, or get rid of them. -->
 	<script type="text/javascript">
