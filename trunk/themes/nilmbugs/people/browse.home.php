@@ -47,6 +47,7 @@ $media_outlets = $POD->mediaOutlets(9);
 			<div class="clearer"></div>
 		</li>
 		<div class="mainheader"><a href="<? $POD->siteRoot(); ?>/bugs/browse/status">Browse by Status</a></div>
+		<li class="mainheader">
 			<ul>
 				<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/status?q=open">Open</a></li>
 				<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/status?q=open:under discussion">Open: Under Discussion</a></li>
@@ -56,6 +57,7 @@ $media_outlets = $POD->mediaOutlets(9);
 				<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/status?q=closed:unresolved">Closed: Unresolved</a></li>
 				<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/status?q=closed:off topic">Off Topic</a></li>
 			</ul>	
+		</li>	
 			<div class="clearer"></div>
 	</ul>			
 
