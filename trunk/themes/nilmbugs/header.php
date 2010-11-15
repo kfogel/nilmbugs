@@ -61,14 +61,12 @@
 
 	<!-- begin login status -->
 	<div id="login_status">
-		<div class="grid">
 			<? if ($POD->isAuthenticated()) { ?>
 				Welcome, <a href="<? $POD->currentUser()->write('permalink'); ?>" title="View My Profile"><? $POD->currentUser()->write('nick'); ?></a> |
 				<a href="<? $POD->siteRoot(); ?>/logout" title="Logout">Log&nbsp;out</a>
 			<? } else { ?>
 				<a href="<? $POD->siteRoot(); ?>/login">Log&nbsp;in</a></a>
 			<? } ?>
-		</div>
 	</div>
 	<!-- end login status -->
 	<!-- begin header -->
@@ -80,12 +78,13 @@
 					<input name="q" class="repairField" value="Find a specific bug..." onfocus="repairField(this,'Find a specific bug...');" onblur="repairField(this,'Find a specific bug...');" />
 					<input name="search" value="Search" type="submit" class="littlebutton" />
 				</form>
+			</div>
 			<div class="clearer"></div>
 		</div>		
 	</div>
 	<!-- end header -->
 	<!-- begin main navigation -->		
-	<div id="nav" style="clear: both;">				
+	<div id="nav">				
 		<ul>
 			<li id="nav_report"><a href="<? $POD->siteRoot(); ?>/bugs/edit">Report&nbsp;a&nbsp;bug</a></li>
 			<li id="nav_browse"><a href="<? $POD->siteRoot(); ?>/bugs">Browse&nbsp;bugs</a></li>
@@ -96,8 +95,9 @@
 			<li id="nav_help"><a href="<? $POD->siteRoot(); ?>/pages/help">Help</a></li>
 			<li id="nav_contact"><a href="<? $POD->siteRoot(); ?>/pages/contact">Contact</a></li>
 		</ul>
-			</div>
 			<div class="clearer"></div>
 		</div>	
 	<!-- end main navigation -->	
 	<div id="main" class="content grid">
+
+
