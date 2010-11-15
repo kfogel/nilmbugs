@@ -15,17 +15,22 @@ $media_outlets = $POD->mediaOutlets(9);
 	<h1>Browse Bugs</h1>
 
 	<ul class="directory">
-		<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/date">Browse by Date</a>
-		
+		<div class="mainheader"><a href="<? $POD->siteRoot(); ?>/bugs/browse/date">Browse by Date</a></div>
+		<li class="mainheader">
 			<ul>
 				<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/date">Newest Bugs</a></li>
 				<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/date?sort=date:asc">Oldest Bugs</a></li>
 			</ul>
 			<div class="clearer"></div>
 		</li>
-		<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/date?sort=modification">Browse by Recent Activity</a></li>
-		<li>
-			<a href="<? $POD->siteRoot(); ?>/bugs/browse/type">Browse by Type</a>
+		<div class="mainheader"><a href="<? $POD->siteRoot(); ?>/bugs/browse/date?sort=modification">Browse by Recent Activity</a></div>
+		<li class="mainheader">
+			<ul>
+			</ul>
+			<div class="clearer"></div>
+		</li>
+		<div class="mainheader"><a href="<? $POD->siteRoot(); ?>/bugs/browse/type">Browse by Type</a></div>
+		<li class="mainheader">
 			<ul>
 				<? foreach ($bug_types as $type) { ?>
 					<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/type?q=<?= $type->headline; ?>"><?= $type->headline; ?></a></li>
@@ -33,18 +38,15 @@ $media_outlets = $POD->mediaOutlets(9);
 			</ul>
 			<div class="clearer"></div>
 		</li>
-		<li>
-			<a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet">Browse by Jurisdiction</a>
+		<div class="mainheader"><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet">Browse by Jurisdiction</a></div>
 			<ul>
 				<? foreach ($media_outlets as $outlet) { ?>
 					<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet?q=<?= $outlet->id; ?>"><?= $outlet->headline; ?></a></li>				
 				<? } ?>
 			</ul>	
 			<div class="clearer"></div>
-
 		</li>
-		<li>
-			<a href="<? $POD->siteRoot(); ?>/bugs/browse/status">Browse by Status</a>
+		<div class="mainheader"><a href="<? $POD->siteRoot(); ?>/bugs/browse/status">Browse by Status</a></div>
 			<ul>
 				<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/status?q=open">Open</a></li>
 				<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/status?q=open:under discussion">Open: Under Discussion</a></li>
@@ -55,7 +57,6 @@ $media_outlets = $POD->mediaOutlets(9);
 				<li><a href="<? $POD->siteRoot(); ?>/bugs/browse/status?q=closed:off topic">Off Topic</a></li>
 			</ul>	
 			<div class="clearer"></div>
-		</li>
 	</ul>			
 
 </div>
