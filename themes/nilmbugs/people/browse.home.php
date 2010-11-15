@@ -64,13 +64,6 @@ $media_outlets = $POD->mediaOutlets(9);
 </div>
 
 <div class="column_4 last">
-	<div class="sidebar">
-		<form method="get" action="<? $POD->siteRoot(); ?>/bugs/browse/search" id="big_search">
-			<p>Find bugs on a specific topic (person, event, place)</p>
-			<input name="q" class="text" value="Search Bugs" style="color:#CCC;" onfocus="repairField(this,'Search Bugs');" onblur="repairField(this,'Search Bugs');">
-			<input type="submit" value="Search" />
-		</form>
-	</div>
 	
 	<? $POD->output('sidebars/recent_bugs'); ?>
 
