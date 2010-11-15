@@ -114,16 +114,16 @@
 
 <div class="column_4 last" id="post_info">
 	<div id="member_info">
-	<div class="person_avatar">	<img src="img/NILM.flag.oregon.png"></div>
+	<div class="person_avatar">	<img src="<? $POD->templateDir(); ?>/img/NILM.flag.oregon.png"></div>
 	
 	<? $doc->author()->output('member_info'); ?>
 	
-		<div class="post_date">
+		<div class="post-date">
 			Posted on <? echo date_format(date_create($doc->get('date')),'l, M jS'); ?>
 			(<? $doc->write('timesince'); ?>)
 		</div>	
+	<div class="clearer"></div>
 	<div id="post_stream_navigation">
-
 		<?
 			$previous = $POD->getContents(array('userId'=>$doc->author('id'),'id:lt'=>$doc->get('id')),'d.id DESC',1);
 			if ($previous->success() && $previous->count() > 0) { 
@@ -179,6 +179,8 @@
 	
 			
 	<div id="watchers">
+	<div class="stack_output stack_1_person_tracking">
+			<div class="tracking_short">
 			<?  
 				$watching = $POD->getPeopleByWatching($doc); 
 				if ($watching->totalCount() > 0) {
@@ -187,7 +189,7 @@
 			?>
 	</div>
 	</div>
-
+</div>
 </div>
 
 
