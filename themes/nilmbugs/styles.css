@@ -430,7 +430,8 @@ textarea.white {width: 100%; background-color: #fff; border: 1px solid #bbb;}
 
 
 #post_output ul {list-style-type: none; margin: 0px; padding: 0px; margin-left:0px; margin-right:auto; width:800px;}
+ul.post_actions { display: block; }
 .post_actions li a { cursor: pointer; display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: 0px; font-size: 12px; line-height: 12px; padding-top: 7px; padding-bottom:7px; background: #0072BC; padding-left: 10px; padding-right: 10px;  color: #FFF; text-shadow: #333 1px 1px 5px; border: 0px solid #0072BC; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-align: center; margin-right: 5px; margin-bottom: 15px; }
 .post_actions li a:hover { cursor: pointer; display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: 0px; font-size: 12px; line-height: 12px; padding-top: 7px; padding-bottom:7px; background: #C0B770; padding-left: 10px; padding-right: 10px;  color: #FFF; text-shadow: #333 1px 1px 5px; border: 0px solid #C0B770; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-align: center; }
 
-#watchers h2.stack_header { font-size: 12px; line-height: 14px; font-family: Georgia, san-serif; font-weight: normal; }
+#watchers h2.stack_header { font-size: 12px; line-height: 14px; font-family: Georgia, san-serif; font-weight: bold; }
