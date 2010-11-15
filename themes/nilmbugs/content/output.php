@@ -140,6 +140,7 @@
 		<? }  else { ?>
 			<strong>&#187;&nbsp;Next</strong>&nbsp;&nbsp;&nbsp;This is <? echo $doc->author('nick'); ?>'s most recent post
 		<? } ?>
+	</div>
 
 	<? if ($doc->group()) {
 		if ($POD->isAuthenticated()) {
@@ -147,7 +148,7 @@
 		}
 
 		?>
-		<div class="column_padding" id="post_group_navigation">
+		<div class="column_padding">
 			<p>This is part of <? $doc->group()->permalink(); ?>.</p>
 
 			<?
@@ -188,6 +189,7 @@
 			?>
 	</div>
 	</div>
+</div>
 </div>
 </div>
 
