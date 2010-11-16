@@ -11,5 +11,5 @@
 
 /* styling for active target elements - usually for background hilighting */
 .bt-active {
-  background-color: yellow !important;
+  background-color: #000 !important;
 }
