@@ -437,6 +437,3 @@ textarea.white {width: 100%; background-color: #fff; border: 1px solid #bbb;}
 
 #watchers h2.stack_header { font-size: 12px; line-height: 14px; font-family: Georgia, san-serif; font-weight: bold; }
 
-.bt-active {
-  background-color: #000 !important;
-}
