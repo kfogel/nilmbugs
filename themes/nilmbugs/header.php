@@ -57,7 +57,7 @@
 </head>
 
 <body id="body">
-	<div id="lawgov_logo"><a href="/"><img src="<? $POD->templateDir(); ?>/img/law.gov.nilm.png" alt="Law.Gov" border="0"></a></div>
+	<div id="lawgov_logo"><a href="<? $POD->siteRoot(); ?>"><img src="<? $POD->templateDir(); ?>/img/law.gov.nilm.png" alt="Law.Gov" border="0"></a></div>
 
 	<!-- begin login status -->
 	<div id="login_status">
