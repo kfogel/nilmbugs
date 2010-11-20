@@ -33,7 +33,9 @@
 				<input type="submit"  value="Login" name="login" />
 			</p>
 			
-			<p>Need an account? <a href="<? $POD->siteRoot(); ?>/join">Join this site!</a></p>
+                        <? if ($POD->libOptions('enable_bugs_authentication_creation')) { ?>
+			        <p>Need an account? <a href="<? $POD->siteRoot(); ?>/join">Join this site!</a></p>
+                        <? } ?>
 
 		</form>
 		<script type="text/javascript">
