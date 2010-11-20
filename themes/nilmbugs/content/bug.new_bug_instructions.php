@@ -32,9 +32,11 @@
 		  	so that you can track this bug and make sure it gets closed. 
 		</p>
 	
-		<p>
-			<a href="<? $POD->siteRoot(); ?>/join?claim=<?= $doc->id; ?>" class="littlebutton">Claim this bug</a>		
-		</p>
+                <? if ($POD->libOptions('enable_bugs_authentication_creation')) { ?>
+                        <p>
+                                <a href="<? $POD->siteRoot(); ?>/join?claim=<?= $doc->id; ?>" class="littlebutton">Claim this bug</a>		
+		        </p>
+                <? } ?>
 		<div class="clearer"></div>
 
 	
