@@ -48,11 +48,17 @@ if ($POD->isAuthenticated()) {
 					<? if ($POD->isAuthenticated()) { ?>
 						<li><?= $POD->toggleBot($POD->currentUser()->isWatched($doc),'togglewatch','Stop tracking','Track','method=toggleWatch&content='.$doc->id,null,null,'Stop tracking this bug on your My Bugs dashboard','Track this bug on your My Bugs dashboard'); ?></li>
 						<li><?= $POD->toggleBot($subscribed,'togglesub','Stop receiving updates','E-mail me updates','method=toggleSub&contentId='.$doc->id); ?></li>
-					<? } ?>					<li><a id="rsslink" href="<?= $doc->permalink ?>/feed">RSS</a></li>
+					<? } else { ?>
+						<li><a id="togglewatch" href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>">Track</a></li>
+						<li><a id="togglesub" href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>">Email me updates</a></li>
+					<? } ?>
+					<li><a id="rsslink" href="<?= $doc->permalink ?>/feed">RSS</a></li>
 					<li><a id="tweetlink" href="<?= $doc->createTweet(); ?>">Tweet</a></li>
 					<? if ($POD->isAuthenticated()) { ?>
 						<li><a id="sendlink" href="<? $POD->siteRoot(); ?>/send?id=<?= $doc->id; ?>">Send</a></li>
 						<li><?= $POD->toggleBot($doc->hasFlag('report',$POD->currentUser()),'toggleflag','Flagged','Flag a problem','method=toggleFlag&flag=report&content='.$doc->id); ?></li>
+					<? } else { ?>
+						<li><a id="toggleflag" href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>">Flag a problem</a></li>
 					<? } ?>
 				</ul>
 				<div class="clearer"></div>
@@ -157,7 +163,7 @@ if ($POD->isAuthenticated()) {
 	</div>	
 
 	<div id="comments">
-		<h2>Discussion <? if ($POD->isAuthenticated()) {?><a href="#reply" class="with_right_float littlebutton">Leave a comment</a><? } ?></h2>
+		<h2>Discussion <? if ($POD->isAuthenticated()) {?><a href="#reply" class="with_right_float littlebutton">Leave a comment</a><? } else { ?><a href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>" class="with_right_float littlebutton">Leave a comment</a><? } ?></h2>
 		<!-- COMMENTS -->	
 		<? 
 			$comments->output('comment');
@@ -189,6 +195,12 @@ if ($POD->isAuthenticated()) {
 			<p id="metoo_counter"><?= $POD->pluralize($doc->flagCount('metoo'),'@number other person thinks this is a bug','@number other people think this is a bug'); ?></p>
 		<? } else if ($POD->isAuthenticated()) { ?>
 				<?= $POD->toggleBot($doc->hasFlag('metoo',$POD->currentUser()),'metoo','I think this is a bug too!','I think this is a bug too!','method=toggleFlag&flag=metoo&content=' . $doc->id,'metoocounter'); ?>		
+			<p id="metoo_counter"><?= $POD->pluralize($doc->flagCount('metoo'),'@number person thinks this is a bug','@number people think this is a bug'); ?></p>
+		<? }  else { ?>
+			<p>
+				<a href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>" id="metoo">I think this is a bug too!</a>
+			</p>	
+			<p id="metoo_counter"><?= $POD->pluralize($doc->flagCount('metoo'),'@number person thinks this is a bug','@number people think this is a bug'); ?></p>		
 		<? } ?>
 
 		<? if ($doc->isEditable()) { ?>
