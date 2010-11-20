@@ -37,6 +37,12 @@
 			  	so that you can track this bug and make sure it gets closed. 
 			</p>
 		
+			<p>
+				<a href="<? $POD->siteRoot(); ?>/join?claim=<?= $doc->id; ?>" target="_new" class="littlebutton">Claim this bug</a>		
+			</p>
+
+
+		
 		<? } ?>
 	
 	</div>	
