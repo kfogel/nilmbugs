@@ -1,0 +1,91 @@
+         National Inventory of Legal Materials (NILM) Bug Tracker
+         ========================================================
+
+This is the source distribution for the NILM Bug Tracker.  The project
+home is http://code.google.com/p/nilmbugs.  For more information about
+NILM, see http://radar.oreilly.com/2010/09/lawgov-update-1.html.
+
+NILMBugs is based on the MediaBugs.org tracker, which in turn uses the
+PeoplePods.net library developed by Ben Brown.
+
+Installation Overview
+=====================
+
+  When you run the installation instructions below, a new directory
+  'mediabugs-open' is created here and the mediabugs-open tree is
+  checked out into it (mediabugs-open in turn fetches the PeoplePods
+  library).  Then some symlinking happens so various PHP code can find
+  other PHP code.  When it's all over, the live web site runs out of
+  this directory, and some stuff under mediabugs-open is reached via
+  symlinks that the deployment script set up.
+
+Installation Instructions
+=========================
+
+  1. Run 'make deploy'.
+
+  2. Follow the instructions in ./mediabugs-open/README, but with these
+     (fairly self-explanatory) differences: 
+
+       a) Use 'nilmbugs' for the database name and user 'nilmbugsrw',
+          instead of 'mediabugs' / 'mediabugsrw'.
+
+       b) Serve the live web site from the current directory (i.e.,
+          the directory this README is in).
+
+       c) Skip the 'make deploy' step for MediaBugs.
+          (The 'make deploy' you already ran took care of that.)
+
+       d) When activating pods, make sure to also turn on the
+          'lgviolation' pod.
+
+       e) Where it says to choose the "MediaBugs" theme, choose
+          the "NILM Bugs" theme instead. 
+
+  3. Run the 'seed-db' script in the current directory to create the
+     ten objects representing Law.Gov Principles.
+
+        ==> alternatively ==>
+
+     You could create them by hand, to learn the web-based admin
+     interface for adding content.  Below is how.  (But skip the rest
+     of this step if you just ran 'seed-db' above.)
+
+     Assuming you're still in the "/peoplepods" admin screens:
+
+     In the upper left vertical nav panel, click on "Content",
+     then at the top of the resultant page, click "Add Content".
+
+     It will ask you "What type of content would you like to create?"
+     Click on the "Create" button next to the faded grey letters
+     saying "new content type" (there's no point actually entering the
+     content type here; we'll do it on the next page).
+
+     On the resultant page, in the upper right where it says "new
+     content type Change", click "Change" and enter "lgviolation".
+     This will be the type for all 10 Law.Gov Violation objects.
+
+     (NOTE: You will *not* be manually entering that type name again.
+     Although we're about to enter the first of ten Law.Gov violation
+     objects, the remaining 2-10 will be created by clicking on the
+     now-existent type from the Add Content page.)
+
+     The rest of this needs to be done 10 times.  Let's walk through
+     the first time:
+
+     Enter a headline, like "Access fees (Law.Gov #1)".
+     For the body, I'd say switch to HTML mode and then enter some
+     text like:
+
+       <p>Direct fees for dissemination of primary legal materials
+       should be avoided.</p> 
+       <p><a href="http://public.resource.org/law.gov"
+       >public.resource.org/law.gov</a>
+
+     Hit "Save", then lather, rinse, repeat, starting from "Add Content.
+     BUT, from now on, just click on "Lgviolation" after "Add Content",
+     since we've now created the type and can re-use it for more objects.
+
+     To save time: when entering the headlines and descriptions, you
+     can cut and paste from the 'law-gov.txt' file included here.  The
+     headlines and HTML bodies are all written out there.

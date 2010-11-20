@@ -1,0 +1,443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+	<title>Add Something - PeoplePods</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="SHORTCUT ICON" href="http://bugs.resource.org/favicon.ico">
+	<!--[if IE]>
+		<script type="text/javascript" src="http://bugs.resource.org/peoplepods/themes/nilmbugs/js/excanvas/excanvas.compiled.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript" src="files/jquery-1.js"></script>
+	<script src="files/jquery_003.js"></script>
+	<script src="files/jquery_008.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/jquery_007.js" type="text/javascript" charset="utf-8"></script>
+	<script src="files/jquery_004.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="files/jquery_006.js"></script>
+	<script type="text/javascript" src="files/jquery_002.js"></script>
+	<script type="text/javascript" src="files/jquery_005.js"></script>
+	<script type="text/javascript" src="files/jquery.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="files/jquery.css" media="screen" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="files/flora.css" media="screen" charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="files/styles.css" media="screen" charset="utf-8">
+	
+			<link rel="alternate" type="application/rss+xml" title="RSS: Most recent bugs from	 PeoplePods" href="bugs.html/feeds/date">
+	<script type="text/javascript">
+		var siteRoot = "http://bugs.resource.org";
+		var podRoot = "http://bugs.resource.org/peoplepods";
+		var themeRoot = "http://bugs.resource.org/peoplepods/themes/nilmbugs";
+		var API = siteRoot + "/api";		
+	</script>
+	
+	<script type="text/javascript" src="files/javascript.js"></script>
+
+	
+<link href="files/ui.css" rel="stylesheet">
+
+</head><body id="body">
+	<div id="lawgov_logo"><a href="PeoplePods.html"><img src="files/law.gov.nilm.png" alt="Law.Gov" border="0"></a></div>
+	<!-- begin login status -->
+	<div id="login_status">
+				Welcome, <a href="http://bugs.resource.org/people/Rebecca_Hargrave_Malamud" title="View My Profile">Rebecca Hargrave Malamud</a> |
+				<a href="http://bugs.resource.org/logout" title="Logout">Logout</a>
+	</div>
+	<!-- end login status -->
+	<!-- begin header -->
+	<div id="header">
+				<a href="PeoplePods.html"><img src="files/NILM_logo.png" id="logo" alt="NILM Bugs" border="0"></a>	
+		<div class="grid">
+			<div id="search_nilm">
+				<form method="get" action="bugs.html/browse/search">
+					<input name="q" class="repairField" value="Find a specific bug..." onfocus="repairField(this,'Find a specific bug...');" onblur="repairField(this,'Find a specific bug...');">
+					<input name="search" value="Search" class="littlebutton" type="submit">
+				</form>
+			</div>
+			<div class="clearer"></div>
+		</div>		
+	</div>
+	<!-- end header -->
+	<!-- begin main navigation -->		
+	<div id="nav">				
+		<ul>
+			<li class="active" id="nav_report"><a href="edit.html">Report&nbsp;a&nbsp;bug</a></li>
+			<li id="nav_browse"><a href="bugs.html">Browse&nbsp;bugs</a></li>
+							<li id="nav_my"><a href="dashboard.html">My&nbsp;bugs</a></li>
+						<li id="nav_about"><a href="about.html">About</a></li>
+			<li id="nav_help"><a href="help.html">Help</a></li>
+			<li id="nav_contact"><a href="contact.html">Contact</a></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+	<!-- end main navigation -->	
+	<div id="main" class="content grid">
+
+<ul id="bug_tabs">
+		<li id="tab_report" class="active">
+		<a href="#" onclick="return tabClick('report');">Describe Jurisdiction</a>
+	</li>
+	<li id="tab_what">
+		<a href="#" onclick="return tabClick('what');">Describe Violation</a>
+	</li>
+	<li id="tab_addtl_info">
+		<a href="#" onclick="return tabClick('addtl_info');">Additional Info</a>
+	</li>
+	<li id="tab_status">
+		<a href="#" onclick="return tabClick('status');">Status</a>
+	</li>
+		<div class="clearer"></div>
+</ul>
+<div id="bug_form">
+	<form action="edit.html" method="post" id="bug" enctype="multipart/form-data" onsubmit="return submitBug();">
+				
+							
+	
+				<input name="type" value="bug" type="hidden">		
+	
+				<fieldset id="report">
+					<legend>Describe Jurisdiction</legend>
+					
+						
+		
+						
+	
+	
+					<p class="input">
+						<label for="headline">Summary of Problem<span class="required">*</span></label>
+						<input bt-xtitle="A brief summary of the problem -- try for 10 words or fewer.  The summary you give here will be how this bug appears in listings; think of it as a name or a headline for the bug.  Some examples (these are made up): &quot;Springfield charges fees&quot;, &quot;4th circuit appeals court requires Flash&quot;, or even just &quot;California Public Safety Codes&quot;, &quot;PACER&quot;, etc." name="headline" id="headline" length="50" class="text required" title="">
+					</p>
+					
+					<p class="input" id="jurisdiction_search">
+							<label for="bug_target">Name of Jurisdiction<span class="required">*</span></label>
+							<input autocomplete="off" bt-xtitle="Please enter the jurisdiction's full name.  If there are already bug reports about this jurisdiction, try to write the jurisdiction's name the same way those bugs do." name="bug_target" id="jurisdiction_q" class="text required ac_input" onblur="mo_newcheck();" title="">
+							<input title="" bt-xtitle="" name="meta_bug_target" value="" id="jurisdiction_id" type="hidden">
+					</p>
+		
+					<div id="jurisdiction_new" style="display: none;">
+						<p class="input"><strong>You are the first person to report a bug about this jurisdiction.</strong></p>
+					</div>
+					
+					<p class="input">
+						<label for="jurisdiction_contact">
+							Point of Contact
+						</label>
+						<input bt-xtitle="For example, &quot;Attorney General Opinions&quot;, or the name/address of the official point of contact (e.g., chief judge, clerk, solicitor general, secretary of state)." name="meta_jurisdiction_contact" class="text" title="" type="text">
+					</p>
+					<p class="input" style="height: 100px;">
+
+						<label for="jurisdiction_contact_mailing_address">
+							Mailing Address
+						</label>
+						<textarea bt-xtitle="The mailing address for the Point of Contact." rows="5" cols="40" name="meta_jurisdiction_contact_mailing_address" id="jurisdiction_contact_mailing_address" title=""></textarea>
+					</p>
+		
+					<p class="input">
+						<label for="jurisdiction_url">
+							Jurisdiction URL
+						</label>
+						<input bt-xtitle="The main URL (web page) for the jurisdiction, if any.  Leave blank if none or unknown." name="meta_jurisdiction_url" class="text" title="" type="text">
+					</p>
+		
+					<p class="input">
+						<label for="jurisdiction_level">
+							What level is this jurisdiction? <span class="required">*</span>
+						</label>
+						<select name="meta_jurisdiction_level" id="jurisdiction_level" class="text required">
+							<option selected="selected" value="Federal">Federal</option>
+							<option value="State">State</option>
+							<option value="Local">Local</option>
+							<option value="Other">Other</option>
+						</select>
+					</p>
+
+					<p class="input">
+						<label for="jurisdiction_branch">
+							What branch is this jurisdiction? <span class="required">*</span>
+						</label>
+						<select name="meta_jurisdiction_branch" id="jurisdiction_branch" class="text required">
+							<option selected="selected" value="Executive">Executive</option>
+							<option value="Judicial">Judicial</option>
+							<option value="Legislative">Legislative</option>
+						</select>
+					</p>
+
+					<p class="input nextbutton"><a href="#who" class="greenbutton" onclick="return nextSection('report','what');">Next</a></p>
+				</fieldset>
+	
+				<a name="what"></a>
+				<fieldset id="what" style="display: none;">
+					<legend>What?</legend>
+				
+									
+					<p class="input">
+ 						<label for="violations">
+							Mark any violations of <a href="http://public.resource.org/law.gov/">Law.Gov</a> Principles:
+ 						</label>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_118" id="bug_lgv_118" value="access_fees_lawgov_1" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/access_fees_lawgov_1" title="Access fees (Law.Gov #1)">Access fees (Law.Gov #1)</a><br>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_119" id="bug_lgv_119" value="copyright_restrictions_lawgov_2" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/copyright_restrictions_lawgov_2" title="Assertion of Copyright (Law.Gov #2)">Assertion of Copyright (Law.Gov #2)</a><br>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_120" id="bug_lgv_120" value="bulk_access_lawgov_3" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/bulk_access_lawgov_3" title="Lack of Bulk Access (Law.Gov #3)">Lack of Bulk Access (Law.Gov #3)</a><br>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_121" id="bug_lgv_121" value="authenticated_integrity_lawgov_4" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/authenticated_integrity_lawgov_4" title="Lack of Authentication (Law.Gov #4)">Lack of Authentication (Law.Gov #4)</a><br>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_122" id="bug_lgv_122" value="static_online_archives_lawgov_5" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/static_online_archives_lawgov_5" title="Incomplete Historical Archives (Law.Gov #5)">Incomplete Historical Archives (Law.Gov #5)</a><br>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_123" id="bug_lgv_123" value="vendor-neutral_media-neutral_citation_lawgov_6" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/vendor-neutral_media-neutral_citation_lawgov_6" title="Vendor Neutral Citation (Law.Gov #6)">Vendor Neutral Citation (Law.Gov #6)</a><br>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_124" id="bug_lgv_124" value="standardized_structure_format_lawgov_7" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/standardized_structure_format_lawgov_7" title="Outmoded Document Structure (Law.Gov #7)">Outmoded Document Structure (Law.Gov #7)</a><br>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_125" id="bug_lgv_125" value="non-proprietary_computer_processability_lawgov_8" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/non-proprietary_computer_processability_lawgov_8" title="Distribution Format Does Not Meet Best Current Practices (Law.Gov #8)">Distribution Format Does Not Meet Best Current Practices (Law.Gov #8)</a><br>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_126" id="bug_lgv_126" value="responsible_online_distribution_lawgov_9" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/responsible_online_distribution_lawgov_9" title="Jurisdiction Not Facing New Challenges (Law.Gov #9)">Jurisdiction Not Facing New Challenges (Law.Gov #9)</a><br>
+						                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                        <input title="" bt-xtitle="" name="meta_bug_lgv_127" id="bug_lgv_127" value="use_best_practices_lawgov_10" type="checkbox">&nbsp;<a href="http://bugs.resource.org/lgviolation/use_best_practices_lawgov_10" title="Inadequate Training, Education, Documentation (Law.Gov #10)">Inadequate Training, Education, Documentation (Law.Gov #10)</a><br>
+											</p>
+				
+					<p class="input">
+						<label for="body">
+							Please describe the nature of the violation(s).<span class="required">*</span>
+						</label>
+						<textarea style="display: none;" title="" bt-xtitle="" name="body" id="bug_body" class="text tinymce required"></textarea><span class="mceEditor defaultSkin" id="bug_body_parent"><table style="width: 100%; height: 100px;" class="mceLayout" id="bug_body_tbl" cellpadding="0" cellspacing="0"><tbody><tr class="mceFirst"><td class="mceToolbar mceLeft mceFirst mceLast"><a href="#" accesskey="q" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X"><!-- IE --></a><table id="bug_body_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" align="" cellpadding="0" cellspacing="0"><tbody><tr><td class="mceToolbarStart mceToolbarStartButton mceFirst"><span><!-- IE --></span></td><td><a id="bug_body_bold" href="javascript:;" class="mceButton mceButtonEnabled mce_bold" onmousedown="return false;" onclick="return false;" title="Bold (Ctrl+B)"><span class="mceIcon mce_bold"></span></a></td><td><a id="bug_body_italic" href="javascript:;" class="mceButton mceButtonEnabled mce_italic" onmousedown="return false;" onclick="return false;" title="Italic (Ctrl+I)"><span class="mceIcon mce_italic"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="bug_body_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" title="Unordered list"><span class="mceIcon mce_bullist"></span></a></td><td><a id="bug_body_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" title="Ordered list"><span class="mceIcon mce_numlist"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="bug_body_link" href="javascript:;" class="mceButton mce_link mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Insert/edit link"><span class="mceIcon mce_link"></span></a></td><td><a id="bug_body_unlink" href="javascript:;" class="mceButton mce_unlink mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Unlink"><span class="mceIcon mce_unlink"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="bug_body_undo" href="javascript:;" class="mceButton mce_undo mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Undo (Ctrl+Z)"><span class="mceIcon mce_undo"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="bug_body_charmap" href="javascript:;" class="mceButton mceButtonEnabled mce_charmap" onmousedown="return false;" onclick="return false;" title="Insert custom character"><span class="mceIcon mce_charmap"></span></a></td><td class="mceToolbarEnd mceToolbarEndButton mceLast"><span><!-- IE --></span></td></tr></tbody></table><a href="#" accesskey="z" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X" onfocus="tinyMCE.getInstanceById('bug_body').focus();"><!-- IE --></a></td></tr><tr class="mceLast"><td class="mceIframeContainer mceFirst mceLast"><iframe style="width: 100%; height: 100px;" src='javascript:""' id="bug_body_ifr" frameborder="0"></iframe></td></tr></tbody></table></span>
+					</p>
+	
+					<p class="input">
+						<label for="date">When was this bug discovered? <span class="required">*</span></label>
+						<input title="" bt-xtitle="" name="meta_report_date" id="report_date" class="text required dpDate hasDatepick" value="10/21/2010" type="text">
+						<script type="text/javascript">
+							$('#report_date').datepick({navigationAsDateFormat: true, prevText: '< M', currentText: 'M y', nextText: 'M >',changeMonth: false, changeYear: false,mandatory:true});
+						</script>
+					</p>
+	
+					<p class="input nextbutton"><a href="#addtl_info" class="littlebutton" onclick="return nextSection('what','addtl_info');">Next</a></p>
+				</fieldset>
+	
+				<a name="addtl_info"></a>
+				<fieldset id="addtl_info" style="display: none;">
+					<legend>Additional Info</legend>
+						
+<!-- BEGIN Official Vendor -->
+				<p class="input">
+					<label for="">Is there an official vendor?</label>
+					<input title="" bt-xtitle="" name="meta_has_official_vendor" value="yes" id="has_official_vendor_yes" onchange="chofficialvendor();" type="radio"> Yes
+					<input title="" bt-xtitle="" name="meta_has_official_vendor" value="no" id="has_official_vendor_no" onchange="chofficialvendor();" checked="checked" type="radio"> No
+				</p>
+
+				<p class="input" id="official_vendor_name" style="display: none;">
+					<label for="">Name:</label>
+					<input title="" bt-xtitle="" name="meta_official_vendor_name" class="text tinymce" type="text">
+				</p>
+
+				<p class="input" id="official_vendor_url" style="display: none;">
+					<label for="">URL:</label>
+					<input title="" bt-xtitle="" name="meta_official_vendor_url" class="text tinymce" type="text">
+				</p>
+
+				<p class="input" id="official_vendor_addtl_info" style="display: none;">
+						<label for="">Price or
+						additional information:</label>
+						<textarea style="display: none;" id="mce_0" title="" bt-xtitle="" name="meta_official_vendor_addtl_info" class="text tinymce"></textarea><span class="mceEditor defaultSkin" id="mce_0_parent"><table style="width: 100%; height: 100px;" class="mceLayout" id="mce_0_tbl" cellpadding="0" cellspacing="0"><tbody><tr class="mceFirst"><td class="mceToolbar mceLeft mceFirst mceLast"><a href="#" accesskey="q" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X"><!-- IE --></a><table id="mce_0_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" align="" cellpadding="0" cellspacing="0"><tbody><tr><td class="mceToolbarStart mceToolbarStartButton mceFirst"><span><!-- IE --></span></td><td><a id="mce_0_bold" href="javascript:;" class="mceButton mceButtonEnabled mce_bold" onmousedown="return false;" onclick="return false;" title="Bold (Ctrl+B)"><span class="mceIcon mce_bold"></span></a></td><td><a id="mce_0_italic" href="javascript:;" class="mceButton mceButtonEnabled mce_italic" onmousedown="return false;" onclick="return false;" title="Italic (Ctrl+I)"><span class="mceIcon mce_italic"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_0_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" title="Unordered list"><span class="mceIcon mce_bullist"></span></a></td><td><a id="mce_0_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" title="Ordered list"><span class="mceIcon mce_numlist"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_0_link" href="javascript:;" class="mceButton mce_link mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Insert/edit link"><span class="mceIcon mce_link"></span></a></td><td><a id="mce_0_unlink" href="javascript:;" class="mceButton mce_unlink mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Unlink"><span class="mceIcon mce_unlink"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_0_undo" href="javascript:;" class="mceButton mce_undo mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Undo (Ctrl+Z)"><span class="mceIcon mce_undo"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_0_charmap" href="javascript:;" class="mceButton mceButtonEnabled mce_charmap" onmousedown="return false;" onclick="return false;" title="Insert custom character"><span class="mceIcon mce_charmap"></span></a></td><td class="mceToolbarEnd mceToolbarEndButton mceLast"><span><!-- IE --></span></td></tr></tbody></table><a href="#" accesskey="z" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X" onfocus="tinyMCE.getInstanceById('mce_0').focus();"><!-- IE --></a></td></tr><tr class="mceLast"><td class="mceIframeContainer mceFirst mceLast"><iframe style="width: 100%; height: 100px;" src='javascript:""' id="mce_0_ifr" frameborder="0"></iframe></td></tr></tbody></table></span>
+				</p>
+                                <br>
+<!-- END Official Vendor -->
+<!-- BEGIN Terms of Service -->
+				<p class="input">
+					<label for="">Are there terms of service?</label>
+					<input title="" bt-xtitle="" name="meta_has_terms_of_service" value="yes" id="has_terms_of_service_yes" onchange="chtos();" type="radio"> Yes
+					<input title="" bt-xtitle="" name="meta_has_terms_of_service" value="no" id="has_terms_of_service_no" onchange="chtos();" checked="checked" type="radio"> No
+				</p>
+
+				<p class="input" id="terms_of_service_url" style="display: none;">
+					<label for="">URL:</label>
+					<input title="" bt-xtitle="" name="meta_terms_of_service_url" class="text tinymce" type="text">
+				</p>
+                                <br>
+<!-- END Terms of Service -->
+<!-- BEGIN Enabling Legislation Etc -->
+				<p class="input">
+					<label for="">Is there enabling legislation for this jurisdiction or other statutory authority?</label>
+					<input title="" bt-xtitle="" name="meta_has_enabling_legislation_etc" value="yes" id="has_enabling_legislation_etc_yes" onchange="chenablinglegislation();" type="radio"> Yes
+					<input title="" bt-xtitle="" name="meta_has_enabling_legislation_etc" value="no" id="has_enabling_legislation_etc_no" onchange="chenablinglegislation();" checked="checked" type="radio"> No
+				</p>
+
+				<p class="input" id="enabling_legislation_etc_info" style="display: none;">
+					<label for="">Please describe, including URLs where possible:</label>
+					<input title="" bt-xtitle="" name="meta_enabling_legislation_etc_info" class="text tinymce" type="text">
+				</p>
+                                <br>
+<!-- END Enabling Legislation Etc -->
+<!-- BEGIN Other Information -->
+                                <p class="input">
+						<label for="">Any other information we should know?</label>
+						<textarea style="display: none;" id="mce_1" title="" bt-xtitle="" name="meta_additional_information" class="text tinymce"></textarea><span class="mceEditor defaultSkin" id="mce_1_parent"><table style="width: 100%; height: 100px;" class="mceLayout" id="mce_1_tbl" cellpadding="0" cellspacing="0"><tbody><tr class="mceFirst"><td class="mceToolbar mceLeft mceFirst mceLast"><a href="#" accesskey="q" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X"><!-- IE --></a><table id="mce_1_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" align="" cellpadding="0" cellspacing="0"><tbody><tr><td class="mceToolbarStart mceToolbarStartButton mceFirst"><span><!-- IE --></span></td><td><a id="mce_1_bold" href="javascript:;" class="mceButton mceButtonEnabled mce_bold" onmousedown="return false;" onclick="return false;" title="Bold (Ctrl+B)"><span class="mceIcon mce_bold"></span></a></td><td><a id="mce_1_italic" href="javascript:;" class="mceButton mceButtonEnabled mce_italic" onmousedown="return false;" onclick="return false;" title="Italic (Ctrl+I)"><span class="mceIcon mce_italic"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_1_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" title="Unordered list"><span class="mceIcon mce_bullist"></span></a></td><td><a id="mce_1_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" title="Ordered list"><span class="mceIcon mce_numlist"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_1_link" href="javascript:;" class="mceButton mce_link mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Insert/edit link"><span class="mceIcon mce_link"></span></a></td><td><a id="mce_1_unlink" href="javascript:;" class="mceButton mce_unlink mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Unlink"><span class="mceIcon mce_unlink"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_1_undo" href="javascript:;" class="mceButton mce_undo mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Undo (Ctrl+Z)"><span class="mceIcon mce_undo"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_1_charmap" href="javascript:;" class="mceButton mceButtonEnabled mce_charmap" onmousedown="return false;" onclick="return false;" title="Insert custom character"><span class="mceIcon mce_charmap"></span></a></td><td class="mceToolbarEnd mceToolbarEndButton mceLast"><span><!-- IE --></span></td></tr></tbody></table><a href="#" accesskey="z" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X" onfocus="tinyMCE.getInstanceById('mce_1').focus();"><!-- IE --></a></td></tr><tr class="mceLast"><td class="mceIframeContainer mceFirst mceLast"><iframe style="width: 100%; height: 100px;" src='javascript:""' id="mce_1_ifr" frameborder="0"></iframe></td></tr></tbody></table></span>
+                                </p>
+                                <br>
+<!-- END Other Information -->
+<!-- BEGIN Attach File(s) -->
+					<p class="input">
+						<label for="file1">Attach file, if any</label>
+					</p>
+					<div id="files">
+												<script type="text/javascript">
+							addFile();
+						</script><input id="file1" class="file" name="file1" type="file">
+					</div>
+					<div class="clearer"></div>
+					
+					<p class="input">
+						<label for="file2">&nbsp;</label>
+						<a href="#" onclick="return addFile()" ;="">Add Another File</a>
+					</p>
+<!-- END Attach File(s) -->
+	
+					<p class="input nextbutton"><a href="#status" class="littlebutton" onclick="return nextSection('addtl_info','status');">Next</a></p>
+				</fieldset>
+			
+			<a name="status"></a>
+			<fieldset id="status" style="display: none;">
+				<legend>Bug Status</legend>
+
+								
+							
+				<p class="input">
+					<label for="">Have you contacted this jurisdiction?</label>
+					<input title="" bt-xtitle="" name="meta_media_outlet_contacted" value="yes" id="contacted_yes" onchange="chcontact();" type="radio"> Yes
+					<input title="" bt-xtitle="" name="meta_media_outlet_contacted" value="no" id="contacted_no" onchange="chcontact();" checked="checked" type="radio"> No
+				</p>
+				
+				<p class="input" id="jurisdiction_response" style="display: none;">
+					<label for="">What was the jurisdiction's response?</label>
+					<textarea style="display: none;" id="mce_2" title="" bt-xtitle="" name="meta_media_outlet_response" class="text tinymce"></textarea><span class="mceEditor defaultSkin" id="mce_2_parent"><table style="width: 100%; height: 100px;" class="mceLayout" id="mce_2_tbl" cellpadding="0" cellspacing="0"><tbody><tr class="mceFirst"><td class="mceToolbar mceLeft mceFirst mceLast"><a href="#" accesskey="q" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X"><!-- IE --></a><table id="mce_2_toolbar1" class="mceToolbar mceToolbarRow1 Enabled" align="" cellpadding="0" cellspacing="0"><tbody><tr><td class="mceToolbarStart mceToolbarStartButton mceFirst"><span><!-- IE --></span></td><td><a id="mce_2_bold" href="javascript:;" class="mceButton mceButtonEnabled mce_bold" onmousedown="return false;" onclick="return false;" title="Bold (Ctrl+B)"><span class="mceIcon mce_bold"></span></a></td><td><a id="mce_2_italic" href="javascript:;" class="mceButton mceButtonEnabled mce_italic" onmousedown="return false;" onclick="return false;" title="Italic (Ctrl+I)"><span class="mceIcon mce_italic"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_2_bullist" href="javascript:;" class="mceButton mceButtonEnabled mce_bullist" onmousedown="return false;" onclick="return false;" title="Unordered list"><span class="mceIcon mce_bullist"></span></a></td><td><a id="mce_2_numlist" href="javascript:;" class="mceButton mceButtonEnabled mce_numlist" onmousedown="return false;" onclick="return false;" title="Ordered list"><span class="mceIcon mce_numlist"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_2_link" href="javascript:;" class="mceButton mce_link mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Insert/edit link"><span class="mceIcon mce_link"></span></a></td><td><a id="mce_2_unlink" href="javascript:;" class="mceButton mce_unlink mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Unlink"><span class="mceIcon mce_unlink"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_2_undo" href="javascript:;" class="mceButton mce_undo mceButtonDisabled" onmousedown="return false;" onclick="return false;" title="Undo (Ctrl+Z)"><span class="mceIcon mce_undo"></span></a></td><td><span class="mceSeparator"></span></td><td><a id="mce_2_charmap" href="javascript:;" class="mceButton mceButtonEnabled mce_charmap" onmousedown="return false;" onclick="return false;" title="Insert custom character"><span class="mceIcon mce_charmap"></span></a></td><td class="mceToolbarEnd mceToolbarEndButton mceLast"><span><!-- IE --></span></td></tr></tbody></table><a href="#" accesskey="z" title="Jump to tool buttons - Alt+Q, Jump to editor - Alt-Z, Jump to element path - Alt-X" onfocus="tinyMCE.getInstanceById('mce_2').focus();"><!-- IE --></a></td></tr><tr class="mceLast"><td class="mceIframeContainer mceFirst mceLast"><iframe style="width: 100%; height: 100px;" src='javascript:""' id="mce_2_ifr" frameborder="0"></iframe></td></tr></tbody></table></span>
+				</p>
+			
+				<p class="input" id="save_button"><input title="" bt-xtitle="" class="button" value="Save Bug" type="submit"></p>
+				<div id="saving_progress" style="display: none;">
+					<strong>Saving...</strong>
+					<br>
+					<img src="files/ajax-loader.gif" align="absmiddle">
+				</div>
+
+			</fieldset>
+			
+		
+	</form>
+
+</div>
+
+
+
+
+<script>
+
+	function chofficialvendor() { 
+		if ($('#has_official_vendor_yes').attr('checked')) { 
+			$('#official_vendor_name').show();
+			$('#official_vendor_url').show();
+			$('#official_vendor_addtl_info').show();
+		} else {
+			$('#official_vendor_name').hide();
+			$('#official_vendor_url').hide();
+			$('#official_vendor_addtl_info').hide();
+		}
+		return false;
+	}
+
+	function chtos() { 
+		if ($('#has_terms_of_service_yes').attr('checked')) { 
+			$('#terms_of_service_url').show();
+		} else {
+			$('#terms_of_service_url').hide();
+		}
+		return false;
+	}
+
+	function chenablinglegislation() { 
+		if ($('#has_enabling_legislation_etc_yes').attr('checked')) { 
+			$('#enabling_legislation_etc_info').show();
+		} else {
+			$('#enabling_legislation_etc_info').hide();
+		}
+		return false;
+	}
+
+	function chcontact() { 
+		if ($('#contacted_yes').attr('checked')) { 
+			$('#jurisdiction_response').show();
+		} else {
+			$('#jurisdiction_response').hide();	
+		}
+		return false;
+	}
+
+	function mo_outletupdate(json) {
+	
+		if (json.id) {
+			$('#jurisdiction_id').val(json.id);
+		//	$('#jurisdiction_new').hide();
+		} else {
+			$('#jurisdiction_id').val('');
+		//	$('#jurisdiction_new').show();		
+		}
+	
+	}
+	function mo_newcheck() { 
+		var val = $('#jurisdiction_q').val();
+		$.getJSON('/api?method=mediaoutletcheck&outlet='+escape(val),mo_outletupdate);
+	}
+
+	$().ready(function() { 
+	
+			$('#jurisdiction_q').autocomplete('/api',{
+					autoFill: false,
+					selectFirst: false,
+					mustMatch: false,
+					extraParams: { method: 'mediaoutletautocomplete' }
+				}
+			).result(function(event,data,formatted) { 
+				mo_newcheck();
+			})
+	
+		}
+	);
+
+</script>
+		<div class="clearer"></div>
+	</div> <!-- main -->
+	<div id="footer">
+			<ul>
+				<li>
+					<a href="what-is-an-nilm-bug.html">What is an NILM Bug?</a>
+				</li>
+				<li>
+					<a href="http://public.resource.org/">Public.Resource.org</a>
+				</li>
+				<li>
+					<a href="who.html">Who we are</a>
+				</li>
+				<li>
+					<a href="faq.html">FAQ</a>
+				</li>
+				<li>
+					<a href="tos.html">Terms of Service</a>
+				</li>
+			</ul>
+	</div>	
+<!-- FIXME: update the Google Analytics, or get rid of them. -->
+	<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script src="files/ga.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-15426486-1");
+	pageTracker._setDomainName(".mediabugs.org");
+	pageTracker._trackPageview();
+	} catch(err) {}</script>
+
+
+
+
+<div style="display: none;"></div></body></html>

@@ -1,0 +1,68 @@
+#!/bin/bash
+
+MEDIABUGS_RO=http
+MEDIABUGS_RW=https
+MEDIABUGS_SVN=mediabugs-open.googlecode.com/svn/trunk/
+
+# Check out the mediabugs-open core code, unless it's already present.
+# Note we could unconditionally check it out -- if it were already
+# here, it would just get updated.  But that's not a very predictable
+# behavior; it's better for updates to be manual and intentional.
+if [ -d mediabugs-open ]; then
+    echo "'mediabugs-open' directory already present"
+else
+  if svn checkout ${MEDIABUGS_RW}://${MEDIABUGS_SVN} mediabugs-open; then
+    echo "Checked out read/write copy of mediabugs-open."
+  else
+    echo "Doing a read-only checkout of mediabugs-open:"
+    svn checkout ${MEDIABUGS_RO}://${MEDIABUGS_SVN} mediabugs-open
+    echo "Checked out read-only copy of mediabugs-open."
+  fi
+fi
+
+# Due to mysterious portability problems with /bin/sh and '[' on the
+# main production server for 'nilmbugs', we have to use /bin/bash for
+# deploying mediabugs-open.  So we set that up temporily...
+sed -e 's|/bin/sh|/bin/bash|' < mediabugs-open/build > mediabugs-open/btmp
+mv mediabugs-open/btmp mediabugs-open/build
+chmod a+x mediabugs-open/build
+# ...then run the build recipe for MediaBugs...
+(cd mediabugs-open; make deploy)
+# ...then revert it back to /bin/sh.
+sed -e 's|/bin/bash|/bin/sh|' < mediabugs-open/build > mediabugs-open/btmp
+mv mediabugs-open/btmp mediabugs-open/build
+chmod a+x mediabugs-open/build
+
+# The current directory is the "top" of the install; symlink accordingly.
+if [ -e mediabugs-open/peoplepods/themes/nilmbugs ]; then
+  echo "mediabugs-open/peoplepods/themes/nilmbugs already exists"
+else
+  ln -s "../../../themes/nilmbugs" mediabugs-open/peoplepods/themes/nilmbugs
+fi
+if [ -e mediabugs-open/peoplepods/pods/lgviolation ]; then
+  echo "mediabugs-open/peoplepods/pods/lgviolation already exists"
+else
+  ln -s "../../../pods/lgviolation" mediabugs-open/peoplepods/pods/lgviolation
+fi
+if [ -e peoplepods ]; then
+  echo "peoplepods already exists"
+else
+  ln -s mediabugs-open/peoplepods peoplepods
+fi
+if [ -e .htaccess ]; then
+  echo ".htaccess already exists"
+else
+  ln -s mediabugs-open/.htaccess .htaccess
+fi
+
+# Yet another symlink kluge, similar to one in MediaBugs itself.
+if [ -e PeoplePods.php ]; then
+  echo "PeoplePods.php already exists"
+else
+  ln -s "mediabugs-open/peoplepods/PeoplePods.php" PeoplePods.php
+fi
+if [ -e lib ]; then
+  echo "lib already exists"
+else
+  ln -s "mediabugs-open/peoplepods/lib" lib
+fi

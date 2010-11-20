@@ -1,0 +1,1 @@
+<li><?= $doc->permalink(); ?></li>

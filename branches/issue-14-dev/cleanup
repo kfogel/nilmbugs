@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Give us a fresh start.
+
+# Remove 'mediabugs-open' directory after making sure it's the right one.
+if [ -L mediabugs-open/PeoplePods.php -a -L mediabugs-open/lib ]; then
+  rm -rf mediabugs-open
+fi
+
+# Remove the symlink kluges.
+if [ -L .htaccess ]; then
+  rm .htaccess
+fi
+if [ -L peoplepods ]; then
+  rm peoplepods
+fi
+if [ -L PeoplePods.php ]; then
+  rm PeoplePods.php
+fi
+if [ -L lib ]; then
+  rm lib
+fi

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+DATE_SOLID=`date "+%Y%m%d_%H.%M.%S"`
+DB_USER=nilmbugsrw
+
+echo ""
+echo "You are being prompted ${DB_USER}'s MySQL password below:"
+echo ""
+
+# If there's a 'dumps' directory, use it, but don't create it if not.
+DUMPS_DIR=""
+if [ -d dumps ]; then
+  DUMPS_DIR="dumps/"
+fi
+
+DEST=${DUMPS_DIR}nilmbugs-dump-${DATE_SOLID}.sql
+
+mysqldump -u ${DB_USER} -p --default-character-set=utf8 nilmbugs > ${DEST}
+
+# Reassure the user that it worked.
+ls -lh ${DEST}
