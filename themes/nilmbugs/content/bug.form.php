@@ -181,7 +181,7 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
  						</label>
 						<? foreach ($violations as $violation) { ?>
                                                 <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
-                                                        <input type="checkbox" name="meta_bug_lgv_<?= $violation->id; ?>" id="bug_lgv_<?= $violation->id; ?>" value="<?= $violation->stub; ?>">&nbsp;<? echo $violation->permalink(); ?></input><br/>
+                                                        <input type="checkbox" name="meta_bug_lgv_<?= $violation->id; ?>" id="bug_lgv_<?= $violation->id; ?>" value="<?= $violation->stub; ?>" <? if ($doc->get("bug_lgv_$violation->id")) {?>checked<? } ?>>&nbsp;<? echo $violation->permalink(); ?></input><br/>
 						<? } ?>
 					</p>
 				
