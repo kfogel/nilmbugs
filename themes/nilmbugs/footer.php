@@ -51,5 +51,10 @@
 	} catch(err) {}</script>
 
 
+<script language="JavaScript">
+	// a very simple setup
+	flowplayer("div.player", "http://releases.flowplayer.org/swf/flowplayer-3.2.5.swf");
+</script>
+
 </body>
 </html>
