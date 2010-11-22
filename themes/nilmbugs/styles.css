@@ -341,7 +341,7 @@ ul#bug_tabs li#tab_report {   }
 ul#bug_tabs li#tab_status.active { background:  #dae9f4; }
 ul#bug_tabs li#tab_report.active {  border-bottom: 1px solid #900; }
 ul#bug_tabs li.active {  }
-ul#bug_tabs li.active a {  background: url(img/hex_blue.png) no-repeat; color: #900; }
+ul#bug_tabs li.active a {  background: url(img/hex_gold.png) no-repeat; color: #900; }
 
 ul#bug_tabs li#tab_edit { background: #dae9f4; text-align: center; padding-top: 10px; padding-bottom: 10px; font-weight: bold; }
 ul#bug_tabs li#tab_closed { background: #dae9f4; text-align: center; padding-top: 10px; padding-bottom: 10px; font-weight: bold; }
@@ -349,12 +349,12 @@ ul#bug_tabs li#tab_closed { background: #dae9f4; text-align: center; padding-top
 ul#bug_tabs li#tab_status.revisited {  background:  #dae9f4; }
 ul#bug_tabs li#tab_report.revisited {  background:#dae9f4; }
 ul#bug_tabs li.revisited { margin-right: 2px; background:#dae9f4; -moz-border-radius-topleft: 12px; -moz-border-radius-topright: 12px; -webkit-border-top-left-radius: 12px; -webkit-border-top-right-radius: 12px;  border: 1px solid #133366;  border-bottom: 1px solid #dae9f4;}
-ul#bug_tabs li.revisited a {  background: url(img/hex_blue.png) no-repeat; }
+ul#bug_tabs li.revisited a {  background: url(img/hex_gold.png) no-repeat; }
 
 ul#bug_tabs li#tab_status.complete { margin-right: 0px; background: #e6e7e8; }
 ul#bug_tabs li#tab_report.complete {  background: #e6e7e8;  }
 ul#bug_tabs li.complete { margin-right: 2px; background: #e6e7e8; -moz-border-radius-topleft: 12px; -moz-border-radius-topright: 12px; -webkit-border-top-left-radius: 12px; -webkit-border-top-right-radius: 12px; }
-ul#bug_tabs li.complete a {  background: url(img/hex_blue.png) no-repeat;  padding-top: 50px; }
+ul#bug_tabs li.complete a {  background: url(img/hex_gold.png) no-repeat;  padding-top: 50px; }
 
 
 #new_bug_instructions { background: #dae9f4;  border: 1px solid #133366; padding:10px; margin:10px; margin-bottom:20px; -moz-box-shadow: rgba(0,0,0,0.5) 0px 0px 10px; -webkit-box-shadow:  rgba(0,0,0,0.5) 0px 0px 10px;}
