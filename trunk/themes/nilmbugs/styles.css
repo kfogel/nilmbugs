@@ -338,10 +338,16 @@ ul#bug_tabs li a { display: block; text-align: center; background: url(img/hex_g
 ul#bug_tabs li#tab_status { width: 168px; margin-right: 0px;  }
 ul#bug_tabs li#tab_report {   }
 
+ul#bug_tabs li.active#tab_status a { display: block; text-align: center; background: url(img/hex_blue.png) no-repeat;  padding-top: 50px; padding-bottom:5px; font-weight: bold; color: #999; }
+ul#bug_tabs li.active#tab_what a { display: block; text-align: center; background: url(img/2.png) no-repeat;  padding-top: 50px; padding-bottom:5px; font-weight: bold; color: #999; }
+ul#bug_tabs li.active#tab_addtl_info a { display: block; text-align: center; background: url(img/3.png) no-repeat;  padding-top: 50px; padding-bottom:5px; font-weight: bold; color: #999; }
+ul#bug_tabs li.active#tab_status a { display: block; text-align: center; background: url(img/4.png) no-repeat;  padding-top: 50px; padding-bottom:5px; font-weight: bold; color: #999; }
+
+
 ul#bug_tabs li#tab_status.active { background:  #dae9f4; }
 ul#bug_tabs li#tab_report.active {  border-bottom: 1px solid #900; }
 ul#bug_tabs li.active {  }
-ul#bug_tabs li.active a {  background: url(img/hex_blue.png) no-repeat; color: #900; }
+ul#bug_tabs li.active a { }
 
 ul#bug_tabs li#tab_edit { background: #dae9f4; text-align: center; padding-top: 10px; padding-bottom: 10px; font-weight: bold; }
 ul#bug_tabs li#tab_closed { background: #dae9f4; text-align: center; padding-top: 10px; padding-bottom: 10px; font-weight: bold; }
