@@ -344,7 +344,7 @@ ul#bug_tabs li#tab_addtl_info.active a { display: block; text-align: center; bac
 ul#bug_tabs li#tab_status.active a { display: block; text-align: center; background: url(img/4.png) no-repeat;  padding-top: 50px; padding-bottom:5px; font-weight: bold; color: #999; }
 
 
-ul#bug_tabs li#tab_status.active { }
+ul#bug_tabs li#tab_status.active { background:  #dae9f4; }
 ul#bug_tabs li#tab_report.active {  border-bottom: 1px solid #900; }
 ul#bug_tabs li.active {  }
 ul#bug_tabs li.active a {  background: url(img/hex_gold.png) no-repeat; color: #900; }
