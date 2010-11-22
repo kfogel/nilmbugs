@@ -84,6 +84,7 @@
 		<? $POD->output('sidebars/recent_bugs'); ?>
 
 
+<div class="sidebar">
 <h3><a href="http://twitter.com/#!/search/lawgov">Twitter</a></h3>		
 <script src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
@@ -119,6 +120,7 @@ new TWTR.Widget({
   }
 }).render().start();
 </script>
+</div>
 </div>
 
 	<div class="clearer"></div>
