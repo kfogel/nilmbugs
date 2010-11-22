@@ -85,7 +85,7 @@
 
 
 <div class="sidebar">
-<h3><a href="http://twitter.com/#!/search/lawgov">Twitter</a></h3>		
+<h3><a href="http://twitter.com/#!/search/lawgov">Law.Gov on Twitter</a></h3>		
 <script src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
 new TWTR.Widget({
