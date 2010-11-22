@@ -91,7 +91,7 @@ new TWTR.Widget({
   search: 'lawgov, law.gov',
   interval: 6000,
   title: '',
-  subject: '#law.gov',
+  subject: 'law.gov',
   width: 250,
   height: 300,
   theme: {
