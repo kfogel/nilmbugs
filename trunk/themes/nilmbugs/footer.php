@@ -16,7 +16,7 @@
 	</div> <!-- main -->
 	<div id="footer">
 			<ul>
-				<li>
+				<li style="margin-left: 10px;">
 					<a href="http://public.resource.org">Public.Resource.org</a>
 				</li>
 				<li>
