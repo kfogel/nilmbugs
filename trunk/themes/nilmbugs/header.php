@@ -97,7 +97,6 @@
 			<? } ?>
 			<li id="nav_about"><a href="<? $POD->siteRoot(); ?>/pages/about">About</a></li>
 			<li id="nav_help"><a href="<? $POD->siteRoot(); ?>/pages/help">Help</a></li>
-			<li id="nav_contact"><a href="<? $POD->siteRoot(); ?>/pages/contact">Contact</a></li>
 		</ul>
 			<div class="clearer"></div>
 		</div>	

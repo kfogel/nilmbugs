@@ -17,9 +17,6 @@
 	<div id="footer">
 			<ul>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/what-is-an-nilm-bug">What is an NILM Bug?</a>
-				</li>
-				<li>
 					<a href="http://public.resource.org">Public.Resource.org</a>
 				</li>
 				<li>
@@ -29,11 +26,15 @@
 					<a href="<? $POD->siteRoot(); ?>/pages/faq">FAQ</a>
 				</li>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/tos">Terms of Service</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/contact">Contact</a>
 				</li>
+				<li>
+					<a href="<? $POD->siteRoot(); ?>/pages/tos">Credits</a>
+				</li>
+				
 				<? if ($POD->isAuthenticated() && $POD->currentUser()->adminUser) { ?>
 					<li>
-						<a href="<? $POD->siteRoot(); ?>/peoplepods/admin">PeoplePods</a>
+						<a href="<? $POD->siteRoot(); ?>/peoplepods/admin">Admin</a>
 					</li>			
 				<? } ?>
 			</ul>

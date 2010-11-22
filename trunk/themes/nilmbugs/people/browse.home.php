@@ -12,8 +12,9 @@ $media_outlets = $POD->mediaOutlets(9);
 ?>
 <div class="column_8">
 
-	<h1>Browse Bugs</h1>
+	<h1>Browse / By Date</h1>
 
+(show bugs by date, newest first, as default here)
 <? $POD->output('bugs/browse/date'); ?>
 
 </div>
