@@ -347,7 +347,6 @@ ul#bug_tabs li.active#tab_status a { display: block; text-align: center; backgro
 ul#bug_tabs li#tab_status.active { background:  #dae9f4; }
 ul#bug_tabs li#tab_report.active {  border-bottom: 1px solid #900; }
 ul#bug_tabs li.active {  }
-ul#bug_tabs li.active a { }
 
 ul#bug_tabs li#tab_edit { background: #dae9f4; text-align: center; padding-top: 10px; padding-bottom: 10px; font-weight: bold; }
 ul#bug_tabs li#tab_closed { background: #dae9f4; text-align: center; padding-top: 10px; padding-bottom: 10px; font-weight: bold; }
