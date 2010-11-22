@@ -82,7 +82,9 @@
 	<div class="column_4 last">
 			
 		<? $POD->output('sidebars/recent_bugs'); ?>
-		
+
+
+<h3><a href="http://twitter.com/#!/search/lawgov">Twitter</a></h3>		
 <script src="http://widgets.twimg.com/j/2/widget.js"></script>
 <script>
 new TWTR.Widget({
