@@ -38,6 +38,7 @@
 	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/flowplayer.css" media="screen" charset="utf-8" />
 	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/flowplayer-3.2.4.min.js"></script>
 
+	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/toggle.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/jquery-bt/jquery.bt.css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/jquery-autocomplete/jquery.autocomplete.css" media="screen" charset="utf-8" />
