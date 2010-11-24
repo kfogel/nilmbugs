@@ -91,7 +91,7 @@
 new TWTR.Widget({
   version: 2,
   type: 'search',
-  search: 'lawgov OR law.gov OR @carlmalamud',
+  search: 'lawgov OR @carlmalamud',
   interval: 6000,
   title: '',
   subject: 'law.gov',
