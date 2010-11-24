@@ -278,7 +278,7 @@ ul.sidebar_directory li { clear: both; margin-bottom:10px; }
 ul.sidebar_directory li ul { list-style-type: none; margin:0px; padding: 0px; margin-top:10px; margin-left: 10px;}
 ul.sidebar_directory li ul li { }
 
-ul.subcategory { margin: 0px; padding: 0px; }
+ul li.subcategory { margin: 0px; padding: 0px; }
 
 p.did_you_mean { font-weight: bold; background: #FFFFCC; }
 
