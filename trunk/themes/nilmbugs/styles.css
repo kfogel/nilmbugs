@@ -278,8 +278,8 @@ ul.sidebar_directory li { clear: both; margin-bottom:10px; }
 ul.sidebar_directory li ul { list-style-type: none; margin:0px; padding: 0px; margin-top:10px; margin-left: 10px;}
 ul.sidebar_directory li ul li { }
 
-ul.resource1 li.subcategory { margin: 0px; padding: 0px; }
-ul.resource2 li.subcategory { margin: 0px; padding: 0px; }
+ul.resource1 li.subcategory { margin-bottom: 0px; padding: 0px; }
+ul.resource2 li.subcategory { margin-bottom: 0px; padding: 0px; }
 
 p.did_you_mean { font-weight: bold; background: #FFFFCC; }
 
@@ -439,3 +439,4 @@ textarea.white {width: 100%; background-color: #fff; border: 1px solid #bbb;}
 
 #watchers h2.stack_header { font-size: 12px; line-height: 14px; font-family: Georgia, san-serif; font-weight: bold; }
 
+.stateflag { width: 121px; float: left; margin-right: 10px; margin-bottom: 10px; }
