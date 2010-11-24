@@ -11,7 +11,7 @@
 					<a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet">Browse by Jurisdiction</a>
 				</li>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/browse-by-state">Browse by State</a>
+					<a href="<? $POD->siteRoot(); ?>/bugs/browse/state">Browse by State</a>
 				</li>				
 				<li>
 					Browse by Status
