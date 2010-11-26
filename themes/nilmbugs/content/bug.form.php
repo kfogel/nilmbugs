@@ -132,7 +132,7 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 
 						<div id="mailing-address">
 						<p class="input" style="margin-left: 20px;">
-					        <label>Mailing Address (all fields optional)</label>
+					        <label><b>Mailing Address (all fields optional)</b></label>
                                                 <label for="jurisdiction_contact_street">Street:</label>
                                                 <input type="text" style="width: 416px;" class="text" name="meta_jurisdiction_contact_street_address" id="jurisdiction_contact_street_address" title="The street address for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_street_address'); ?>"/><br/>
 						<div id="city">
