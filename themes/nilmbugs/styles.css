@@ -1,7 +1,7 @@
 /* Main Styles */
 
 	body { background: #FFFFFF url(img/bkg.png) top left repeat-y; color: #333; padding: 0px; margin: 0px; font-family: Georgia; }
-	div,ul,blockquote,label,p { font-size: 13px; line-height: 20px;  } 
+	div,ul,blockquote,p { font-size: 13px; line-height: 20px;  } 
 	
 	p { line-height: 150%; }
 	
@@ -14,8 +14,6 @@
 	h1 { font-size: 28px; line-height: 40px; font-family: Georgia, san-serif; font-weight: normal; } 
 	h2 { font-size: 18px; line-height: 30px; }
 	h3 { font-size: 15px; line-height: 20px; } 
-
-	label {  } 
 
 	form { margin: 0px; padding: 0px; } 
 
@@ -324,19 +322,37 @@ a#metoo.active { cursor: pointer;  display: block; float: left; font-family: hel
 #bug_body p,#bug_body li { font-family: "Helvetica", san serif; font-size: 14px; line-height: 150%; }
 
 #bug_form { width: 640px; background: #fff; border: 0px solid #133366; border-top:0px; padding-bottom:30px;}
-#bug_form p.input { width: 640px; }
+#bug_form p.input { width: 100%; }
 #bug_form p.radio { width: 640px; }
+
+#bug_form p.address { width: 240px; }
 
 #files { width: 460px; margin-left: auto; margin-right: auto; } 
 input.file { display: block; margin-bottom:10px; }
+input.select { padding-top: 6px; }
 
 input[type="checkbox"]{
 	clear:both;
 }
 
+form.select {
+	padding-top: 4px;
+}
+
+.select-padding { padding-top: 4px; }
+
 #bug_form fieldset { border:0px; margin:0px; padding:10px;}
 #bug_form fieldset legend { display: none; }
 
+#mailing-address { width: 440px; clear: both; padding-top: 10px; padding-bottom: 10px; }
+#mailing-address label { line-height: 12px; font-weight: normal; } 
+
+#city { float: left; margin-left: 20px; width: 200px; }
+#county { float: left; margin-left: 20px; width: 200px; }
+#state { float: left; margin-left: 20px; }
+#zip-code { float: left; width: 100px; margin-left: 20px;  }
+
+label { font-weight: bold; line-height: 12px; } 
 
 ul#bug_tabs { width: 680px;  margin:0px 0px 0px 30px; padding: 0px; list-style-type: none; border-bottom: 1px solid #ccc;}
 ul#bug_tabs li { float: left; display: block; width: 168px; border-top: 1px solid transparent; border-bottom: 1px solid #ccc; margin-bottom:-1px;}
@@ -371,7 +387,7 @@ ul#bug_tabs li.complete a {  background: url(img/hex_gold.png) no-repeat;  paddi
 p.input { margin-top: 0px; padding-top: 0px; clear: both; }
 p.input label { display: block;  padding-top: 10px; padding-bottom: 0px; clear: both; }
 p.input input.text { font-family: Arial, san-serif; width: 98%;  font-size: 12px; color: #000; border: 1px solid #ccc;  padding:5px; background-color: #eee; } 
-p.input select.text { font-family: Arial, san-serif; font-size: 12px;  color: #000;  } 
+p.input select.text { font-family: Arial, san-serif; font-size: 12px;  color: #000; margin-top: 6px; width: 200px; } 
 p.input textarea.text { font-family: Arial, san-serif; width: 98%; border: 1px solid #ccc; font-size: 18px; margin-top: 0px; }  
 
 p.radio label { font-weight: bold; } 
