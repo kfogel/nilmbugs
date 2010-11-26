@@ -129,14 +129,26 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 							Point of Contact
 						</label>
 						<input type="text" name="meta_jurisdiction_contact" value="<? $doc->htmlspecialwrite('jurisdiction_contact'); ?>" class="text" title='For example, "Attorney General Opinions", or the name/address of the official point of contact (e.g., chief judge, clerk, solicitor general, secretary of state).'/>
-                                                <p class="input" style="margin-left: 5%;">
+
+						<div id="mailing-address">
+						<p class="input" style="margin-left: 20px;">
 					        <label>Mailing Address (all fields optional)</label>
                                                 <label for="jurisdiction_contact_street">Street:</label>
-                                                <input type="text" class="text" name="meta_jurisdiction_contact_street_address" id="jurisdiction_contact_street_address" title="The street address for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_street_address'); ?>"/><br/>
-						<label for="jurisdiction_contact_city">City:</label>
-						<input type="text" class="text" name="meta_jurisdiction_contact_city" id="jurisdiction_contact_city" title="The city for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_city'); ?>"/><br/>
-						<label for="jurisdiction_contact_county">County:</label>
-						<input type="text" class="text" name="meta_jurisdiction_contact_county" id="jurisdiction_contact_county" title="The county for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_county'); ?>"/><br/>
+                                                <input type="text" style="width: 416px;" class="text" name="meta_jurisdiction_contact_street_address" id="jurisdiction_contact_street_address" title="The street address for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_street_address'); ?>"/><br/>
+						<div id="city">
+						<p class="input">
+							<label for="jurisdiction_contact_city">City:</label>
+							<input type="text" class="text" name="meta_jurisdiction_contact_city" id="jurisdiction_contact_city" title="The city for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_city'); ?>"/><br/>
+						</p>	
+						</div>	
+						<div id="county">
+						<p class="input">
+							<label for="jurisdiction_contact_county">County:</label>
+							<input type="text" class="text" name="meta_jurisdiction_contact_county" id="jurisdiction_contact_county" title="The county for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_county'); ?>"/><br/>
+						</p>
+						</div>
+						<div id="state">
+						<p class="input">
 						<label for="jurisdiction_contact_state">State:</label>
 						<select name="meta_jurisdiction_contact_state" id="jurisdiction_contact_state" class="text">
                                                         <option value="" >---</option><!-- empty string for state represents Federal jurisdiction -->
@@ -197,11 +209,16 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
                                                         <option value="PR" >Puerto Rico (PR)</option>
                                                         <option value="VI" >Virgin Islands (VI)</option>
 						</select>
-						<label for="jurisdiction_contact_zip">ZIP Code:</label>
-						<input type="text" class="text" name="meta_jurisdiction_contact_zip" id="jurisdiction_contact_zip" title="The ZIP Code for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_zip'); ?>"/><br/>
-                                                </p>
-                                                </p>
-		
+						</p>
+						</div>
+						<div id="zip-code">
+						<p class="input">
+							<label for="jurisdiction_contact_zip">ZIP Code:</label>
+							<input type="text" class="text" name="meta_jurisdiction_contact_zip" id="jurisdiction_contact_zip" title="The ZIP Code for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_zip'); ?>"/><br/>
+						</p>	
+                        </div>
+					</div>              
+					
 					<p class="input">
 						<label for="jurisdiction_url">
 							Jurisdiction URL
