@@ -1135,7 +1135,7 @@ jQuery.bt = {version: '0.9.5-rc1'};
                                              // possible values 'top', 'bottom', 'left', 'right' as an array in order of
                                              // preference. Last value will be used if others don't have enough space.
                                              // or use 'most' to use the area with the most space
-    fill:             "rgb(255, 255, 102)",  // fill color for the tooltip box, you can use any CSS-style color definition method
+    fill:             "#000",  // fill color for the tooltip box, you can use any CSS-style color definition method
                                              // http://www.w3.org/TR/css3-color/#numerical - not all methods have been tested
     
     windowMargin:     10,                    // space (px) to leave between text box and browser edge
