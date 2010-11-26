@@ -98,6 +98,17 @@ if ($POD->isAuthenticated()) {
 					<? } ?>
 				<? } ?>
 				
+				<? if ($doc->jurisdiction_contact_street_address or $doc->jurisdiction_contact_city or $doc->jurisdiction_contact_county or $doc->jurisdiction_contact_state) { ?>
+					<h3>Address:</h3>
+                                        <p style="margin-left: 5%;">
+                                        <? if ($doc->jurisdiction_contact_street_address) { ?><?= $doc->jurisdiction_contact_street_address; }?><br/>
+                                        <? if ($doc->jurisdiction_contact_city) { ?><?= $doc->jurisdiction_contact_city; } ?><? if ($doc->jurisdiction_contact_city and $doc->jurisdiction_contact_state) { ?>,<? } ?>
+                                        <? if ($doc->jurisdiction_contact_state) { ?><?= $doc->jurisdiction_contact_state; }?>
+                                        <? if ($doc->jurisdiction_contact_zip) { ?><?= $doc->jurisdiction_contact_zip; }?><br/>
+                                        <? if ($doc->jurisdiction_contact_county) { ?>(County: <?= $doc->jurisdiction_contact_county; ?>)<? } ?>
+                                        </p>
+				<? } ?>
+
 				<? if ($doc->has_official_vendor == 'yes') { ?>
 					<h3>Official Vendor:</h3>
                                         <ul>

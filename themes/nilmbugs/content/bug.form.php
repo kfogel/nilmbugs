@@ -129,12 +129,78 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 							Point of Contact
 						</label>
 						<input type="text" name="meta_jurisdiction_contact" value="<? $doc->htmlspecialwrite('jurisdiction_contact'); ?>" class="text" title='For example, "Attorney General Opinions", or the name/address of the official point of contact (e.g., chief judge, clerk, solicitor general, secretary of state).'/>
-
-						<label for="jurisdiction_contact_mailing_address">
-							Mailing Address
-						</label>
-						<textarea rows="5" cols="40" name="meta_jurisdiction_contact_mailing_address" id="jurisdiction_contact_mailing_address" title="The mailing address for the Point of Contact." ><? $doc->htmlspecialwrite('jurisdiction_contact_mailing_address'); ?></textarea>
-					</p>
+                                                <p class="input" style="margin-left: 5%;">
+					        <label>Mailing Address (all fields optional)</label>
+                                                <label for="jurisdiction_contact_street">Street:</label>
+                                                <input type="text" class="text" name="meta_jurisdiction_contact_street_address" id="jurisdiction_contact_street_address" title="The street address for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_street_address'); ?>"/><br/>
+						<label for="jurisdiction_contact_city">City:</label>
+						<input type="text" class="text" name="meta_jurisdiction_contact_city" id="jurisdiction_contact_city" title="The city for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_city'); ?>"/><br/>
+						<label for="jurisdiction_contact_county">County:</label>
+						<input type="text" class="text" name="meta_jurisdiction_contact_county" id="jurisdiction_contact_county" title="The county for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_county'); ?>"/><br/>
+						<label for="jurisdiction_contact_state">State:</label>
+						<select name="meta_jurisdiction_contact_state" id="jurisdiction_contact_state" class="text">
+                                                        <option value="" >---</option><!-- empty string for state represents Federal jurisdiction -->
+                                                        <option value="AL" >Alabama (AL)</option>
+                                                        <option value="AK" >Alaska (AK)</option>
+                                                        <option value="AZ" >Arizona (AZ)</option>
+                                                        <option value="AR" >Arkansas (AR)</option>
+                                                        <option value="CA" >California (CA)</option>
+                                                        <option value="CO" >Colorado (CO)</option>
+                                                        <option value="CT" >Connecticut (CT)</option>
+                                                        <option value="DE" >Delaware (DE)</option>
+                                                        <option value="DC" >District of Columbia (DC)</option>
+                                                        <option value="FL" >Florida (FL)</option>
+                                                        <option value="GA" >Georgia (GA)</option>
+                                                        <option value="HI" >Hawaii (HI)</option>
+                                                        <option value="ID" >Idaho (ID)</option>
+                                                        <option value="IL" >Illinois (IL)</option>
+                                                        <option value="IN" >Indiana (IN)</option>
+                                                        <option value="IA" >Iowa (IA)</option>
+                                                        <option value="KS" >Kansas (KS)</option>
+                                                        <option value="KY" >Kentucky (KY)</option>
+                                                        <option value="LA" >Louisiana (LA)</option>
+                                                        <option value="ME" >Maine (ME)</option>
+                                                        <option value="MD" >Maryland (MD)</option>
+                                                        <option value="MA" >Massachusetts (MA)</option>
+                                                        <option value="MI" >Michigan (MI)</option>
+                                                        <option value="MN" >Minnesota (MN)</option>
+                                                        <option value="MS" >Mississippi (MS)</option>
+                                                        <option value="MO" >Missouri (MO)</option>
+                                                        <option value="MT" >Montana (MT)</option>
+                                                        <option value="NE" >Nebraska (NE)</option>
+                                                        <option value="NV" >Nevada (NV)</option>
+                                                        <option value="NH" >New Hampshire (NH)</option>
+                                                        <option value="NJ" >New Jersey (NJ)</option>
+                                                        <option value="NM" >New Mexico (NM)</option>
+                                                        <option value="NY" >New York (NY)</option>
+                                                        <option value="NC" >North Carolina (NC)</option>
+                                                        <option value="ND" >North Dakota (ND)</option>
+                                                        <option value="OH" >Ohio (OH)</option>
+                                                        <option value="OK" >Oklahoma (OK)</option>
+                                                        <option value="OR" >Oregon (OR)</option>
+                                                        <option value="PA" >Pennsylvania (PA)</option>
+                                                        <option value="RI" >Rhode Island (RI)</option>
+                                                        <option value="SC" >South Carolina (SC)</option>
+                                                        <option value="SD" >South Dakota (SD)</option>
+                                                        <option value="TN" >Tennessee (TN)</option>
+                                                        <option value="TX" >Texas (TX)</option>
+                                                        <option value="UT" >Utah (UT)</option>
+                                                        <option value="VT" >Vermont (VT)</option>
+                                                        <option value="VA" >Virginia (VA)</option>
+                                                        <option value="WA" >Washington (WA)</option>
+                                                        <option value="WV" >West Virginia (WV)</option>
+                                                        <option value="WI" >Wisconsin (WI)</option>
+                                                        <option value="WY" >Wyoming (WY)</option>
+                                                        <option value="AS" >American Samoa (AS)</option>
+                                                        <option value="GU" >Guam (GU)</option>
+                                                        <option value="MP" >Northern Mariana Islands (MP)</option>
+                                                        <option value="PR" >Puerto Rico (PR)</option>
+                                                        <option value="VI" >Virgin Islands (VI)</option>
+						</select>
+						<label for="jurisdiction_contact_zip">ZIP Code:</label>
+						<input type="text" class="text" name="meta_jurisdiction_contact_zip" id="jurisdiction_contact_zip" title="The ZIP Code for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_zip'); ?>"/><br/>
+                                                </p>
+                                                </p>
 		
 					<p class="input">
 						<label for="jurisdiction_url">
