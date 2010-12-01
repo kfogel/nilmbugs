@@ -460,4 +460,4 @@ textarea.white {width: 100%; background-color: #fff; border: 1px solid #bbb;}
 #watchers h2.stack_header { font-size: 12px; line-height: 14px; font-family: Georgia, san-serif; font-weight: bold; }
 
 .stateflag img { border: 1px solid #000; width: 45px; }
-.stateflag { width: 121px; float: left; margin-right: 10px; margin-bottom: 10px; }
+.stateflag { width: 60px; float: left; margin-right: 10px; margin-bottom: 10px; }
