@@ -14,7 +14,7 @@ $media_outlets = $POD->mediaOutlets(9);
 
 	<h1>Browse / By Date</h1>
 
-(show bugs by date, newest first, as default here)
+<p class="bigwarning">If you see this text, it's probably a mistake: someone has undone or sidestepped the fix for <a href="http://code.google.com/p/nilmbugs/issues/detail?id=10" >nilmbugs issue #10</a>.  Please <a href="http://code.google.com/p/nilmbugs/issues/entry" >file a bug</a> in the code's issue tracker, mentioning this message and giving the exact URL where you saw it.</p>
 <? $POD->output('bugs/browse/date'); ?>
 
 </div>
