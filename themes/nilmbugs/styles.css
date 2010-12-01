@@ -19,6 +19,7 @@
 
 	.highlight { background: #FFFFCC; } 
 	.lightblue { background: #CCD9E5; color: #3a3a3a;  }
+	.bigwarning { background: yellow; color: red; font-size: 200%; font-style: bold;} 
 	.pink { background: #EF5BA1; color: #FFF;  }
 	.pink b { font-size: 15px; letter-spacing: -1px; } 
 	.gray { color: #CCC; } 
