@@ -5,8 +5,8 @@
 	
 	p { line-height: 150%; }
 	
-	a { color: #133366; text-decoration: underline; }
-	a:visited { color: #0072BC; } 
+	a { color: #133366; text-decoration: none; }
+	a:visited { color: #133366; } 
 	a:hover {  }  
 
 	h1,h2,h3 { margin-top: 0px; margin-bottom: 10px;}
