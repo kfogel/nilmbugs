@@ -1,5 +1,5 @@
 	<div class="sidebar" id="browse_starter">
-			<h3><a href="<? $POD->siteRoot(); ?>/bugs" title="Browse bugs in a variety of ways">Browse Bugs</a></h3>
+			<h3><a href="<? $POD->siteRoot(); ?>/bugs/browse/date" title="Browse bugs in a variety of ways">Browse Bugs</a></h3>
 			<ul class="sidebar_directory">
 				<li>
 					<a href="<? $POD->siteRoot(); ?>/bugs/browse/date" title="See the most recent bugs">Browse by Date</a>
