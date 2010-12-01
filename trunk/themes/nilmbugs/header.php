@@ -93,7 +93,7 @@
 		<ul>
 			<li id="nav_home" style="margin-left: 10px;"><a href="<? $POD->siteRoot(); ?>">Home</a></li>
 			<li id="nav_report"><a href="<? $POD->siteRoot(); ?>/bugs/edit">Report&nbsp;a&nbsp;bug</a></li>
-			<li id="nav_browse"><a href="<? $POD->siteRoot(); ?>/bugs">Browse&nbsp;bugs</a></li>
+			<li id="nav_browse"><a href="<? $POD->siteRoot(); ?>/bugs/browse/date">Browse&nbsp;bugs</a></li>
 			<? if ($POD->isAuthenticated()) { ?>
 				<li id="nav_my"><a href="<? $POD->siteRoot(); ?>/dashboard">My&nbsp;bugs</a></li>
 			<? } ?>
