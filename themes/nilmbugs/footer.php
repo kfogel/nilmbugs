@@ -20,12 +20,6 @@
 					<a href="http://public.resource.org">Public.Resource.org</a>
 				</li>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/who">Who we are</a>
-				</li>
-				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/faq">FAQ</a>
-				</li>
-				<li>
 					<a href="<? $POD->siteRoot(); ?>/pages/contact">Contact</a>
 				</li>
 				<li>
