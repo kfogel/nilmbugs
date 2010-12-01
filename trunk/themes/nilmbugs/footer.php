@@ -20,10 +20,10 @@
 					<a href="http://public.resource.org">Public.Resource.org</a>
 				</li>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/contact">Contact</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/privacy">Privacy</a>
 				</li>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/tos">Credits</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/credits">Credits</a>
 				</li>
 				
 				<? if ($POD->isAuthenticated() && $POD->currentUser()->adminUser) { ?>
