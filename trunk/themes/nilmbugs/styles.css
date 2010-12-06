@@ -136,7 +136,7 @@
 	.person_avatar { width: 130px; background-color: #eee; float: left; margin: 0px; text-align: center; margin-right: 10px; }
 	
 	.person_short { font-size: 12px;  }
-	.person_short .person_short_follow_button { display: block; padding-top:0px;  text-transform: uppercase; letter-spacing: .05em; font-size: 11px; color: #366D2F; font-weight: bold; } 
+	.person_short .person_short_follow_button { display: block; padding-top:0px;  text-transform: uppercase; letter-spacing: .05em; font-size: 11px; color: #366D2F; font-weight: bold; text-decoration: none; } 
 	.person_short .person_short_follow_button_start { font-weight: bold; } 
 	.person_short .person_short_follow_button_stop { color: #CCC; } 
 	.person_short .person_permalink { font-size: 18px; } 
@@ -301,8 +301,9 @@ p.did_you_mean { font-weight: bold; background: #FFFFCC; }
 .littlebutton { cursor: pointer; display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: 0px; font-size: 12px; line-height: 12px; padding-top: 7px; padding-bottom:7px; background: #0072BC; padding-left: 10px; padding-right: 10px;  color: #FFF; text-shadow: #333 1px 1px 5px; border: 0px solid #0072BC; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-align: center; }
 .littlebutton:hover { cursor: pointer; display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: 0px; font-size: 12px; line-height: 12px; padding-top: 7px; padding-bottom:7px; background: #C0B770; padding-left: 10px; padding-right: 10px;  color: #FFF; text-shadow: #333 1px 1px 5px; border: 0px solid #C0B770; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-align: center; }
 .button { cursor: pointer; display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: 0px; font-size: 12px; line-height: 12px; padding-top: 7px; padding-bottom:7px; background: #900; padding-left: 10px; padding-right: 10px;  color: #FFF; text-shadow: #333 1px 1px 5px; border: 0px solid #0072BC; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-align: center; margin-bottom: 40px; }
-a.edit_button { cursor: pointer; display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: 0px; font-size: 12px; line-height: 12px; padding-top: 7px; padding-bottom:7px; background: #C0B770; padding-left: 10px; padding-right: 10px;  color: #FFF; text-shadow: #333 1px 1px 5px; border: 0px solid #0072BC; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-align: center; color: #fff; margin-right: 5px; }
-
+a.edit_button { cursor: pointer; display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: 0px; font-size: 12px; line-height: 12px; padding-top: 7px; padding-bottom:7px; background: #C0B770; padding-left: 10px; padding-right: 10px;  color: #FFF; text-shadow: #333 1px 1px 5px; border: 0px solid #0072BC; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-align: center; color: #fff; margin-right: 5px; text-decoration: none; }
+a.favorite_button { text-decoration: none; }
+a.watch_button { text-decoration: none; }
 
 a#metoo { cursor: pointer;  display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: 0px; font-size: 16px; line-height: 16px; padding-top: 19px; padding-bottom:19px; background: url(img/button_skin.png); padding-left: 30px; padding-right: 30px;  color: #FFF; text-shadow: #333 1px 1px 5px; border: 2px solid #27326a; -moz-border-radius: 12px; -webkit-border-radius: 12px; text-align: center;  float: none; }
 a#metoo.active { cursor: pointer;  display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: 0px; font-size: 16px; line-height: 16px; padding-top: 19px; padding-bottom:19px; background: #133366; padding-left: 30px; padding-right: 30px;  color: #FFF; text-shadow: #333 1px 1px 5px; border: 2px solid #27326a; -moz-border-radius: 12px; -webkit-border-radius: 12px; text-align: center;  float: none; }
