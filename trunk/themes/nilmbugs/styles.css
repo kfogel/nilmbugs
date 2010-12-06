@@ -74,8 +74,8 @@
 
 	#nav ul li:last-child {  margin-right:0px;}
 
-	#nav ul li a { display: block; padding: 5px 8px; font-weight: bold; font-size: 11px; letter-spacing: .05em; } 
-	#nav ul li.active a { display: block; background: #FFF;  font-weight: bold; font-size: 11px;  letter-spacing: .05em;  } 
+	#nav ul li a { display: block; padding: 5px 8px; font-weight: bold; font-size: 11px; letter-spacing: .05em; text-decoration: none; color: #133366; } 
+	#nav ul li.active a { display: block; background: #FFF;  font-weight: bold; font-size: 11px;  letter-spacing: .05em; text-decoration: none; color: #133366; } 
 
 
 	#navigator ul { list-style-type: none; margin:0px; padding:0px; border-bottom:1px solid #CCC; margin-top:-10px; margin-bottom:20px; margin-right:305px; float:right; }
