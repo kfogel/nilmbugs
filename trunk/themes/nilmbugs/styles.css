@@ -4,10 +4,6 @@
 	div,ul,blockquote,p { font-size: 13px; line-height: 20px;  } 
 	
 	p { line-height: 150%; }
-	
-	a.navlinks { color: #133366; text-decoration: none; }
-	a.navlinks:visited { color: #133366; } 
-	a.navlinks:hover {  }  
 
 	a { color: #900; }
 	a:visited { color: #133366; } 
