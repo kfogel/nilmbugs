@@ -5,9 +5,9 @@
 	
 	p { line-height: 150%; }
 	
-	a.navlink { color: #133366; text-decoration: none; }
-	a.navlink:visited { color: #133366; } 
-	a.navlink:hover {  }  
+	a.navlinks { color: #133366; text-decoration: none; }
+	a.navlinks:visited { color: #133366; } 
+	a.navlinks:hover {  }  
 
 	a { color: #900; }
 	a:visited { color: #133366; } 
@@ -60,7 +60,7 @@
 /* Header Styles */ 
 
 	#lawgov_logo { position: absolute; top: 0px; left: 0px; width: 162px; }
-	#stateflag { position: absolute; top: 145px; left: 20px; width: 162px; }
+	#stateflag { position: absolute; top: 150px; left: 20px; width: 162px; }
 
 	img#logo { margin:7px 0px 0px 20px; padding: 0px; float: left; } 
 	#tagline { float: right; font-size: 28px; letter-spacing:-1px; margin-top:30px;}
