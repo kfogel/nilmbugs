@@ -10,6 +10,7 @@
 	a:hover {  }  
 
 	h1,h2,h3 { margin-top: 0px; margin-bottom: 10px;}
+	h1,h2,h3 a { text-decoration: none; }
 
 	h1 { font-size: 28px; line-height: 40px; font-family: Georgia, san-serif; font-weight: normal; } 
 	h2 { font-size: 18px; line-height: 30px; }
@@ -241,7 +242,7 @@
 #footer { background: #b9d5f9; padding:10px 6px 0px 6px; margin-bottom:0px; margin-left: 162px; height: 30px; text-transform: uppercase; letter-spacing: .05em; }
 #footer ul { list-style-type: none; padding:0px 6px; margin:0px; font-size: 11px; }
 #footer ul li { float: left; display: block; margin-right: 20px; font-weight: bold; } 
-#footer ul li a { display: block; padding: 5px 8px; font-weight: bold; font-size: 11px; letter-spacing: .05em; text-decoration: none; color: #133366; } 
+#footer ul li a { display: block; padding: 0px 8px; font-weight: bold; font-size: 11px; letter-spacing: .05em; text-decoration: none; color: #133366; } 
 #footer ul li.active a { display: block; background: #FFF;  font-weight: bold; font-size: 11px;  letter-spacing: .05em; text-decoration: none; color: #133366; } 
 
 
