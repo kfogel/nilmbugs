@@ -17,18 +17,18 @@
 	<div id="footer">
 			<ul>
 				<li style="margin-left: 10px;">
-					<a href="http://public.resource.org" class="navlinks">Public.Resource.org</a>
+					<a href="http://public.resource.org">Public.Resource.org</a>
 				</li>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/privacy" class="navlinks">Privacy</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/privacy">Privacy</a>
 				</li>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/pages/credits" class="navlinks">Credits</a>
+					<a href="<? $POD->siteRoot(); ?>/pages/credits">Credits</a>
 				</li>
 				
 				<? if ($POD->isAuthenticated() && $POD->currentUser()->adminUser) { ?>
 					<li>
-						<a href="<? $POD->siteRoot(); ?>/peoplepods/admin" class="navlinks">Admin</a>
+						<a href="<? $POD->siteRoot(); ?>/peoplepods/admin">Admin</a>
 					</li>			
 				<? } ?>
 			</ul>
