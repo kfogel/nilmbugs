@@ -40,6 +40,10 @@
 
 	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/toggle.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/featured_slide.css" media="screen" charset="utf-8" />
+	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/jquery.jcarousel.pack.js"></script>
+	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/jquery.jcarousel.setup.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/jquery-bt/jquery.bt.css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/jquery-autocomplete/jquery.autocomplete.css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/jquery-datepick/flora.datepick.css" media="screen" charset="utf-8" />
