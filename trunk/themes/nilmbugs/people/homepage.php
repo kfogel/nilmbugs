@@ -103,11 +103,6 @@
 
 	<div id="welcome_block">
 		<? $welcome_message->output('interface_text'); ?>
-		<div id="homepage_submit">
-			<a href="<? $POD->siteRoot(); ?>/bugs/edit" class="button with_right_margin">Report a Bug Now</a>
-			<div class="clearer"></div>
-		</div>
-		<div class="clearer"></div>	
 	</div>
 	<div class="column_8">
 		<?
