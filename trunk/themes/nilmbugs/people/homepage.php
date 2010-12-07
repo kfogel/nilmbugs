@@ -44,56 +44,56 @@
 
     <div id="featured_content">
       <ul>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/AK.png" class="stateflag" alt="" /></a><br />AK</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/AL.png" class="stateflag" alt="" /></a><br />AL</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/AR.png" class="stateflag" alt="" /></a><br />AR</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/AZ.png" class="stateflag" alt="" /></a><br />AZ</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/CA.png" class="stateflag" alt="" /></a><br />CA</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/CO.png" class="stateflag" alt="" /></a><br />CO</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/CT.png" class="stateflag" alt="" /></a><br />CT</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/DE.png" class="stateflag" alt="" /></a><br />DE</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/FL.png" class="stateflag" alt="" /></a><br />FL</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/GA.png" class="stateflag" alt="" /></a><br />GA</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/hawaii.png" class="stateflag" alt="" /></a><br />Hawaii</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/IA.png" class="stateflag" alt="" /></a><br />IA</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/ID.png" class="stateflag" alt="" /></a><br />ID</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/IL.png" class="stateflag" alt="" /></a><br />IL</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/IN.png" class="stateflag" alt="" /></a><br />IN</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/KS.png" class="stateflag" alt="" /></a><br />KS</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/KY.png" class="stateflag" alt="" /></a><br />KY</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/LA.png" class="stateflag" alt="" /></a><br />LA</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/MA.png" class="stateflag" alt="" /></a><br />MA</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/MD.png" class="stateflag" alt="" /></a><br />MD</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/ME.png" class="stateflag" alt="" /></a><br />ME</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/MI.png" class="stateflag" alt="" /></a><br />MI</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/MN.png" class="stateflag" alt="" /></a><br />MN</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/MO.png" class="stateflag" alt="" /></a><br />MO</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/MS.png" class="stateflag" alt="" /></a><br />MS</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/MT.png" class="stateflag" alt="" /></a><br />MT</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/NC.png" class="stateflag" alt="" /></a><br />NC</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/ND.png" class="stateflag" alt="" /></a><br />ND</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/NE.png" class="stateflag" alt="" /></a><br />NE</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/NH.png" class="stateflag" alt="" /></a><br />NH</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/NJ.png" class="stateflag" alt="" /></a><br />NJ</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/NM.png" class="stateflag" alt="" /></a><br />NM</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/NV.png" class="stateflag" alt="" /></a><br />NV</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/NY.png" class="stateflag" alt="" /></a><br />NY</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/OH.png" class="stateflag" style="border: none;" alt="" /></a><br />OH</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/OK.png" class="stateflag" alt="" /></a><br />OK</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/OR.png" class="stateflag" alt="" /></a><br />OR</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/PA.png" class="stateflag" alt="" /></a><br />PA</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/RI.png" class="stateflag" alt="" /></a><br />RI</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/SC.png" class="stateflag" alt="" /></a><br />SC</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/SD.png" class="stateflag" alt="" /></a><br />SD</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/TN.png" class="stateflag" alt="" /></a><br />TN</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/TX.png" class="stateflag" alt="" /></a><br />TX</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/UT.png" class="stateflag" alt="" /></a><br />UT</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/VA.png" class="stateflag" alt="" /></a><br />VA</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/VT.png" class="stateflag" alt="" /></a><br />VT</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/WA.png" class="stateflag" alt="" /></a><br />WA</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/WI.png" class="stateflag" alt="" /></a><br />WI</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/WV.png" class="stateflag" alt="" /></a><br />WV</li>
-        <li><a href="#"><img src="<? $POD->templateDir(); ?>/img/flags/WY.png" class="stateflag" alt="" /></a><br />WY</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Alaska"><img src="<? $POD->templateDir(); ?>/img/flags/AK.png" class="stateflag" alt="" /></a><br />AK</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Alabama"><img src="<? $POD->templateDir(); ?>/img/flags/AL.png" class="stateflag" alt="" /></a><br />AL</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Arkansas"><img src="<? $POD->templateDir(); ?>/img/flags/AR.png" class="stateflag" alt="" /></a><br />AR</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Arizona"><img src="<? $POD->templateDir(); ?>/img/flags/AZ.png" class="stateflag" alt="" /></a><br />AZ</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=California"><img src="<? $POD->templateDir(); ?>/img/flags/CA.png" class="stateflag" alt="" /></a><br />CA</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Colorado"><img src="<? $POD->templateDir(); ?>/img/flags/CO.png" class="stateflag" alt="" /></a><br />CO</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Connecticut"><img src="<? $POD->templateDir(); ?>/img/flags/CT.png" class="stateflag" alt="" /></a><br />CT</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Delaware"><img src="<? $POD->templateDir(); ?>/img/flags/DE.png" class="stateflag" alt="" /></a><br />DE</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Florida"><img src="<? $POD->templateDir(); ?>/img/flags/FL.png" class="stateflag" alt="" /></a><br />FL</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Georgia"><img src="<? $POD->templateDir(); ?>/img/flags/GA.png" class="stateflag" alt="" /></a><br />GA</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Hawaii"><img src="<? $POD->templateDir(); ?>/img/flags/hawaii.png" class="stateflag" alt="" /></a><br />Hawaii</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Iowa"><img src="<? $POD->templateDir(); ?>/img/flags/IA.png" class="stateflag" alt="" /></a><br />IA</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Idaho"><img src="<? $POD->templateDir(); ?>/img/flags/ID.png" class="stateflag" alt="" /></a><br />ID</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Illinois"><img src="<? $POD->templateDir(); ?>/img/flags/IL.png" class="stateflag" alt="" /></a><br />IL</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Indiana"><img src="<? $POD->templateDir(); ?>/img/flags/IN.png" class="stateflag" alt="" /></a><br />IN</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Kansas"><img src="<? $POD->templateDir(); ?>/img/flags/KS.png" class="stateflag" alt="" /></a><br />KS</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Kentucky"><img src="<? $POD->templateDir(); ?>/img/flags/KY.png" class="stateflag" alt="" /></a><br />KY</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Louisiana"><img src="<? $POD->templateDir(); ?>/img/flags/LA.png" class="stateflag" alt="" /></a><br />LA</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Massachusetts"><img src="<? $POD->templateDir(); ?>/img/flags/MA.png" class="stateflag" alt="" /></a><br />MA</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Maryland"><img src="<? $POD->templateDir(); ?>/img/flags/MD.png" class="stateflag" alt="" /></a><br />MD</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Maine"><img src="<? $POD->templateDir(); ?>/img/flags/ME.png" class="stateflag" alt="" /></a><br />ME</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Michigan"><img src="<? $POD->templateDir(); ?>/img/flags/MI.png" class="stateflag" alt="" /></a><br />MI</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Minnesota"><img src="<? $POD->templateDir(); ?>/img/flags/MN.png" class="stateflag" alt="" /></a><br />MN</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Missouri"><img src="<? $POD->templateDir(); ?>/img/flags/MO.png" class="stateflag" alt="" /></a><br />MO</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Mississippi"><img src="<? $POD->templateDir(); ?>/img/flags/MS.png" class="stateflag" alt="" /></a><br />MS</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Montana"><img src="<? $POD->templateDir(); ?>/img/flags/MT.png" class="stateflag" alt="" /></a><br />MT</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=North Carolina"><img src="<? $POD->templateDir(); ?>/img/flags/NC.png" class="stateflag" alt="" /></a><br />NC</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=North Dakota"><img src="<? $POD->templateDir(); ?>/img/flags/ND.png" class="stateflag" alt="" /></a><br />ND</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Nebraska"><img src="<? $POD->templateDir(); ?>/img/flags/NE.png" class="stateflag" alt="" /></a><br />NE</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=New Hampshire"><img src="<? $POD->templateDir(); ?>/img/flags/NH.png" class="stateflag" alt="" /></a><br />NH</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=New Jersey"><img src="<? $POD->templateDir(); ?>/img/flags/NJ.png" class="stateflag" alt="" /></a><br />NJ</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=New Mexico"><img src="<? $POD->templateDir(); ?>/img/flags/NM.png" class="stateflag" alt="" /></a><br />NM</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Nevada"><img src="<? $POD->templateDir(); ?>/img/flags/NV.png" class="stateflag" alt="" /></a><br />NV</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=New York"><img src="<? $POD->templateDir(); ?>/img/flags/NY.png" class="stateflag" alt="" /></a><br />NY</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Ohio"><img src="<? $POD->templateDir(); ?>/img/flags/OH.png" class="stateflag" style="border: none;" alt="" /></a><br />OH</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Oklahoma"><img src="<? $POD->templateDir(); ?>/img/flags/OK.png" class="stateflag" alt="" /></a><br />OK</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Oregon"><img src="<? $POD->templateDir(); ?>/img/flags/OR.png" class="stateflag" alt="" /></a><br />OR</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Pennsylvania"><img src="<? $POD->templateDir(); ?>/img/flags/PA.png" class="stateflag" alt="" /></a><br />PA</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Rhode Island"><img src="<? $POD->templateDir(); ?>/img/flags/RI.png" class="stateflag" alt="" /></a><br />RI</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=South Carolina"><img src="<? $POD->templateDir(); ?>/img/flags/SC.png" class="stateflag" alt="" /></a><br />SC</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=South Dakota"><img src="<? $POD->templateDir(); ?>/img/flags/SD.png" class="stateflag" alt="" /></a><br />SD</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Tennessee"><img src="<? $POD->templateDir(); ?>/img/flags/TN.png" class="stateflag" alt="" /></a><br />TN</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Texas"><img src="<? $POD->templateDir(); ?>/img/flags/TX.png" class="stateflag" alt="" /></a><br />TX</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Utah"><img src="<? $POD->templateDir(); ?>/img/flags/UT.png" class="stateflag" alt="" /></a><br />UT</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Virginia"><img src="<? $POD->templateDir(); ?>/img/flags/VA.png" class="stateflag" alt="" /></a><br />VA</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Vermont"><img src="<? $POD->templateDir(); ?>/img/flags/VT.png" class="stateflag" alt="" /></a><br />VT</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Washington"><img src="<? $POD->templateDir(); ?>/img/flags/WA.png" class="stateflag" alt="" /></a><br />WA</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Wisconsin"><img src="<? $POD->templateDir(); ?>/img/flags/WI.png" class="stateflag" alt="" /></a><br />WI</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=West Virginia"><img src="<? $POD->templateDir(); ?>/img/flags/WV.png" class="stateflag" alt="" /></a><br />WV</li>
+        <li><a href="http://www.red-bean.com/nilmbugs/bugs/browse/search?q=Wyoming"><img src="<? $POD->templateDir(); ?>/img/flags/WY.png" class="stateflag" alt="" /></a><br />WY</li>
 
       </ul>
     </div>
