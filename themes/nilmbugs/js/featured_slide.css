@@ -1,9 +1,9 @@
 #featured_slide {
 	position:relative;
-	margin:0 0 0 80px;
+	margin:0 0 0 0px;
 	display:block;
 	width:850px;
-	height:50px;
+	height:70px;
 	padding:0px 42px 0px 20px;
 	overflow:hidden;
 	font-size:12px;
