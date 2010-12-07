@@ -3,7 +3,7 @@
 	margin:0 0 0 0px;
 	display:block;
 	width:850px;
-	height:70px;
+	height:60px;
 	padding:0px 42px 0px 20px;
 	overflow:hidden;
 	font-size:12px;
@@ -25,7 +25,7 @@
 #featured_content, #featured_content ul{
 	display:block;
 	width:850px;
-	height:70px;
+	height:60px;
 	margin:0;
 	padding:0;
 	list-style:none;
@@ -43,7 +43,7 @@
 	position:relative;
 	float:left;
 	width:45px;
-	height:70px;
+	height:60px;
 	margin:0 0px 0 0;
 	padding:3px;
 	color:#999999;
@@ -70,7 +70,7 @@
 	position:absolute;
 	top:0px;
 	width:36px;
-	height:70px;
+	height:60px;
 	}
 
 #featured-item-prev {left:0;}
