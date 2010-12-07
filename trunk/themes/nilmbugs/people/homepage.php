@@ -39,6 +39,8 @@
 	}
 ?>
 
+
+	<div id="welcome_block">
   <div id="featured_slide">
 
     <div id="featured_content">
@@ -98,13 +100,7 @@
     </div>
     <a href="javascript:void(0);" id="featured-item-prev"><img src="images/prev.png" alt="" /></a> <a href="javascript:void(0);" id="featured-item-next"><img src="images/next.png" alt="" /></a> </div>
 </div>
-
-	<div id="welcome_block">
-		<? $welcome_message->output('interface_text'); ?>
-		<div id="homepage_submit">
-			<a href="<? $POD->siteRoot(); ?>/bugs/edit" class="button with_right_margin">Report a Bug Now</a>
-			<div class="clearer"></div>
-		</div>
+<? $welcome_message->output('interface_text'); ?>
 		<div class="clearer"></div>	
 	</div>
 	<div class="column_8">
