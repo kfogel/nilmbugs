@@ -26,6 +26,10 @@
 	<![endif]-->
 
 	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/jquery.jcarousel.pack.js"></script>
+	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/jquery.jcarousel.setup.js"></script>
+
 	<script src="<? $POD->templateDir(); ?>/js/jquery-autocomplete/jquery.autocomplete.min.js"></script>
 	<script src="<? $POD->templateDir(); ?>/js/jquery-bt/other_libs/jquery.hoverIntent.minified.js" type="text/javascript" charset="utf-8"></script>
 	<script src="<? $POD->templateDir(); ?>/js/jquery-bt/other_libs/bgiframe_2.1.1/jquery.bgiframe.min.js" type="text/javascript" charset="utf-8"></script>
@@ -41,8 +45,6 @@
 	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/toggle.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/featured_slide.css" media="screen" charset="utf-8" />
-	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/jquery.jcarousel.pack.js"></script>
-	<script type="text/javascript" src="<? $POD->templateDir(); ?>/js/jquery.jcarousel.setup.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/jquery-bt/jquery.bt.css" media="screen" charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="<? $POD->templateDir(); ?>/js/jquery-autocomplete/jquery.autocomplete.css" media="screen" charset="utf-8" />
