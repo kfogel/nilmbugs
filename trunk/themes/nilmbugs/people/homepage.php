@@ -97,7 +97,7 @@
 
       </ul>
     </div>
-    <a href="javascript:void(0);" id="featured-item-prev"><img src="images/prev.png" alt="" /></a> <a href="javascript:void(0);" id="featured-item-next"><img src="images/next.png" alt="" /></a> 
+    <a href="javascript:void(0);" id="featured-item-prev"><img src="<? $POD->templateDir(); ?>/img/prev.png" alt="" /></a> <a href="javascript:void(0);" id="featured-item-next"><img src="<? $POD->templateDir(); ?>/img/next.png" alt="" /></a> 
 </div>
 
 
