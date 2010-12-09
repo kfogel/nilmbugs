@@ -2,21 +2,39 @@ Index: mediabugs-open/pods/bugs_bugs/list.php
 ===================================================================
 --- mediabugs-open/pods/bugs_bugs/list.php	(revision 16)
 +++ mediabugs-open/pods/bugs_bugs/list.php	(working copy)
+@@ -28,7 +28,7 @@
+ 	$sort = $_GET['sort'] ? $_GET['sort'] : 'date';
+ 
+ 	$crumbs = array();
+-	$crumbs[] = "<a href=\"/bugs\">Browse</a>";
++	$crumbs[] = "<a href=\"" . $POD->siteRoot(false) . "/bugs/browse/date\">Browse</a>";
+ 	$feed = null;
+ 	if ($mode !='home') { 
+ 		$feed = "/bugs/feeds/" .  $mode  ."?q=". urlencode($_GET['q']);
+@@ -47,7 +47,7 @@
+ 		
+ 		if ($mode=='status') { 
+ 		
+-			$crumbs[] = "<a href=\"/bugs/browse/status\">Status</a>";
++			$crumbs[] = "<a href=\"" . $POD->siteRoot(false) . "/bugs/browse/status\">Status</a>";
+ 
+ 			$key = 'bug_status';
+ 			
 @@ -59,7 +59,12 @@
  				$key = 'bug_status:like';
  				$term = 'closed%';
  			}
 -			
 +		} else if ($mode=='state') {
-+			$crumbs[] = "<a href=\"" . $POD->siteRoot(false) . "/bugs/browse\">State</a>";
++			$crumbs[] = "<a href=\"" . $POD->siteRoot(false) . "/bugs/browse/state\">By State</a>";
 +			$key = 'jurisdiction_contact_state';
 +		} else if ($mode=='city') {
-+			$crumbs[] = "<a href=\"" . $POD->siteRoot(false) . "/bugs/browse\">City</a>";
++			$crumbs[] = "<a href=\"" . $POD->siteRoot(false) . "/bugs/browse/city\">By City</a>";
 +			$key = 'jurisdiction_contact_city';
  		} else if ($mode=="outlet") { 
  			if ($term) { 
  				$outlet = $POD->getContent(array('id'=>$term));
-@@ -187,6 +192,62 @@
+@@ -187,14 +192,84 @@
  					
  					$POD->output('regionmap');
  				}
@@ -77,6 +95,34 @@ Index: mediabugs-open/pods/bugs_bugs/list.php
 +                                <?
 +                                }
  			
- 				echo '<ul class="directory">';
- 				echo "<li><a href=\"#\">" .ucfirst($mode) ."</a>";
-
+-				echo '<ul class="directory">';
+-				echo "<li><a href=\"#\">" .ucfirst($mode) ."</a>";
+-				echo "<ul>";
+-				foreach ($links as $link) { 
+-					echo "<li>$link</li>";
+-				}
+-				echo '</ul></li></ul>';
++                                /* This could be unconditional, and we
++                                   could instead just set up $links in 
++                                   the mode=="state" section above.
++                                   However, it's a crock anyway and
++                                   will soon be gone, and listing out
++                                   the HTML above allows us to
++                                   customize the list-style-type and
++                                   the funny business with Ohio's flag
++                                   having no rectangular border, which
++                                   would be tricky if we tried to hook
++                                   the state flags list into the
++                                   $links[] mechanism. */
++                                if ($mode != 'state') {
++				          echo '<ul class="directory">';
++				          echo "<li><a href=\"#\">" .ucfirst($mode) ."</a>";
++				          echo "<ul>";
++				          foreach ($links as $link) { 
++					          echo "<li>$link</li>";
++				          }
++				          echo '</ul></li></ul>';
++                                }
+ 			} else { 
+ 			
+ 				if ($outlet) { 
