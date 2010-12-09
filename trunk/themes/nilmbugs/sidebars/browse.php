@@ -5,9 +5,6 @@
 					<a href="<? $POD->siteRoot(); ?>/bugs/browse/date" title="See the most recent bugs">Browse by Date</a>
 				</li>
 				<li>
-					<a href="<? $POD->siteRoot(); ?>/bugs/browse/outlet">Browse by Jurisdiction</a>
-				</li>
-				<li>
 					<a href="<? $POD->siteRoot(); ?>/bugs/browse/state">Browse by State</a>
 				</li>				
 				<li>
