@@ -1,0 +1,19 @@
+Index: mediabugs-open/pods/bugs_bugs/list.php
+===================================================================
+--- mediabugs-open/pods/bugs_bugs/list.php	(revision 16)
++++ mediabugs-open/pods/bugs_bugs/list.php	(working copy)
+@@ -59,7 +59,12 @@
+ 				$key = 'bug_status:like';
+ 				$term = 'closed%';
+ 			}
+-			
++		} else if ($mode=='state') {
++			$crumbs[] = "<a href=\"" . $POD->siteRoot(false) . "/bugs/browse\">State</a>";
++			$key = 'jurisdiction_contact_state';
++		} else if ($mode=='city') {
++			$crumbs[] = "<a href=\"" . $POD->siteRoot(false) . "/bugs/browse\">City</a>";
++			$key = 'jurisdiction_contact_city';
+ 		} else if ($mode=="outlet") { 
+ 			if ($term) { 
+ 				$outlet = $POD->getContent(array('id'=>$term));
+

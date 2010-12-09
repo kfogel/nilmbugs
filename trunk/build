@@ -66,3 +66,13 @@ if [ -e lib ]; then
 else
   ln -s "mediabugs-open/peoplepods/lib" lib
 fi
+
+# This is an offensive solution, but we needed search-by-city and
+# search-by-state working ASAP, and the Right Way was not obvious.
+# When the Right Way is clear, this will go away.
+if grep -q "$key = 'jurisdiction_contact_state';" \
+           mediabugs-open/pods/bugs_bugs/list.php; then
+  echo "Issue #13 crock patch already applied; not re-applying."
+else
+  echo "patch -p0 < issue-13-crock.txt"
+fi
