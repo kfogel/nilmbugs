@@ -54,7 +54,7 @@
         <li><a href="<? $POD->siteRoot(); ?>/bugs/browse/state?q=DE"><img src="<? $POD->templateDir(); ?>/img/flags/DE.png" class="stateflag" alt="" /></a><br />DE</li><!-- Delaware -->
         <li><a href="<? $POD->siteRoot(); ?>/bugs/browse/state?q=FL"><img src="<? $POD->templateDir(); ?>/img/flags/FL.png" class="stateflag" alt="" /></a><br />FL</li><!-- Florida -->
         <li><a href="<? $POD->siteRoot(); ?>/bugs/browse/state?q=GA"><img src="<? $POD->templateDir(); ?>/img/flags/GA.png" class="stateflag" alt="" /></a><br />GA</li><!-- Georgia -->
-        <li><a href="<? $POD->siteRoot(); ?>/bugs/browse/state?q=Hawaii"><img src="<? $POD->templateDir(); ?>/img/flags/hawaii.png" class="stateflag" alt="" /></a><br />Hawaii</li><!-- Hawaii -->
+        <li><a href="<? $POD->siteRoot(); ?>/bugs/browse/state?q=Hawaii"><img src="<? $POD->templateDir(); ?>/img/flags/HI.png" class="stateflag" alt="" /></a><br />Hawaii</li><!-- Hawaii -->
         <li><a href="<? $POD->siteRoot(); ?>/bugs/browse/state?q=IA"><img src="<? $POD->templateDir(); ?>/img/flags/IA.png" class="stateflag" alt="" /></a><br />IA</li><!-- Iowa -->
         <li><a href="<? $POD->siteRoot(); ?>/bugs/browse/state?q=ID"><img src="<? $POD->templateDir(); ?>/img/flags/ID.png" class="stateflag" alt="" /></a><br />ID</li><!-- Idaho -->
         <li><a href="<? $POD->siteRoot(); ?>/bugs/browse/state?q=IL"><img src="<? $POD->templateDir(); ?>/img/flags/IL.png" class="stateflag" alt="" /></a><br />IL</li><!-- Illinois -->
