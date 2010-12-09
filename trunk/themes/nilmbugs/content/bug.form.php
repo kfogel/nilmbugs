@@ -19,14 +19,6 @@ if ($doc->saved()) {
 	$jurisdiction = $POD->getContent(array('id'=>$doc->bug_target));
 }
 
-// after 15 minutes, users can only edit the last little piece.
-$minutes = 1;
-if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc->date) < ($minutes*60))) {
-	$editable = true;
-} else {
-	$editable = false;
-}
-
 
 	$instructions_report = $POD->getContent(array('stub'=>'instructions-report-bug'));
 	$instructions_what = $POD->getContent(array('stub'=>'instructions-what-bug'));
@@ -74,8 +66,6 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 		<? } ?>
 		
 		<? if ($doc->bugIsOpen()) { ?>
-			<? if ($editable) { ?>		
-	
 				<input type="hidden" name="type" value="bug" />		
 	
 				<fieldset id="report">
@@ -374,7 +364,6 @@ if (!$doc->saved() || $POD->currentUser()->adminUser || (time() - strtotime($doc
 	
 					<p class="input nextbutton"><a href="#status" class="littlebutton" onclick="return nextSection('addtl_info','status');">Next</a></p>
 				</fieldset>
-			<? } ?>
 
 			<a name="status"></a>
 			<fieldset id="status" style="display: none;">
