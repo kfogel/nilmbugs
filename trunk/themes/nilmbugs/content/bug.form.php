@@ -66,304 +66,304 @@ if ($doc->saved()) {
 		<? } ?>
 		
 		<? if ($doc->bugIsOpen()) { ?>
-				<input type="hidden" name="type" value="bug" />		
+			<input type="hidden" name="type" value="bug" />		
 	
-				<fieldset id="report">
-					<legend>Describe Jurisdiction</legend>
+			<fieldset id="report">
+				<legend>Describe Jurisdiction</legend>
 					
-					<? $instructions_report->output('interface_text'); ?>
+				<? $instructions_report->output('interface_text'); ?>
 	
 		
-					<? if ($doc->saved() && $POD->isAuthenticated() && $POD->currentUser()->adminUser) { ?>
+				<? if ($doc->saved() && $POD->isAuthenticated() && $POD->currentUser()->adminUser) { ?>
 	
-					<hr />
+				<hr />
 	
-					<h3>List View</h3>
-					<p>
-						Since you are an administrator, you can specify a title and summary that will override the 
-						values specified by the original bug reporter.
-					</p>
+				<h3>List View</h3>
+				<p>
+					Since you are an administrator, you can specify a title and summary that will override the 
+					values specified by the original bug reporter.
+				</p>
 			
-					<p class="input">
-						<label for="override_headline">Display Headline:</label>
-						<input name="meta_override_headline" id="override_headline" value="<? $doc->htmlspecialwrite('override_headline'); ?>" class="text" title="This will appear in list view instead of the headline below" />				
-					</p>		
-					<p class="input">
-						<label for="summary">Summary:</label>
-						<textarea name="meta_summary" id="summary" title="This will appear instead of the bug explanation" class="text tinymce"><? $doc->htmlspecialwrite('summary'); ?></textarea>
-					</p>		
+				<p class="input">
+					<label for="override_headline">Display Headline:</label>
+					<input name="meta_override_headline" id="override_headline" value="<? $doc->htmlspecialwrite('override_headline'); ?>" class="text" title="This will appear in list view instead of the headline below" />				
+				</p>		
+				<p class="input">
+					<label for="summary">Summary:</label>
+					<textarea name="meta_summary" id="summary" title="This will appear instead of the bug explanation" class="text tinymce"><? $doc->htmlspecialwrite('summary'); ?></textarea>
+				</p>		
 					
-					<hr />
+				<hr />
 					
-					<? } ?>
+				<? } ?>
 	
 	
 	
-					<p class="input">
-						<label for="headline">Summary of Problem<span class="required">*</span></label>
-						<input name="headline" id="headline" value="<? if ($doc->htmlspecialwrite('headline')) { echo $doc->htmlspecialwrite('headline'); } ?>" length="50" class="text required" title='A brief summary of the problem -- try for 10 words or fewer.  The summary you give here will be how this bug appears in listings; think of it as a name or a headline for the bug.  Some examples (these are made up): "Springfield charges fees", "4th circuit appeals court requires Flash", or even just "California Public Safety Codes", "PACER", etc.'/>
-					</p>
+				<p class="input">
+					<label for="headline">Summary of Problem<span class="required">*</span></label>
+					<input name="headline" id="headline" value="<? if ($doc->htmlspecialwrite('headline')) { echo $doc->htmlspecialwrite('headline'); } ?>" length="50" class="text required" title='A brief summary of the problem -- try for 10 words or fewer.  The summary you give here will be how this bug appears in listings; think of it as a name or a headline for the bug.  Some examples (these are made up): "Springfield charges fees", "4th circuit appeals court requires Flash", or even just "California Public Safety Codes", "PACER", etc.'/>
+				</p>
 					
-					<p class="input" id="jurisdiction_search">
-							<label for="bug_target">Name of Jurisdiction<span class="required">*</label>
-							<input name="bug_target" id="jurisdiction_q" class="text required" value="<? if ($jurisdiction) { $jurisdiction->htmlspecialwrite('headline'); }  if ($doc->suggested_outlet) { $doc->htmlspecialwrite('suggested_outlet'); } ?>" onblur="mo_newcheck();" title="Please enter the jurisdiction's full name.  If there are already bug reports about this jurisdiction, try to write the jurisdiction's name the same way those bugs do." />
-							<input name="meta_bug_target" type="hidden" value="<? $doc->bug_target; ?>" id="jurisdiction_id" />
-					</p>
+				<p class="input" id="jurisdiction_search">
+						<label for="bug_target">Name of Jurisdiction<span class="required">*</label>
+						<input name="bug_target" id="jurisdiction_q" class="text required" value="<? if ($jurisdiction) { $jurisdiction->htmlspecialwrite('headline'); }  if ($doc->suggested_outlet) { $doc->htmlspecialwrite('suggested_outlet'); } ?>" onblur="mo_newcheck();" title="Please enter the jurisdiction's full name.  If there are already bug reports about this jurisdiction, try to write the jurisdiction's name the same way those bugs do." />
+						<input name="meta_bug_target" type="hidden" value="<? $doc->bug_target; ?>" id="jurisdiction_id" />
+				</p>
 		
-					<div  id="jurisdiction_new" style="display:none;">
-						<p class="input"><strong>You are the first person to report a bug about this jurisdiction.</strong></p>
+				<div  id="jurisdiction_new" style="display:none;">
+					<p class="input"><strong>You are the first person to report a bug about this jurisdiction.</strong></p>
+				</div>
+					
+				<p class="input">
+					<label for="jurisdiction_contact">
+						Point of Contact
+					</label>
+					<input type="text" name="meta_jurisdiction_contact" value="<? $doc->htmlspecialwrite('jurisdiction_contact'); ?>" class="text" title='For example, "Attorney General Opinions", or the name/address of the official point of contact (e.g., chief judge, clerk, solicitor general, secretary of state).'/>
+
+					<div id="mailing-address">
+					<p class="input" style="margin-left: 20px;">
+					       <label><b>Mailing Address (all fields optional)</b></label>
+                                               <label for="jurisdiction_contact_street">Street:</label>
+                                               <input type="text" style="width: 416px;" class="text" name="meta_jurisdiction_contact_street_address" id="jurisdiction_contact_street_address" title="The street address for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_street_address'); ?>"/><br/>
+					<div id="city">
+					<p class="input">
+						<label for="jurisdiction_contact_city">City:</label>
+						<input type="text" class="text" name="meta_jurisdiction_contact_city" id="jurisdiction_contact_city" title="The city for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_city'); ?>"/><br/>
+					</p>	
+					</div>	
+					<div id="county">
+					<p class="input">
+						<label for="jurisdiction_contact_county">County:</label>
+						<input type="text" class="text" name="meta_jurisdiction_contact_county" id="jurisdiction_contact_county" title="The county for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_county'); ?>"/><br/>
+					</p>
 					</div>
-					
+					<div id="state">
 					<p class="input">
-						<label for="jurisdiction_contact">
-							Point of Contact
-						</label>
-						<input type="text" name="meta_jurisdiction_contact" value="<? $doc->htmlspecialwrite('jurisdiction_contact'); ?>" class="text" title='For example, "Attorney General Opinions", or the name/address of the official point of contact (e.g., chief judge, clerk, solicitor general, secretary of state).'/>
-
-						<div id="mailing-address">
-						<p class="input" style="margin-left: 20px;">
-					        <label><b>Mailing Address (all fields optional)</b></label>
-                                                <label for="jurisdiction_contact_street">Street:</label>
-                                                <input type="text" style="width: 416px;" class="text" name="meta_jurisdiction_contact_street_address" id="jurisdiction_contact_street_address" title="The street address for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_street_address'); ?>"/><br/>
-						<div id="city">
-						<p class="input">
-							<label for="jurisdiction_contact_city">City:</label>
-							<input type="text" class="text" name="meta_jurisdiction_contact_city" id="jurisdiction_contact_city" title="The city for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_city'); ?>"/><br/>
-						</p>	
-						</div>	
-						<div id="county">
-						<p class="input">
-							<label for="jurisdiction_contact_county">County:</label>
-							<input type="text" class="text" name="meta_jurisdiction_contact_county" id="jurisdiction_contact_county" title="The county for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_county'); ?>"/><br/>
-						</p>
-						</div>
-						<div id="state">
-						<p class="input">
-						<label for="jurisdiction_contact_state">State:</label>
-						<select name="meta_jurisdiction_contact_state" id="jurisdiction_contact_state" class="text">
-                                                        <option value="" >---</option><!-- empty string for state represents Federal jurisdiction -->
-                                                        <option value="AL" >Alabama (AL)</option>
-                                                        <option value="AK" >Alaska (AK)</option>
-                                                        <option value="AZ" >Arizona (AZ)</option>
-                                                        <option value="AR" >Arkansas (AR)</option>
-                                                        <option value="CA" >California (CA)</option>
-                                                        <option value="CO" >Colorado (CO)</option>
-                                                        <option value="CT" >Connecticut (CT)</option>
-                                                        <option value="DE" >Delaware (DE)</option>
-                                                        <option value="DC" >District of Columbia (DC)</option>
-                                                        <option value="FL" >Florida (FL)</option>
-                                                        <option value="GA" >Georgia (GA)</option>
-                                                        <option value="HI" >Hawaii (HI)</option>
-                                                        <option value="ID" >Idaho (ID)</option>
-                                                        <option value="IL" >Illinois (IL)</option>
-                                                        <option value="IN" >Indiana (IN)</option>
-                                                        <option value="IA" >Iowa (IA)</option>
-                                                        <option value="KS" >Kansas (KS)</option>
-                                                        <option value="KY" >Kentucky (KY)</option>
-                                                        <option value="LA" >Louisiana (LA)</option>
-                                                        <option value="ME" >Maine (ME)</option>
-                                                        <option value="MD" >Maryland (MD)</option>
-                                                        <option value="MA" >Massachusetts (MA)</option>
-                                                        <option value="MI" >Michigan (MI)</option>
-                                                        <option value="MN" >Minnesota (MN)</option>
-                                                        <option value="MS" >Mississippi (MS)</option>
-                                                        <option value="MO" >Missouri (MO)</option>
-                                                        <option value="MT" >Montana (MT)</option>
-                                                        <option value="NE" >Nebraska (NE)</option>
-                                                        <option value="NV" >Nevada (NV)</option>
-                                                        <option value="NH" >New Hampshire (NH)</option>
-                                                        <option value="NJ" >New Jersey (NJ)</option>
-                                                        <option value="NM" >New Mexico (NM)</option>
-                                                        <option value="NY" >New York (NY)</option>
-                                                        <option value="NC" >North Carolina (NC)</option>
-                                                        <option value="ND" >North Dakota (ND)</option>
-                                                        <option value="OH" >Ohio (OH)</option>
-                                                        <option value="OK" >Oklahoma (OK)</option>
-                                                        <option value="OR" >Oregon (OR)</option>
-                                                        <option value="PA" >Pennsylvania (PA)</option>
-                                                        <option value="RI" >Rhode Island (RI)</option>
-                                                        <option value="SC" >South Carolina (SC)</option>
-                                                        <option value="SD" >South Dakota (SD)</option>
-                                                        <option value="TN" >Tennessee (TN)</option>
-                                                        <option value="TX" >Texas (TX)</option>
-                                                        <option value="UT" >Utah (UT)</option>
-                                                        <option value="VT" >Vermont (VT)</option>
-                                                        <option value="VA" >Virginia (VA)</option>
-                                                        <option value="WA" >Washington (WA)</option>
-                                                        <option value="WV" >West Virginia (WV)</option>
-                                                        <option value="WI" >Wisconsin (WI)</option>
-                                                        <option value="WY" >Wyoming (WY)</option>
-                                                        <option value="AS" >American Samoa (AS)</option>
-                                                        <option value="GU" >Guam (GU)</option>
-                                                        <option value="MP" >Northern Mariana Islands (MP)</option>
-                                                        <option value="PR" >Puerto Rico (PR)</option>
-                                                        <option value="VI" >Virgin Islands (VI)</option>
-						</select>
-						</p>
-						</div>
-						<div id="zip-code">
-						<p class="input">
-							<label for="jurisdiction_contact_zip">ZIP Code:</label>
-							<input type="text" class="text" name="meta_jurisdiction_contact_zip" id="jurisdiction_contact_zip" title="The ZIP Code for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_zip'); ?>"/><br/>
-						</p>	
-                        </div>
-					</div>              
-					
-					<p class="input">
-						<label for="jurisdiction_url">
-							Jurisdiction URL
-						</label>
-						<input type="text" name="meta_jurisdiction_url" value="<? $doc->htmlspecialwrite('jurisdiction_url'); ?>" class="text" title='The main URL (web page) for the jurisdiction, if any.  Leave blank if none or unknown.'/>
+					<label for="jurisdiction_contact_state">State:</label>
+					<select name="meta_jurisdiction_contact_state" id="jurisdiction_contact_state" class="text">
+                                                       <option value="" >---</option><!-- empty string for state represents Federal jurisdiction -->
+                                                       <option value="AL" >Alabama (AL)</option>
+                                                       <option value="AK" >Alaska (AK)</option>
+                                                       <option value="AZ" >Arizona (AZ)</option>
+                                                       <option value="AR" >Arkansas (AR)</option>
+                                                       <option value="CA" >California (CA)</option>
+                                                       <option value="CO" >Colorado (CO)</option>
+                                                       <option value="CT" >Connecticut (CT)</option>
+                                                       <option value="DE" >Delaware (DE)</option>
+                                                       <option value="DC" >District of Columbia (DC)</option>
+                                                       <option value="FL" >Florida (FL)</option>
+                                                       <option value="GA" >Georgia (GA)</option>
+                                                       <option value="HI" >Hawaii (HI)</option>
+                                                       <option value="ID" >Idaho (ID)</option>
+                                                       <option value="IL" >Illinois (IL)</option>
+                                                       <option value="IN" >Indiana (IN)</option>
+                                                       <option value="IA" >Iowa (IA)</option>
+                                                       <option value="KS" >Kansas (KS)</option>
+                                                       <option value="KY" >Kentucky (KY)</option>
+                                                       <option value="LA" >Louisiana (LA)</option>
+                                                       <option value="ME" >Maine (ME)</option>
+                                                       <option value="MD" >Maryland (MD)</option>
+                                                       <option value="MA" >Massachusetts (MA)</option>
+                                                       <option value="MI" >Michigan (MI)</option>
+                                                       <option value="MN" >Minnesota (MN)</option>
+                                                       <option value="MS" >Mississippi (MS)</option>
+                                                       <option value="MO" >Missouri (MO)</option>
+                                                       <option value="MT" >Montana (MT)</option>
+                                                       <option value="NE" >Nebraska (NE)</option>
+                                                       <option value="NV" >Nevada (NV)</option>
+                                                       <option value="NH" >New Hampshire (NH)</option>
+                                                       <option value="NJ" >New Jersey (NJ)</option>
+                                                       <option value="NM" >New Mexico (NM)</option>
+                                                       <option value="NY" >New York (NY)</option>
+                                                       <option value="NC" >North Carolina (NC)</option>
+                                                       <option value="ND" >North Dakota (ND)</option>
+                                                       <option value="OH" >Ohio (OH)</option>
+                                                       <option value="OK" >Oklahoma (OK)</option>
+                                                       <option value="OR" >Oregon (OR)</option>
+                                                       <option value="PA" >Pennsylvania (PA)</option>
+                                                       <option value="RI" >Rhode Island (RI)</option>
+                                                       <option value="SC" >South Carolina (SC)</option>
+                                                       <option value="SD" >South Dakota (SD)</option>
+                                                       <option value="TN" >Tennessee (TN)</option>
+                                                       <option value="TX" >Texas (TX)</option>
+                                                       <option value="UT" >Utah (UT)</option>
+                                                       <option value="VT" >Vermont (VT)</option>
+                                                       <option value="VA" >Virginia (VA)</option>
+                                                       <option value="WA" >Washington (WA)</option>
+                                                       <option value="WV" >West Virginia (WV)</option>
+                                                       <option value="WI" >Wisconsin (WI)</option>
+                                                       <option value="WY" >Wyoming (WY)</option>
+                                                       <option value="AS" >American Samoa (AS)</option>
+                                                       <option value="GU" >Guam (GU)</option>
+                                                       <option value="MP" >Northern Mariana Islands (MP)</option>
+                                                       <option value="PR" >Puerto Rico (PR)</option>
+                                                       <option value="VI" >Virgin Islands (VI)</option>
+					</select>
 					</p>
+					</div>
+					<div id="zip-code">
+					<p class="input">
+						<label for="jurisdiction_contact_zip">ZIP Code:</label>
+						<input type="text" class="text" name="meta_jurisdiction_contact_zip" id="jurisdiction_contact_zip" title="The ZIP Code for the Point of Contact." value="<? $doc->htmlspecialwrite('jurisdiction_contact_zip'); ?>"/><br/>
+					</p>	
+                       </div>
+				</div>              
+					
+				<p class="input">
+					<label for="jurisdiction_url">
+						Jurisdiction URL
+					</label>
+					<input type="text" name="meta_jurisdiction_url" value="<? $doc->htmlspecialwrite('jurisdiction_url'); ?>" class="text" title='The main URL (web page) for the jurisdiction, if any.  Leave blank if none or unknown.'/>
+				</p>
 		
-					<p class="input">
-						<label for="jurisdiction_level">
-							What level is this jurisdiction? <span class="required">*</span>
-						</label>
-						<select name="meta_jurisdiction_level" id="jurisdiction_level" class="text required">
-							<option value="Federal" >Federal</option>
-							<option value="State" >State</option>
-							<option value="Local" >Local</option>
-							<option value="Other" >Other</option>
-						</select>
-					</p>
+				<p class="input">
+					<label for="jurisdiction_level">
+						What level is this jurisdiction? <span class="required">*</span>
+					</label>
+					<select name="meta_jurisdiction_level" id="jurisdiction_level" class="text required">
+						<option value="Federal" >Federal</option>
+						<option value="State" >State</option>
+						<option value="Local" >Local</option>
+						<option value="Other" >Other</option>
+					</select>
+				</p>
 
-					<p class="input">
-						<label for="jurisdiction_branch">
-							What branch is this jurisdiction? <span class="required">*</span>
-						</label>
-						<select name="meta_jurisdiction_branch" id="jurisdiction_branch" class="text required">
-							<option value="Executive" >Executive</option>
-							<option value="Judicial" >Judicial</option>
-							<option value="Legislative" >Legislative</option>
-						</select>
-					</p>
+				<p class="input">
+					<label for="jurisdiction_branch">
+						What branch is this jurisdiction? <span class="required">*</span>
+					</label>
+					<select name="meta_jurisdiction_branch" id="jurisdiction_branch" class="text required">
+						<option value="Executive" >Executive</option>
+						<option value="Judicial" >Judicial</option>
+						<option value="Legislative" >Legislative</option>
+					</select>
+				</p>
 
-					<p class="input nextbutton"><a href="#who" class="littlebutton" onclick="return nextSection('report','what');">Next</a></p>
-				</fieldset>
+				<p class="input nextbutton"><a href="#who" class="littlebutton" onclick="return nextSection('report','what');">Next</a></p>
+			</fieldset>
 	
-				<a name="what"></a>
-				<fieldset id="what" style="display: none;">
-					<legend>What?</legend>
+			<a name="what"></a>
+			<fieldset id="what" style="display: none;">
+				<legend>What?</legend>
 				
-					<? $instructions_what->output('interface_text'); ?>
+				<? $instructions_what->output('interface_text'); ?>
 				
-					<p class="input">
- 						<label for="violations">
-							Mark any violations of <a href="http://public.resource.org/law.gov/" >Law.Gov</a> Principles:
- 						</label>
-						<? foreach ($violations as $violation) { ?>
-                                                <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
-                                                        <input type="checkbox" name="meta_bug_lgv_<?= $violation->id; ?>" id="bug_lgv_<?= $violation->id; ?>" value="<?= $violation->stub; ?>" <? if ($doc->get("bug_lgv_$violation->id")) {?>checked<? } ?>>&nbsp;<? echo $violation->permalink(); ?></input><br/>
-						<? } ?>
-					</p>
+				<p class="input">
+ 					<label for="violations">
+						Mark any violations of <a href="http://public.resource.org/law.gov/" >Law.Gov</a> Principles:
+ 					</label>
+					<? foreach ($violations as $violation) { ?>
+                                               <!-- Use each violation object's ID to distinguish it when attaching it to a bug via a meta field. -->
+                                                       <input type="checkbox" name="meta_bug_lgv_<?= $violation->id; ?>" id="bug_lgv_<?= $violation->id; ?>" value="<?= $violation->stub; ?>" <? if ($doc->get("bug_lgv_$violation->id")) {?>checked<? } ?>>&nbsp;<? echo $violation->permalink(); ?></input><br/>
+					<? } ?>
+				</p>
 				
-					<p class="input">
-						<label for="body">
-							Please describe the nature of the violation(s).<span class="required">*</span>
-						</label>
-						<textarea name="body" id="bug_body" class="text tinymce required"><? $doc->htmlspecialwrite('body'); ?></textarea>
-					</p>
+				<p class="input">
+					<label for="body">
+						Please describe the nature of the violation(s).<span class="required">*</span>
+					</label>
+					<textarea name="body" id="bug_body" class="text tinymce required"><? $doc->htmlspecialwrite('body'); ?></textarea>
+				</p>
 	
-					<p class="input">
-						<label for="date">When was this bug discovered? <span class="required">*</span></label>
-						<input type="text" name="meta_report_date" id="report_date" class="text required dpDate" value="<? if ($doc->report_date) { echo date('m/d/Y',strtotime($doc->report_date)); } else { echo date("m/d/Y"); }  ?>" />
-						<script type="text/javascript">
-							$('#report_date').datepick({navigationAsDateFormat: true, prevText: '< M', currentText: 'M y', nextText: 'M >',changeMonth: false, changeYear: false,mandatory:true});
-						</script>
-					</p>
+				<p class="input">
+					<label for="date">When was this bug discovered? <span class="required">*</span></label>
+					<input type="text" name="meta_report_date" id="report_date" class="text required dpDate" value="<? if ($doc->report_date) { echo date('m/d/Y',strtotime($doc->report_date)); } else { echo date("m/d/Y"); }  ?>" />
+					<script type="text/javascript">
+						$('#report_date').datepick({navigationAsDateFormat: true, prevText: '< M', currentText: 'M y', nextText: 'M >',changeMonth: false, changeYear: false,mandatory:true});
+					</script>
+				</p>
 	
-					<p class="input nextbutton"><a href="#addtl_info" class="littlebutton" onclick="return nextSection('what','addtl_info');">Next</a></p>
-				</fieldset>
+				<p class="input nextbutton"><a href="#addtl_info" class="littlebutton" onclick="return nextSection('what','addtl_info');">Next</a></p>
+			</fieldset>
 	
-				<a name="addtl_info"></a>
-				<fieldset id="addtl_info" style="display: none;">
-					<legend>Additional Info</legend>
-					<? $instructions_addtl_info->output('interface_text'); ?>
+			<a name="addtl_info"></a>
+			<fieldset id="addtl_info" style="display: none;">
+				<legend>Additional Info</legend>
+				<? $instructions_addtl_info->output('interface_text'); ?>
 	
 <!-- BEGIN Official Vendor -->
-				<p class="input">
-					<label for="">Is there an official vendor?</label>
-					<input type="radio" name="meta_has_official_vendor" value="yes" id="has_official_vendor_yes" onchange="chofficialvendor();" <? if ($doc->has_official_vendor=="yes") {?>checked<? } ?>> Yes
-					<input type="radio" name="meta_has_official_vendor" value="no" id="has_official_vendor_no" onchange="chofficialvendor();"<? if ($doc->has_official_vendor=="no" || !$doc->saved()) {?>checked<? } ?>> No
-				</p>
+			<p class="input">
+				<label for="">Is there an official vendor?</label>
+				<input type="radio" name="meta_has_official_vendor" value="yes" id="has_official_vendor_yes" onchange="chofficialvendor();" <? if ($doc->has_official_vendor=="yes") {?>checked<? } ?>> Yes
+				<input type="radio" name="meta_has_official_vendor" value="no" id="has_official_vendor_no" onchange="chofficialvendor();"<? if ($doc->has_official_vendor=="no" || !$doc->saved()) {?>checked<? } ?>> No
+			</p>
 
-				<p class="input" id="official_vendor_name" <? if (!$doc->saved() || $doc->official_vendor_name=='') { ?>style="display:none;"<? }?>>
-					<label for="">Name:</label>
-					<input type="text" name="meta_official_vendor_name" class="text tinymce"><? $doc->htmlspecialwrite('official_vendor_name'); ?></input>
-				</p>
+			<p class="input" id="official_vendor_name" <? if (!$doc->saved() || $doc->official_vendor_name=='') { ?>style="display:none;"<? }?>>
+				<label for="">Name:</label>
+				<input type="text" name="meta_official_vendor_name" class="text tinymce"><? $doc->htmlspecialwrite('official_vendor_name'); ?></input>
+			</p>
 
-				<p class="input" id="official_vendor_url" <? if (!$doc->saved() || $doc->official_vendor_url=='') { ?>style="display:none;"<? }?>>
-					<label for="">URL:</label>
-					<input type="text" name="meta_official_vendor_url" class="text tinymce"><? $doc->htmlspecialwrite('official_vendor_url'); ?></input>
-				</p>
+			<p class="input" id="official_vendor_url" <? if (!$doc->saved() || $doc->official_vendor_url=='') { ?>style="display:none;"<? }?>>
+				<label for="">URL:</label>
+				<input type="text" name="meta_official_vendor_url" class="text tinymce"><? $doc->htmlspecialwrite('official_vendor_url'); ?></input>
+			</p>
 
-				<p class="input" id="official_vendor_addtl_info" <? if (!$doc->saved() || $doc->official_vendor_addtl_info=='') { ?>style="display:none;"<? }?>>
-						<label for="">Price or
-						additional information:</label>
-						<textarea name="meta_official_vendor_addtl_info" class="text tinymce"><? $doc->htmlspecialwrite('official_vendor_addtl_info'); ?></textarea>
-				</p>
-                                <br/>
+			<p class="input" id="official_vendor_addtl_info" <? if (!$doc->saved() || $doc->official_vendor_addtl_info=='') { ?>style="display:none;"<? }?>>
+					<label for="">Price or
+					additional information:</label>
+					<textarea name="meta_official_vendor_addtl_info" class="text tinymce"><? $doc->htmlspecialwrite('official_vendor_addtl_info'); ?></textarea>
+			</p>
+                               <br/>
 <!-- END Official Vendor -->
 <!-- BEGIN Terms of Service -->
-				<p class="input">
-					<label for="">Are there terms of service?</label>
-					<input type="radio" name="meta_has_terms_of_service" value="yes" id="has_terms_of_service_yes" onchange="chtos();" <? if ($doc->has_terms_of_service=="yes") {?>checked<? } ?>> Yes
-					<input type="radio" name="meta_has_terms_of_service" value="no" id="has_terms_of_service_no" onchange="chtos();"<? if ($doc->has_terms_of_service=="no" || !$doc->saved()) {?>checked<? } ?>> No
-				</p>
+			<p class="input">
+				<label for="">Are there terms of service?</label>
+				<input type="radio" name="meta_has_terms_of_service" value="yes" id="has_terms_of_service_yes" onchange="chtos();" <? if ($doc->has_terms_of_service=="yes") {?>checked<? } ?>> Yes
+				<input type="radio" name="meta_has_terms_of_service" value="no" id="has_terms_of_service_no" onchange="chtos();"<? if ($doc->has_terms_of_service=="no" || !$doc->saved()) {?>checked<? } ?>> No
+			</p>
 
-				<p class="input" id="terms_of_service_url" <? if (!$doc->saved() || $doc->terms_of_service_url=='') { ?>style="display:none;"<? }?>>
-					<label for="">URL:</label>
-					<input type="text" name="meta_terms_of_service_url" class="text tinymce"><? $doc->htmlspecialwrite('terms_of_service_url'); ?></input>
-				</p>
-                                <br/>
+			<p class="input" id="terms_of_service_url" <? if (!$doc->saved() || $doc->terms_of_service_url=='') { ?>style="display:none;"<? }?>>
+				<label for="">URL:</label>
+				<input type="text" name="meta_terms_of_service_url" class="text tinymce"><? $doc->htmlspecialwrite('terms_of_service_url'); ?></input>
+			</p>
+                               <br/>
 <!-- END Terms of Service -->
 <!-- BEGIN Enabling Legislation Etc -->
-				<p class="input">
-					<label for="">Is there enabling legislation for this jurisdiction or other statutory authority?</label>
-					<input type="radio" name="meta_has_enabling_legislation_etc" value="yes" id="has_enabling_legislation_etc_yes" onchange="chenablinglegislation();" <? if ($doc->has_enabling_legislation_etc=="yes") {?>checked<? } ?>> Yes
-					<input type="radio" name="meta_has_enabling_legislation_etc" value="no" id="has_enabling_legislation_etc_no" onchange="chenablinglegislation();"<? if ($doc->has_enabling_legislation_etc=="no" || !$doc->saved()) {?>checked<? } ?>> No
-				</p>
+			<p class="input">
+				<label for="">Is there enabling legislation for this jurisdiction or other statutory authority?</label>
+				<input type="radio" name="meta_has_enabling_legislation_etc" value="yes" id="has_enabling_legislation_etc_yes" onchange="chenablinglegislation();" <? if ($doc->has_enabling_legislation_etc=="yes") {?>checked<? } ?>> Yes
+				<input type="radio" name="meta_has_enabling_legislation_etc" value="no" id="has_enabling_legislation_etc_no" onchange="chenablinglegislation();"<? if ($doc->has_enabling_legislation_etc=="no" || !$doc->saved()) {?>checked<? } ?>> No
+			</p>
 
-				<p class="input" id="enabling_legislation_etc_info" <? if (!$doc->saved() || $doc->enabling_legislation_etc_info=='') { ?>style="display:none;"<? }?>>
-					<label for="">Please describe, including URLs where possible:</label>
-					<input type="text" name="meta_enabling_legislation_etc_info" class="text tinymce"><? $doc->htmlspecialwrite('enabling_legislation_etc_info'); ?></input>
-				</p>
-                                <br/>
+			<p class="input" id="enabling_legislation_etc_info" <? if (!$doc->saved() || $doc->enabling_legislation_etc_info=='') { ?>style="display:none;"<? }?>>
+				<label for="">Please describe, including URLs where possible:</label>
+				<input type="text" name="meta_enabling_legislation_etc_info" class="text tinymce"><? $doc->htmlspecialwrite('enabling_legislation_etc_info'); ?></input>
+			</p>
+                               <br/>
 <!-- END Enabling Legislation Etc -->
 <!-- BEGIN Other Information -->
-                                <p class="input">
-						<label for="">Any other information we should know?</label>
-						<textarea name="meta_additional_information" class="text tinymce"><? $doc->htmlspecialwrite('additional_information'); ?></textarea>
-                                </p>
-                                <br/>
+                               <p class="input">
+					<label for="">Any other information we should know?</label>
+					<textarea name="meta_additional_information" class="text tinymce"><? $doc->htmlspecialwrite('additional_information'); ?></textarea>
+                               </p>
+                               <br/>
 <!-- END Other Information -->
 <!-- BEGIN Attach File(s) -->
-					<p class="input">
-						<label for="file1">Attach file, if any</label>
-					</p>
-					<div id="files">
-						<? if ($doc->saved() && $doc->files()->count() > 0) {
-							$doc->files()->output('input.file');
-							?>
-							<script type="text/javascript">
-								FILE_COUNTER = <?= ($doc->files()->count()+1) ?>;	
-							</script>
-						<? } ?>
+				<p class="input">
+					<label for="file1">Attach file, if any</label>
+				</p>
+				<div id="files">
+					<? if ($doc->saved() && $doc->files()->count() > 0) {
+						$doc->files()->output('input.file');
+						?>
 						<script type="text/javascript">
-							addFile();
+							FILE_COUNTER = <?= ($doc->files()->count()+1) ?>;	
 						</script>
-					</div>
-					<div class="clearer"></div>
+					<? } ?>
+					<script type="text/javascript">
+						addFile();
+					</script>
+				</div>
+				<div class="clearer"></div>
 					
-					<p class="input">
-						<label for="file2">&nbsp;</label>
-						<a href="#" onclick="return addFile()";>Add Another File</a>
-					</p>
+				<p class="input">
+					<label for="file2">&nbsp;</label>
+					<a href="#" onclick="return addFile()";>Add Another File</a>
+				</p>
 <!-- END Attach File(s) -->
 	
-					<p class="input nextbutton"><a href="#status" class="littlebutton" onclick="return nextSection('addtl_info','status');">Next</a></p>
-				</fieldset>
+				<p class="input nextbutton"><a href="#status" class="littlebutton" onclick="return nextSection('addtl_info','status');">Next</a></p>
+			</fieldset>
 
 			<a name="status"></a>
 			<fieldset id="status" style="display: none;">
