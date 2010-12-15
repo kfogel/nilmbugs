@@ -76,7 +76,7 @@
 		$('p.input input').bt( {
 			 trigger: ['focus', 'blur'],
 			positions: ['right'],
-		  fill: 'rgba(51, 204, 0, .8)',
+		  fill: 'rgba(0, 0, 0, .8)',
 		   shadow: true,
 		    shadowOffsetX: 3,
 		    shadowOffsetY: 3,
