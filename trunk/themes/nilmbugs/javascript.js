@@ -84,13 +84,13 @@
 		    shadowColor: 'rgba(0,0,0,.6)',
 		    shadowOverlap: false,	
 		    padding:10,
-			 cssStyles: {color: '#FFF', fontWeight: 'bold'}
+			 cssStyles: {color: '#C0B770', fontWeight: 'normal'}
 			}
 		);
 		$('p.input textarea').bt( {
 			 trigger: ['focus', 'blur'],
 			positions: ['right'],
-		  fill: 'rgba(51, 204, 0, .8)',
+		  fill: 'rgba(0, 0, 0, .8)',
 		   shadow: true,
 		    shadowOffsetX: 3,
 		    shadowOffsetY: 3,
@@ -98,7 +98,7 @@
 		    shadowColor: 'rgba(0,0,0,.6)',
 		    shadowOverlap: false,	
 		    padding:10,
-			 cssStyles: {color: '#FFF', fontWeight: 'bold'}
+			 cssStyles: {color: '#C0B770', fontWeight: 'normal'}
 			}
 		);
 
