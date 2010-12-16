@@ -289,7 +289,7 @@
 				obj.css("color","#000000");
 			}  else if (obj.val()=='') {
 				obj.val(val);
-				obj.css("color","#336633");
+				obj.css("color","#fff");
 			}
 		
 		}
