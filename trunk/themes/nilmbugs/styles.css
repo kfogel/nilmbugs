@@ -394,8 +394,8 @@ ul#bug_tabs li.complete a {  background: url(img/hex_gold.png) no-repeat;  paddi
 #new_bug_instructions p { width: 460px; margin-left: auto; margin-right: auto; }
 #closer { position: relative; top: 0px; left:-31px; display: block; text-align: center; background: url(img/cancel.png) no-repeat 2px 2px; border: 1px solid #133366; border-right:0px; width:20px; height:20px; float:left;}
 
-p.input { margin-top: 0px; padding-top: 0px; clear: both; }
-p.input label { display: block;  padding-top: 10px; padding-bottom: 0px; clear: both; }
+p.input { font-family: Arial, san-serif; margin-top: 0px; padding-top: 0px; clear: both; }
+p.input label { font-family: Arial, san-serif; display: block;  padding-top: 10px; padding-bottom: 0px; clear: both; }
 p.input input.text { font-family: Arial, san-serif; width: 98%;  font-size: 12px; color: #000; border: 1px solid #ccc;  padding:5px; background-color: #eee; } 
 p.input select.text { font-family: Arial, san-serif; font-size: 12px;  color: #000; margin-top: 6px; width: 200px; } 
 p.input textarea.text { font-family: Arial, san-serif; width: 98%; border: 1px solid #ccc; font-size: 18px; margin-top: 0px; }  
