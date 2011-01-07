@@ -62,7 +62,7 @@
 		}
 		$('a.glossary').bt( {
 			positions: ['right'],
-		  fill: 'rgba(51, 204, 0, .8)',
+		  fill: 'rgba(192, 183, 112, .8)',
 		   shadow: true,
 		    shadowOffsetX: 3,
 		    shadowOffsetY: 3,
@@ -70,13 +70,13 @@
 		    shadowColor: 'rgba(0,0,0,.6)',
 		    shadowOverlap: false,	
 		    padding:10,
-			 cssStyles: {color: '#FFF', fontWeight: 'bold', fontFamily: 'Arial, Helvetica', fontSize: '11px'}			
+			 cssStyles: {color: '#000', fontWeight: 'bold', fontFamily: 'Arial, Helvetica', fontSize: '11px'}			
 			}
 		);
 		$('p.input input').bt( {
 			 trigger: ['focus', 'blur'],
 			positions: ['right'],
-		  fill: 'rgba(0, 0, 0, .8)',
+		  fill: 'rgba(192, 183, 112, .8)',
 		   shadow: true,
 		    shadowOffsetX: 3,
 		    shadowOffsetY: 3,
@@ -84,13 +84,13 @@
 		    shadowColor: 'rgba(0,0,0,.6)',
 		    shadowOverlap: false,	
 		    padding:10,
-			 cssStyles: {color: '#C0B770', fontWeight: 'normal', fontFamily: 'Arial, Helvetica', fontSize: '11px'}
+			 cssStyles: {color: '#000', fontWeight: 'normal', fontFamily: 'Arial, Helvetica', fontSize: '11px'}
 			}
 		);
 		$('p.input textarea').bt( {
 			 trigger: ['focus', 'blur'],
 			positions: ['right'],
-		  fill: 'rgba(0, 0, 0, .8)',
+		  fill: 'rgba(192, 183, 112, .8)',
 		   shadow: true,
 		    shadowOffsetX: 3,
 		    shadowOffsetY: 3,
@@ -98,7 +98,7 @@
 		    shadowColor: 'rgba(0,0,0,.6)',
 		    shadowOverlap: false,	
 		    padding:10,
-			 cssStyles: {color: '#C0B770', fontWeight: 'normal', fontFamily: 'Arial, Helvetica', fontSize: '11px'}
+			 cssStyles: {color: '#000', fontWeight: 'normal', fontFamily: 'Arial, Helvetica', fontSize: '11px'}
 			}
 		);
 
