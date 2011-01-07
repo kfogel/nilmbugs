@@ -84,7 +84,7 @@
 		    shadowColor: 'rgba(0,0,0,.6)',
 		    shadowOverlap: false,	
 		    padding:10,
-			 cssStyles: {color: '#C0B770', fontWeight: 'bold', fontFamily: 'Arial, Helvetica', fontSize: '11px'}
+			 cssStyles: {color: '#C0B770', fontWeight: 'normal', fontFamily: 'Arial, Helvetica', fontSize: '11px'}
 			}
 		);
 		$('p.input textarea').bt( {
@@ -98,7 +98,7 @@
 		    shadowColor: 'rgba(0,0,0,.6)',
 		    shadowOverlap: false,	
 		    padding:10,
-			 cssStyles: {color: '#C0B770', fontWeight: 'bold', fontFamily: 'Arial, Helvetica', fontSize: '11px'}
+			 cssStyles: {color: '#C0B770', fontWeight: 'normal', fontFamily: 'Arial, Helvetica', fontSize: '11px'}
 			}
 		);
 
