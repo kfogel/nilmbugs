@@ -286,7 +286,7 @@
 			
 			if (obj.val()==val) { 
 				obj.val('');
-				obj.css("color","#000000");
+				obj.css("color","#ffffff");
 			}  else if (obj.val()=='') {
 				obj.val(val);
 				obj.css("color","#C0B770");
