@@ -62,7 +62,7 @@
 		}
 		$('a.glossary').bt( {
 			positions: ['right'],
-		  fill: 'rgba(192, 183, 112, .8)',
+		  fill: 'rgba(192, 183, 112, .0)',
 		   shadow: true,
 		    shadowOffsetX: 3,
 		    shadowOffsetY: 3,
@@ -76,7 +76,7 @@
 		$('p.input input').bt( {
 			 trigger: ['focus', 'blur'],
 			positions: ['right'],
-		  fill: 'rgba(192, 183, 112, .8)',
+		  fill: 'rgba(192, 183, 112, .0)',
 		   shadow: true,
 		    shadowOffsetX: 3,
 		    shadowOffsetY: 3,
@@ -90,7 +90,7 @@
 		$('p.input textarea').bt( {
 			 trigger: ['focus', 'blur'],
 			positions: ['right'],
-		  fill: 'rgba(192, 183, 112, .8)',
+		  fill: 'rgba(192, 183, 112, .0)',
 		   shadow: true,
 		    shadowOffsetX: 3,
 		    shadowOffsetY: 3,
