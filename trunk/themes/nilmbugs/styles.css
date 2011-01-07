@@ -68,8 +68,8 @@
 	#login_status a {  font-weight: bold;  color: #033366; }
 	#header {  padding-top:5px; padding-bottom:5px; background: #000; height: 77px; margin-left: 162px; }
 	#header form { margin: 0px; margin-top:30px;}  
-	#header form input.repairField { padding:5px; border: 1px solid #333; color: #C0B770; background: #111; width: 300px;  margin-right:10px; float: left; font-family: Arial, san-serif; }  
-	#header form input.repairField:focus { padding:5px; border: 1px solid #333; color: #fff; background: #333; width: 300px;  margin-right:10px; float: left;  font-family: Arial, san-serif; }  
+	#header form input.repairField { padding:5px; border: 1px solid #333; color: #C0B770; background: #111; width: 300px;  margin-right:10px; float: left; font-family: Arial, san-serif; font-weight: normal; }  
+	#header form input.repairField:focus { padding:5px; border: 1px solid #333; color: #fff; background: #333; width: 300px;  margin-right:10px; float: left;  font-family: Arial, san-serif; font-weight: normal; }  
 	#header form input.littlebutton { margin-top: 4px; }
 
 	#nav { background: #b9d5f9; padding-top:0px; margin-bottom:20px; margin-left: 162px; height: 30px; text-transform: uppercase; }
