@@ -175,6 +175,7 @@ if ($POD->isAuthenticated()) {
 
 	<div id="comments">
 		<? if ($POD->isAuthenticated()) {?><a href="#reply" class="littlebutton">Leave a comment</a><? } else if ($POD->libOptions('enable_bugs_authentication_creation')) { ?><a href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>" class="littlebutton">Leave a comment</a><? } ?>
+		<div class="clearer"></div>		
 		<!-- COMMENTS -->	
 		<!-- <h2>Discussion</h2> -->
 		<? 
@@ -186,7 +187,7 @@ if ($POD->isAuthenticated()) {
 		<div id="comment_form">
 			<a name="reply"></a>
 				<div class="feedback" id="spinner">
-					<p style="margin:0px;" class="right_align byline">You are logged in as <? $POD->currentUser()->permalink(); ?>.  &nbsp;<a href="<? $POD->siteRoot(); ?>/logout" style="color: #900; font-style: italic" class="small">[ Log&nbsp;out ]</a></p>
+					<p style="margin:0px;" class="right_align byline">You are logged in as <? $POD->currentUser()->permalink(); ?>.  &nbsp;<a href="<? $POD->siteRoot(); ?>/logout" style="color: #900; font-style: normal" class="small">Log&nbsp;out</a></p>
 					Leave a comment
 				</div>
 				<form method="post" id="add_comment" class="valid">
