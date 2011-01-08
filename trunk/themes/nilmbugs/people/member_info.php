@@ -13,7 +13,6 @@
 ?>
 <div id="member_info">
 	<? $user->output('avatar'); ?>
-	<div class="column_padding">
 		<b><? $user->permalink(); ?></b>
 		<? if ($user->get('location')) {
 			$user->write('location');
@@ -25,6 +24,5 @@
 			<? } ?>
 			<a href="<? $user->POD->siteRoot(); ?>/editprofile" class="person_permalink">Edit Profile</a>
 		<? } ?>
-	</div>
 	<div class="clearer"></div>
 </div>
