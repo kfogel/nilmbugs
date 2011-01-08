@@ -95,7 +95,7 @@
 		<div id="comment_form">
 			<a name="reply"></a>
 			<div class="column_7 last">
-				<div class="column_padding feedback" id="spinner">
+				<div class="feedback" id="spinner">
 					Feedback
 				</div>
 			</div>
