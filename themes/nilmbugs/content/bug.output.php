@@ -187,12 +187,12 @@ if ($POD->isAuthenticated()) {
 		<div id="comment_form">
 			<a name="reply"></a>
 				<div class="feedback" id="spinner">
-					<p style="margin:0px;" class="right_align byline">You are logged in as <? $POD->currentUser()->permalink(); ?>.  &nbsp;<a href="<? $POD->siteRoot(); ?>/logout" style="color: #900; font-style: normal" class="small">Log&nbsp;out</a></p>
-					Leave a comment
+					<p style="margin:0px;" class="right_align byline">You are logged in as <? $POD->currentUser()->permalink(); ?>.&nbsp;|&nbsp;<a href="<? $POD->siteRoot(); ?>/logout" style="font-style: bold">Log&nbsp;out</a></p>
+					Comment
 				</div>
 				<form method="post" id="add_comment" class="valid">
 					<p class="input"><textarea name="comment" class="white text required" id="comment"></textarea></p>
-					<p><input type="submit" value="Post a comment" class="greenbutton" /></p>
+					<p><input type="submit" value="Post" class="greenbutton" /></p>
 				</form>
 			<div class="clearer"></div>		
 		</div>
