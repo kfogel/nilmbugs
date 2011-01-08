@@ -52,7 +52,7 @@
 	.column_12 { width: 940px; margin-right: 20px; float: left;  } 
 	
 	.last { margin-right: 0px; }
-	.column_padding { padding: 4px; font-weight: bold; font-size: 11px; line-height: 19px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 0px; display: block; }
+	.column_padding { padding: 4px; font-weight: bold; font-size: 11px; line-height: 19px; letter-spacing: .05em; margin-bottom: 0px; display: block; color:#0072BC; }
 	.clearer { float: none; height: 0px; width: 100%; clear: both; }
 	
 	.right_align { text-align: right; } 
