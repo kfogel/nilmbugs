@@ -14,7 +14,7 @@
 * http://peoplepods.net/readme/person-object
 /**********************************************/
 ?><? $recent = $POD->getPeople(array('leaderboard:!='=>'null','leaderboard:!='=>'0'),'u_m_leaderboard.value DESC',5); ?>
-<div class="column_padding" id="recent_visitors_sidebar sidebar">
+<div class="column_padding sidebar" id="recent_visitors_sidebar">
 	<h3>Active Contributors</h3>
 	<? $recent->output('member_leaderboard','ul_header','ul_footer'); ?>
 </div>
