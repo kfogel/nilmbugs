@@ -194,6 +194,7 @@
 
 	.comment .comment_info { font-weight: bold; color: #133366; font-size: 11px; line-height: 13px; font-style: italic; font-weight: normal; }
 	.comment_body { margin-left: 0px; padding: 0px;  }
+	.byline { color: #888; display: block;margin-left: 100px; margin-bottom:3px; font-style: italic; font-size: 11px; line-height: 13px; }
 
 
 	
