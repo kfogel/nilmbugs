@@ -23,7 +23,7 @@
 			<? if ($user->get('verificationKey')) { ?>
 				<a href="<? $user->POD->siteRoot(); ?>/verify" class="highlight">Verify Your Account!</a>
 			<? } ?>
-			<a href="<? $user->POD->siteRoot(); ?>/editprofile">Edit Profile</a>
+			<a href="<? $user->POD->siteRoot(); ?>/editprofile" class="person_permalink">Edit Profile</a>
 		<? } ?>
 	</div>
 	<div class="clearer"></div>
