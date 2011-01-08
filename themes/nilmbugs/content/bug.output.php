@@ -215,7 +215,7 @@ if ($POD->isAuthenticated()) {
 		<? } ?>
 
 		<? if ($doc->isEditable()) { ?>
-			<p><a href="<? $doc->write('editlink'); ?>" title="Edit this post" class="edit_button">Edit this bug</a></p>
+			<p><a href="<? $doc->write('editlink'); ?>" title="Edit this bug" class="edit_bug_button">Edit this bug</a></p>
 			<? if ($POD->currentUser()->adminUser) { ?>
 				<p><?= $POD->toggleBot($doc->hasFlag('featured'),'togglefeatured','Stop featuring this bug','Feature this bug','method=toggleFlag&type=global&flag=featured&content='.$doc->id); ?></p>
 			<? } ?>
