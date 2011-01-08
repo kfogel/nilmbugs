@@ -174,7 +174,7 @@ if ($POD->isAuthenticated()) {
 	</div>	
 
 	<div id="comments">
-		<h2>Discussion <? if ($POD->isAuthenticated()) {?><a href="#reply" class="with_right_float littlebutton">Leave a comment</a><? } else if ($POD->libOptions('enable_bugs_authentication_creation')) { ?><a href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>" class="with_right_float littlebutton">Leave a comment</a><? } ?></h2>
+		<h2>Discussion <? if ($POD->isAuthenticated()) {?><a href="#reply" class="littlebutton">Leave a comment</a><? } else if ($POD->libOptions('enable_bugs_authentication_creation')) { ?><a href="<? $POD->siteRoot(); ?>/join?redirect=<?= $doc->permalink; ?>" class="with_right_float littlebutton">Leave a comment</a><? } ?></h2>
 		<!-- COMMENTS -->	
 		<? 
 			$comments->output('comment');
@@ -185,12 +185,12 @@ if ($POD->isAuthenticated()) {
 		<div id="comment_form">
 			<a name="reply"></a>
 				<div class="feedback" id="spinner">
-					<p style="margin:0px;" class="right_align byline">You are logged in as <? $POD->currentUser()->permalink(); ?>.  <a href="<? $POD->siteRoot(); ?>/logout" class="small">Log&nbsp;out</a></p>
+					<p style="margin:0px;" class="right_align byline">You are logged in as <? $POD->currentUser()->permalink(); ?>.  <a href="<? $POD->siteRoot(); ?>/logout" style="color: #900">Log&nbsp;out</a></p>
 					Leave a comment
 				</div>
 				<form method="post" id="add_comment" class="valid">
 					<p class="input"><textarea name="comment" class="white text required" id="comment"></textarea></p>
-					<p><input type="submit" value="Post" class="greenbutton" /></p>
+					<p><input type="submit" value="Post a comment" class="greenbutton" /></p>
 				</form>
 			<div class="clearer"></div>		
 		</div>
