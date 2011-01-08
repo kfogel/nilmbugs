@@ -184,10 +184,12 @@ if ($POD->isAuthenticated()) {
 	<? if ($this->POD->isAuthenticated() && !preg_match("/closed/",$doc->bug_status)) { ?>
 		<div id="comment_form">
 			<a name="reply"></a>
-				<h3>Leave a comment</h3>
+				<div class="feedback" id="spinner">
+					Leave a comment
+				</div>
 				<form method="post" id="add_comment" class="valid">
 					<p style="margin:0px;" class="right_align">You are logged in as <? $POD->currentUser()->permalink(); ?>.  <a href="<? $POD->siteRoot(); ?>/logout">Log&nbsp;out</a></p>
-					<p class="input"><textarea name="comment" class="text required" id="comment"></textarea></p>
+					<p class="input"><textarea name="comment" class="white text required" id="comment"></textarea></p>
 					<p><input type="submit" value="Post Comment" class="button" /></p>
 				</form>
 			<div class="clearer"></div>		
