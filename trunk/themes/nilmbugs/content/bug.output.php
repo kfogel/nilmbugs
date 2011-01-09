@@ -73,6 +73,7 @@ if ($POD->isAuthenticated()) {
 
 			<div id="bug_body">
 				<h2 style="display:inline">Bug details:&nbsp;</h2>
+				<div class="bug_history bug_odd">Violations of Law.Gov Principles:</div>
 				
                                 <ul>
 					<? foreach ($violations as $violation) { ?>

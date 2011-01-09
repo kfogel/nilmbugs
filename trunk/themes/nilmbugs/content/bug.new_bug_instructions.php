@@ -10,7 +10,7 @@
 
 <div id="new_bug_instructions">
 	<a href="#" onclick="$('#new_bug_instructions').fadeOut();return false;" id="closer">&nbsp;</a>
-	<h1><img src="<? $POD->templateDir(); ?>/img/confirmation_hex.png" align="absmiddle" />&nbsp;Thank you for reporting this bug!</h1>
+	<h1>Thank you for reporting this bug!</h1>
 	
 	<? if ($POD->isAuthenticated()) { ?>
 	
