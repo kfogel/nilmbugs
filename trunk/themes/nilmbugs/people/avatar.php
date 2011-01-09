@@ -18,7 +18,7 @@
 		<? if ($img = $user->files()->contains('file_name','img')) { ?>
 			<a href="<? $user->write('permalink'); ?>"><img src="<? $img->write('thumbnail'); ?>" border="0" /></a>
 		<? } else { ?>
-			<img src="<? $POD->templateDir(); ?>/img/lawgov.black.png">
+			<img src="<? $POD->templateDir(); ?>/img/law.gov.shield.png">
 		<? } ?>	
 	</div>
 </div>
