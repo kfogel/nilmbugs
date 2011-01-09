@@ -273,7 +273,7 @@ if ($doc->saved()) {
 					</script>
 				</p>
 	
-				<p class="input nextbutton"><a href="#addtl_info" class="littlebutton" onclick="return nextSection('what','addtl_info');">Next</a></p>
+				<p class="input nextbutton" style="padding-top: 10px;"><a href="#addtl_info" class="littlebutton" onclick="return nextSection('what','addtl_info');">Next</a></p>
 			</fieldset>
 	
 			<a name="addtl_info"></a>
@@ -284,7 +284,7 @@ if ($doc->saved()) {
 <!-- BEGIN Official Vendor -->
 			<p class="input">
 				<label for="">Is there an official vendor?</label>
-				<input type="radio" name="meta_has_official_vendor" value="yes" id="has_official_vendor_yes" onchange="chofficialvendor();" <? if ($doc->has_official_vendor=="yes") {?>checked<? } ?>> Yes
+				<input type="radio" name="meta_has_official_vendor" value="yes" id="has_official_vendor_yes" onchange="chofficialvendor();" <? if ($doc->has_official_vendor=="yes") {?>checked<? } ?>> Yes<br />
 				<input type="radio" name="meta_has_official_vendor" value="no" id="has_official_vendor_no" onchange="chofficialvendor();"<? if ($doc->has_official_vendor=="no" || !$doc->saved()) {?>checked<? } ?>> No
 			</p>
 
@@ -308,7 +308,7 @@ if ($doc->saved()) {
 <!-- BEGIN Terms of Service -->
 			<p class="input">
 				<label for="">Are there terms of service?</label>
-				<input type="radio" name="meta_has_terms_of_service" value="yes" id="has_terms_of_service_yes" onchange="chtos();" <? if ($doc->has_terms_of_service=="yes") {?>checked<? } ?>> Yes
+				<input type="radio" name="meta_has_terms_of_service" value="yes" id="has_terms_of_service_yes" onchange="chtos();" <? if ($doc->has_terms_of_service=="yes") {?>checked<? } ?>> Yes<br />
 				<input type="radio" name="meta_has_terms_of_service" value="no" id="has_terms_of_service_no" onchange="chtos();"<? if ($doc->has_terms_of_service=="no" || !$doc->saved()) {?>checked<? } ?>> No
 			</p>
 
@@ -321,7 +321,7 @@ if ($doc->saved()) {
 <!-- BEGIN Enabling Legislation Etc -->
 			<p class="input">
 				<label for="">Is there enabling legislation for this jurisdiction or other statutory authority?</label>
-				<input type="radio" name="meta_has_enabling_legislation_etc" value="yes" id="has_enabling_legislation_etc_yes" onchange="chenablinglegislation();" <? if ($doc->has_enabling_legislation_etc=="yes") {?>checked<? } ?>> Yes
+				<input type="radio" name="meta_has_enabling_legislation_etc" value="yes" id="has_enabling_legislation_etc_yes" onchange="chenablinglegislation();" <? if ($doc->has_enabling_legislation_etc=="yes") {?>checked<? } ?>> Yes<br />
 				<input type="radio" name="meta_has_enabling_legislation_etc" value="no" id="has_enabling_legislation_etc_no" onchange="chenablinglegislation();"<? if ($doc->has_enabling_legislation_etc=="no" || !$doc->saved()) {?>checked<? } ?>> No
 			</p>
 
@@ -408,7 +408,7 @@ if ($doc->saved()) {
 			
 				<p class="input">
 					<label for="">Have you contacted this jurisdiction?</label>
-					<input type="radio" name="meta_media_outlet_contacted" value="yes" id="contacted_yes" onchange="chcontact();" <? if ($doc->media_outlet_contacted=="yes") {?>checked<? } ?>> Yes
+					<input type="radio" name="meta_media_outlet_contacted" value="yes" id="contacted_yes" onchange="chcontact();" <? if ($doc->media_outlet_contacted=="yes") {?>checked<? } ?>> Yes<br />
 					<input type="radio" name="meta_media_outlet_contacted" value="no" id="contacted_no" onchange="chcontact();"<? if ($doc->media_outlet_contacted=="no" || !$doc->saved()) {?>checked<? } ?>> No
 				</p>
 				
