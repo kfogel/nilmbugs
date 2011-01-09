@@ -115,7 +115,7 @@
 
 <div class="column_4 last" id="post_info">
 	<div id="member_info">
-	<div class="person_avatar">	<img src="<? $POD->templateDir(); ?>/img/lawgov.black.png"></div>
+<!--	<div class="person_avatar">	<img src="<? $POD->templateDir(); ?>/img/lawgov.black.png"></div> -->
 	
 	<? $doc->author()->output('member_info'); ?>
 	
