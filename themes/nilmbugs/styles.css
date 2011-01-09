@@ -134,7 +134,7 @@
 	#member_info b { font-size: 11px; line-height: 19px; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 0px; display: block;} 
 	#post_info { background-color: #eee; padding: 10px; width: 275px; border: 1px solid #ccc;}
 	
-	.person_avatar { width: 130px; background-color: #eee; float: left; margin: 0px; text-align: center; margin-right: 10px; }
+	.person_avatar { width: 50px; background-color: #eee; float: left; margin: 0px; text-align: center; margin-right: 10px; }
 	
 	.person_short { font-size: 12px;  }
 	.person_short .person_short_follow_button { display: block; padding-top:0px;  text-transform: uppercase; letter-spacing: .05em; font-size: 11px; color: #366D2F; font-weight: bold; text-decoration: none; } 
