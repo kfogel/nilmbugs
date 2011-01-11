@@ -484,3 +484,5 @@ textarea.white {width: 100%; background-color: #fff; border: 1px solid #bbb;}
 	a.person_permalink { font-weight: bold; font-size: 12px; text-transform: uppercase; }
 	.byline { color: #888; display: block; margin-bottom:3px; font-style: italic; font-size: 11px; line-height: 13px; text-transform: none; font-weight: normal; }
 	.stack_output {padding-top: 0px;}
+	
+	#featured_content { font-size: 11px; }
