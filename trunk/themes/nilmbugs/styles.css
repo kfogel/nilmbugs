@@ -1,7 +1,7 @@
 /* Main Styles */
 
 	body { background: #FFFFFF url(img/bkg.png) top left repeat-y; color: #333; padding: 0px; margin: 0px; font-family: Georgia; }
-	div,ul,blockquote,p { font-size: 13px; line-height: 20px;  } 
+	div,ul,blockquote,p { font-size: 14px; line-height: 20px;  } 
 	
 	p { line-height: 150%; }
 
