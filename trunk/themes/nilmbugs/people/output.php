@@ -19,7 +19,7 @@
 			<? if ($img = $user->files()->contains('file_name','img')) { ?>
 				<img src="<?= $img->src(150,true); ?>" border="0" />
 			<? } else { ?>
-				<img src="<? $POD->templateDir(); ?>/img/lawgov.black.png">
+				<img src="<? $POD->templateDir(); ?>/img/law.gov.shield.png">
 			<? } ?>	
 			
 			<h1><? $user->write('nick'); ?></h1>
