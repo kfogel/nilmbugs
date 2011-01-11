@@ -13,7 +13,7 @@
 ?>
 <div id="member_info">
 	<? $user->output('avatar'); ?>
-		<b><? $user->permalink(); ?></b>
+		<div style="padding-top: 10px;"><? $user->permalink(); ?></div>
 		<? if ($user->get('location')) {
 			$user->write('location');
 			echo "<br />";
