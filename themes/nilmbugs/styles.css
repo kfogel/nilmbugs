@@ -373,7 +373,7 @@ ul#bug_tabs li a { display: block; text-align: center; background: url(img/hex_g
 ul#bug_tabs li#tab_status { width: 168px; margin-right: 0px;  }
 ul#bug_tabs li#tab_report {   }
 
-ul#bug_tabs li#tab_status.active { background:  #dae9f4; }
+ul#bug_tabs li#tab_status.active { background:  #fff; }
 ul#bug_tabs li#tab_report.active {  border-bottom: 1px solid #900; }
 ul#bug_tabs li.active {  }
 ul#bug_tabs li.active a {  background: url(img/hex_gold.png) no-repeat; color: #900; }
@@ -400,8 +400,8 @@ ul#bug_tabs li.complete a {  background: url(img/hex_gold.png) no-repeat;  paddi
 p.input { margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; clear: both; }
 p.input label { display: block;  padding-top: 15px; padding-bottom: 10px; clear: both; }
 p.input input.text { font-family: Arial, san-serif; width: 98%;  font-size: 12px; color: #000; border: 1px solid #ccc;  padding:5px; background-color: #eee; margin-top: 0px; } 
-p.input select.text { font-family: Arial, san-serif; font-size: 12px;  color: #000; margin-top: 6px; width: 200px; } 
-p.input textarea.text { font-family: Arial, san-serif; width: 98%; border: 1px solid #ccc; font-size: 18px; margin-top: 0px; }  
+p.input select.text { font-family: Arial, san-serif; font-size: 12px;  color: #000; margin-top: 0px; width: 200px; } 
+p.input textarea.text { font-family: Arial, san-serif; width: 98%; border: 1px solid #ccc; margin-top: 0px; }  
 
 p.radio label { font-weight: bold; } 
 p.radio label.label { font-weight: bold;display: block;  padding-top: 3px; padding-bottom: 3px;}
