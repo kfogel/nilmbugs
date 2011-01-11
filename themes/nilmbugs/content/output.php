@@ -101,24 +101,6 @@
 			(<? $doc->write('timesince'); ?>)
 		</div>	
 	<div class="clearer"></div>
-	<div id="post_stream_navigation">
-		<?
-			$previous = $POD->getContents(array('userId'=>$doc->author('id'),'id:lt'=>$doc->get('id')),'d.id DESC',1);
-			if ($previous->success() && $previous->count() > 0) { 
-				$previous = $previous->getNext();
-				?>
-				<a href="<? $previous->write('permalink');?>" class="post_previous"><strong>&#171;&nbsp;Previous</strong>&nbsp;&nbsp;&nbsp;<? echo $POD->shorten($previous->get('headline'),100); ?></a>
-		<? } 				
-
-			$next = $POD->getContents(array('userId'=>$doc->author('id'),'id:gt'=>$doc->get('id')),'d.id ASC',1);	
-			if ($next->success() && $next->count() > 0) {
-				$next = $next->getNext(); 
-			?>
-				<a href="<? $next->write('permalink');?>" class="post_next"><strong>&#187;&nbsp;Next</strong>&nbsp;&nbsp;&nbsp;<?  echo $POD->shorten($next->get('headline'),80); ?></a>
-		<? }  else { ?>
-			<strong>&#187;&nbsp;Next</strong>&nbsp;&nbsp;&nbsp;This is <? echo $doc->author('nick'); ?>'s most recent post
-		<? } ?>
-	</div>
 
 	<? if ($doc->group()) {
 		if ($POD->isAuthenticated()) {
@@ -156,21 +138,6 @@
 	<? } ?>
 	
 			
-	<div id="watchers">
-	<div class="stack_output stack_1_person_tracking">
-			<div class="tracking_short">
-				<div class="person_short">
-
-			<?  
-				$watching = $POD->getPeopleByWatching($doc); 
-				if ($watching->totalCount() > 0) {
-					$watching->output('short','header','footer',$watching->totalCount() . $POD->pluralize($watching->totalCount(),' Person Tracking',' People Tracking')); 
-				}
-			?>
-	</div>
-	</div>
-	</div>
-</div>
 </div>
 </div>
 
