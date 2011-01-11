@@ -102,7 +102,7 @@ if ($POD->isAuthenticated()) {
 				<? if ($doc->jurisdiction_contact_street_address or $doc->jurisdiction_contact_city or $doc->jurisdiction_contact_county or $doc->jurisdiction_contact_state) { ?>
 					<h3>Address:</h3>
                                         <p style="margin-left: 5%;">
-                                        <? if ($doc->jurisdiction_contact_street_address) { ?><?= $doc->jurisdiction_contact_street_address; }?><br/>
+                                        <? if ($doc->jurisdiction_contact_street_address) { ?><?= $doc->jurisdiction_contact_street_address; }?><? if ($doc->jurisdiction_contact_street_address;) { ?><br/><? } ?>
                                         <? if ($doc->jurisdiction_contact_city) { ?><?= $doc->jurisdiction_contact_city; } ?><? if ($doc->jurisdiction_contact_city and $doc->jurisdiction_contact_state) { ?>,<? } ?>
                                         <? if ($doc->jurisdiction_contact_state) { ?><?= $doc->jurisdiction_contact_state; }?>
                                         <? if ($doc->jurisdiction_contact_zip) { ?><?= $doc->jurisdiction_contact_zip; }?><br/>
@@ -155,7 +155,7 @@ if ($POD->isAuthenticated()) {
 				<? } ?>
 			</div>
 			
-			<h2>Bug History</h2>
+			<h2 style="padding-bottom: 2px;">Bug History</h2>
 
 			<div id="bug_history">
 				<? 
