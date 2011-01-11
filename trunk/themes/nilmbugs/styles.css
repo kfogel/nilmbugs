@@ -153,7 +153,7 @@
 
 	#bug_output { }
 	
-	#bug_output  .bug_status { float: left; background: #e7e8e9; text-align: center; height: 80px; width: 80px; -moz-border-radius: 12px; -webkit-border-radius: 12px; margin-right: 20px; font-family: Helvetica, sans serif; font-weight: bold; color: #888; }
+	#bug_output  .bug_status { float: left; background: #e7e8e9; padding: 2px; text-align: center; height: 80px; width: 80px; -moz-border-radius: 12px; -webkit-border-radius: 12px; margin-right: 20px; font-family: Helvetica, sans serif; font-weight: bold; color: #888; }
 
 	#bug_info { margin-bottom:10px;} 
 	#bug_info h1 { margin-bottom: 5px; }
@@ -388,7 +388,7 @@ ul#bug_tabs li.revisited a {  background: url(img/hex_gold.png) no-repeat; }
 
 ul#bug_tabs li#tab_status.complete { margin-right: 0px; background: #e6e7e8; }
 ul#bug_tabs li#tab_report.complete {  background: #e6e7e8;  }
-ul#bug_tabs li.complete { margin-right: 0px; background: #e6e7e8; -moz-border-radius-topleft: 12px; -moz-border-radius-topright: 12px; -webkit-border-top-left-radius: 12px; -webkit-border-top-right-radius: 12px; }
+ul#bug_tabs li.complete { margin-right: 1px; background: #e6e7e8; -moz-border-radius-topleft: 12px; -moz-border-radius-topright: 12px; -webkit-border-top-left-radius: 12px; -webkit-border-top-right-radius: 12px; }
 ul#bug_tabs li.complete a {  background: url(img/hex_gold.png) no-repeat;  padding-top: 50px; }
 
 
@@ -423,7 +423,7 @@ span.required { color: #900; font-weight: bold; }
 .bug_history { padding: 5px; background: #e7e8e9; }
 .bug_odd { background: #CCC; } 
 .bug_history .history_date { float: left; width: 20%; }
-.bug_history .history_time { float: left; width: 10%; }
+.bug_history .history_time { float: left; width: 10%; white-space: nowrap; }
 .bug_history .history_status { float: left; width: 40%; font-weight: bold; }
 .bug_history .history_icon { float: left; width: 10%; }
 .bug_history .history_person { float: left; width: 20%; }
