@@ -155,7 +155,7 @@ if ($POD->isAuthenticated()) {
 				<? } ?>
 			</div>
 			
-			<h2 style="padding-bottom: 2px;">Bug History</h2>
+			<h2 style="display: block;">Bug History</h2>
 
 			<div id="bug_history">
 				<? 
