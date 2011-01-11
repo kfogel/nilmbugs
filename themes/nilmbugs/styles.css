@@ -332,7 +332,7 @@ a#metoo.active { cursor: pointer;  display: block; float: left; font-family: hel
 #media_info .media_info_text { margin-left: 100px; }
 #jurisdiction_response { margin-left: 20px; }
 #bug_body h2 { margin-bottom: 5px; } 
-#bug_body p,#bug_body li { font-family: "Helvetica", san serif; font-size: 14px; line-height: 150%; }
+#bug_body p,#bug_body li { font-family: "Georgia", serif; font-size: 14px; line-height: 150%; }
 
 #bug_form { width: 640px; background: #fff; border: 0px solid #133366; border-top:0px; padding-bottom:30px;}
 #bug_form p.input { width: 100%; }
@@ -398,7 +398,7 @@ ul#bug_tabs li.complete a {  background: url(img/hex_gold.png) no-repeat;  paddi
 #closer { position: relative; top: 0px; left:-31px; display: block; text-align: center; background: url(img/cancel.png) no-repeat 2px 2px; border: 1px solid #133366; border-right:0px; width:20px; height:20px; float:left;}
 
 p.input { margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; clear: both; }
-p.input label { display: block;  padding-top: 20px; padding-bottom: 10px; clear: both; }
+p.input label { display: block;  padding-top: 15px; padding-bottom: 10px; clear: both; }
 p.input input.text { font-family: Arial, san-serif; width: 98%;  font-size: 12px; color: #000; border: 1px solid #ccc;  padding:5px; background-color: #eee; margin-top: 0px; } 
 p.input select.text { font-family: Arial, san-serif; font-size: 12px;  color: #000; margin-top: 6px; width: 200px; } 
 p.input textarea.text { font-family: Arial, san-serif; width: 98%; border: 1px solid #ccc; font-size: 18px; margin-top: 0px; }  
