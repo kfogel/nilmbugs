@@ -72,7 +72,7 @@ fi
 # When the Right Way is clear, this will go away.
 if grep -q "$key = 'jurisdiction_contact_state';" \
            mediabugs-open/pods/bugs_bugs/list.php; then
-  echo "Issue #13 crock patch already applied; not re-applying."
+  echo "Issue #23 crock patch already applied; not re-applying."
 else
-  echo "patch -p0 < issue-13-crock.txt"
+  echo "patch -p0 < issue-23-crock.txt"
 fi
