@@ -18,29 +18,6 @@
 			<? if ($POD->isAuthenticated()) {  ?>
 				<ul class="post_actions">
 
-				
-					<?	if ($POD->currentUser()->isFavorite($doc)) { ?>
-						<li>
-							<a href="#" id="removeFavorite_<? $doc->write('id'); ?>" onclick="return removeFavorite(<? $doc->write('id'); ?>);" title="Remove from Favorites" class="favorite_button active_button">Fave</a>
-							<a href="#" id="addFavorite_<? $doc->write('id'); ?>" onclick="return addFavorite(<? $doc->write('id'); ?>);"  title="Add to Favorites" class="favorite_button" style="display: none;">Fave</a>
-						</li>
-					<? } else { ?>
-						<li>
-							<a href="#" id="removeFavorite_<? $doc->write('id'); ?>" onclick="return removeFavorite(<? $doc->write('id'); ?>);" title="Remove from Favorites" class="favorite_button active_button" style="display: none;">Fave</a>
-							<a href="#" id="addFavorite_<? $doc->write('id'); ?>" onclick="return addFavorite(<? $doc->write('id'); ?>);" title="Add to Favorites" class="favorite_button">Fave</a>				
-						</li>
-					<? } ?>			
-					<?	if ($POD->currentUser()->isWatched($doc)) { ?>
-						<li>
-							<a href="#" id="removeWatch_<? $doc->write('id'); ?>" onclick="return removeWatch(<? $doc->write('id'); ?>);" title="Stop tracking new comments" class="watch_button active_button">Track</a>
-							<a href="#" id="addWatch_<? $doc->write('id'); ?>" onclick="return addWatch(<? $doc->write('id'); ?>);" title="Track new comments" class="watch_button" style="display: none;">Track</a>
-						</li>
-					<? } else { ?>
-						<li>
-							<a href="#" id="removeWatch_<? $doc->write('id'); ?>" onclick="return removeWatch(<? $doc->write('id'); ?>);"  title="Stop tracking new comments" class="watch_button active_button" style="display: none;">Track</a>
-							<a href="#" id="addWatch_<? $doc->write('id'); ?>" onclick="return addWatch(<? $doc->write('id'); ?>);" title="Track new comments"  class="watch_button">Track</a>				
-						</li>
-					<? } ?>
 					<? if ($doc->isEditable()) { ?>
 						<li>
 							<a href="<? $doc->write('editlink'); ?>" title="Edit this post" class="edit_button">Edit</a>
