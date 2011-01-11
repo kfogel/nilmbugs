@@ -153,7 +153,7 @@
 
 	#bug_output { }
 	
-	#bug_output  .bug_status { float: left; background: #e7e8e9; padding: 2px; text-align: center; height: 80px; width: 80px; -moz-border-radius: 12px; -webkit-border-radius: 12px; margin-right: 20px; font-family: Helvetica, sans serif; font-weight: bold; color: #888; }
+	#bug_output  .bug_status { float: left; background: #e7e8e9; padding: 6px; text-align: center; height: 80px; width: 80px; -moz-border-radius: 12px; -webkit-border-radius: 12px; margin-right: 20px; font-family: Helvetica, sans serif; font-weight: bold; color: #888; }
 
 	#bug_info { margin-bottom:10px;} 
 	#bug_info h1 { margin-bottom: 5px; }
@@ -420,8 +420,8 @@ label.error { color: #900; font-weight: bold; }
 span.required { color: #900; font-weight: bold; }
 
 #bug_history { margin-bottom: 20px; } 
-.bug_history { padding: 5px; background: #e7e8e9; }
-.bug_odd { background: #CCC; } 
+.bug_history { padding: 5px; background: #fff; border: 1px solid #ccc; }
+.bug_odd { background: #e7e8e9; } 
 .bug_history .history_date { float: left; width: 20%; }
 .bug_history .history_time { float: left; width: 10%; white-space: nowrap; }
 .bug_history .history_status { float: left; width: 40%; font-weight: bold; }
