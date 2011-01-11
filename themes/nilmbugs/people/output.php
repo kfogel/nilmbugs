@@ -18,8 +18,10 @@
 
 			<? if ($img = $user->files()->contains('file_name','img')) { ?>
 				<img src="<?= $img->src(150,true); ?>" border="0" />
+			<? } else { ?>
+				<img src="<? $POD->templateDir(); ?>/img/lawgov.black.png">
 			<? } ?>	
-
+			
 			<h1><? $user->write('nick'); ?></h1>
 		
 			<? if ($user->get('aboutme')) { ?>

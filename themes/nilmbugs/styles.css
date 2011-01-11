@@ -184,7 +184,7 @@
 	#comment_form {padding:6px; background-color: #eee; border: 1px solid #ccc; margin-top: 20px; width: 542px; }
 	#comments { border-top: 1px dotted #e7e8e9; padding-top:20px; } 
 	#comment_extras { width:400px; float: left; margin-right: 20px; }
-	.comment { border-bottom: 1px solid #e3e3e3; padding: 6px 0px 6px 0px; margin: 6px 0px 6px 0px; } 
+	.comment { border-bottom: 1px solid #e3e3e3; padding: 6px 0px 12px 0px; margin: 6px 0px 6px 0px; } 
 	.comment:last-child { border-bottom:0px;}
 	.comment span.byline { font-size: 12px; font-weight: bold; display: block; font-style: italic; font-size: 11px; line-height: 13px; }
 	.comment span.remove_comment { float: right; }  
@@ -482,4 +482,4 @@ textarea.white {width: 100%; background-color: #fff; border: 1px solid #bbb;}
 
 	a.person_permalink { font-weight: bold; }
 	.byline { color: #888; display: block; margin-bottom:3px; font-style: italic; font-size: 11px; line-height: 13px; text-transform: none; font-weight: normal; }
-	.stack_output {padding-top: 10px;}
+	.stack_output {padding-top: 0px;}
