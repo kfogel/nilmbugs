@@ -54,7 +54,7 @@ img.datepick-trigger {
 	color: #FFF;
 }
 .datepick-control {
-	background: #000;
+	background: #C0B770;
 	padding: 2px 0px;
 	color: #fff;
 }
@@ -93,14 +93,14 @@ img.datepick-trigger {
 	text-align: left;
 }
 .datepick-header {
-	background: #C0B770;
+	background: #025DA8;
 	color: #fff;
 	text-align: center;
 	font-weight: bold;
 	height: 1.6em;
 }
 .datepick-header select {
-	background: #C0B770;
+	background: #025DA8;
 	color: #fff;
 	border: 0px;
 	font-weight: bold;
@@ -117,7 +117,7 @@ img.datepick-trigger {
 .datepick a {
 	display: block;
 	width: 100%;
-	color: #fff;
+	color: #000;
 }
 .datepick-title-row {
 	background: #B9D5F9;
