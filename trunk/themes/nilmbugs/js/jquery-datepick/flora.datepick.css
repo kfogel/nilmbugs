@@ -120,7 +120,7 @@ img.datepick-trigger {
 	color: #000;
 }
 .datepick-title-row {
-	background: #C0B770;
+	background: #7DAAE5;
 	color: #000;
 }
 .datepick-title-row th {
@@ -128,14 +128,14 @@ img.datepick-trigger {
 	font-weight: normal;
 }
 .datepick-title-row .datepick-week-end-cell {
-	background: #C0B770;
+	background: #7DAAE5;
 }
 .datepick-days-row {
 	background: #FFF;
 	color: #666;
 }
 .datepick-week-col {
-	background: #C0B770;
+	background: #7DAAE5;
 	color: #000;
 }
 .datepick-days-cell {
@@ -155,10 +155,10 @@ img.datepick-trigger {
 	color: #888;
 }
 .datepick-week-over, .datepick-week-over .datepick-week-end-cell {
-	background: #C0B770;
+	background: #7DAAE5;
 }
 .datepick-today {
-	background: #C0B770;
+	background: #7DAAE5;
 }
 .datepick-current-day, .datepick-current-day a {
 	background: #025DA8;
