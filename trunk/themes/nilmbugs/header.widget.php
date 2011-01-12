@@ -22,7 +22,7 @@
 		p.input label { font-weight: bold;display: block; font-size:16px; }
 		p.input input.text { width: 250px;  font-size: 18px; border: 1px solid #ccc;  padding:5px;} 
 		p.input select.text { width: 250px;  font-size: 18px; } 
-		p.input textarea.text { width: 250px; height: 50px; border: 1px solid #ccc; font-size: 18px; margin-top: 0px;background: url(<? $POD->templateDir(); ?>/img/input_skin.png) no-repeat;}  
+		p.input textarea.text { width: 250px; height: 50px; border: 1px solid #ccc; font-size: 18px; margin-top: 0px; }  
 		.button { display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: -1px; font-size: 16px; line-height: 16px; padding-top: 19px; padding-bottom:19px; background: url(<? $POD->templateDir(); ?>/img/button_skin.png); padding-left: 30px; padding-right: 30px;  color: #FFF; text-shadow: #333 1px 1px 1px; border: 1px solid #336633; -moz-border-radius: 12px; -webkit-border-radius: 12px; text-align: center; margin-right: 20px;}
 		.littlebutton { display: block; float: left; font-family: helvetica; font-weight: bold; letter-spacing: -1px; font-size: 16px; line-height: 16px; padding-top: 7px; padding-bottom:7px; background: url(<? $POD->templateDir(); ?>/img/button_skin_small.png); padding-left: 10px; padding-right: 10px;  color: #FFF; text-shadow: #333 1px 1px 1px; border: 1px solid #336633; -moz-border-radius: 12px; -webkit-border-radius: 12px; text-align: center; margin-right: 20px; }
 		p.input input.error { border-color:1px solid #F00;}
