@@ -239,7 +239,7 @@ if ($doc->saved()) {
 					</select>
 				</p>
 
-				<p class="input nextbutton"><a href="#who" class="littlebutton" onclick="return nextSection('report','what');">Next</a></p>
+				<p class="input nextbutton" style="padding-top: 10px;"><a href="#who" class="littlebutton" onclick="return nextSection('report','what');">Next</a></p>
 			</fieldset>
 	
 			<a name="what"></a>

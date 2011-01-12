@@ -186,14 +186,14 @@ img.datepick-trigger {
 }
 .datepick-control a, .datepick-links a {
 	padding: 2px 5px !important;
-	color: #000 !important;
+	color: #C0B770 !important;
 }
 .datepick-title-row a {
 	color: #000;
 }
 .datepick-control a:hover {
-	background: #FDD;
-	color: #333;
+	background: #C0B770;
+	color: #000;
 }
 .datepick-links a:hover, .datepick-title-row a:hover {
 	background: #FFF;
