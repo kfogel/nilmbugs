@@ -9,7 +9,7 @@
 }
 #datepick-div {
 	display: none;
-	border: 1px solid #FF9900;
+	border: 1px solid #000;
 	z-index: 100;
 }
 .datepick-inline {
@@ -54,7 +54,7 @@ img.datepick-trigger {
 	color: #FFF;
 }
 .datepick-control {
-	background: #FF9900;
+	background: #000;
 	padding: 2px 0px;
 }
 .datepick-links {
