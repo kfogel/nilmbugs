@@ -15,7 +15,7 @@
 .datepick-inline {
 	float: left;
 	display: block;
-	border: 1px solid #FF9900;
+	border: 1px solid #000;
 }
 .datepick-rtl {
 	direction: rtl;
