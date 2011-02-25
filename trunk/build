@@ -44,6 +44,11 @@ if [ -e mediabugs-open/peoplepods/pods/lgviolation ]; then
 else
   ln -s "../../../pods/lgviolation" mediabugs-open/peoplepods/pods/lgviolation
 fi
+if [ -e mediabugs-open/peoplepods/pods/browser_plugins ]; then
+  echo "mediabugs-open/peoplepods/pods/browser_plugins already exists"
+else
+  ln -s "../../../pods/browser_plugins" mediabugs-open/peoplepods/pods/browser_plugins
+fi
 if [ -e peoplepods ]; then
   echo "peoplepods already exists"
 else
